@@ -12,10 +12,18 @@
       <ElementMergeDirectives>
         <ElementMergeDirective>
           <Index>
-            <DomainClassMoniker Name="Ventana" />
+            <DomainClassMoniker Name="VentanaPrincipal" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>TapizPrototoolHasVentanas.Ventanas</DomainPath>
+            <DomainPath>TapizPrototoolHasVentanaPrincipal.VentanaPrincipal</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="VentanaSecundaria" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>TapizPrototoolHasVentanaSecundarium.VentanaSecundarium</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
@@ -58,22 +66,6 @@
     </DomainClass>
   </Classes>
   <Relationships>
-    <DomainRelationship Id="3110b838-aee1-4ede-8d3b-159c68d0c5f5" Description="Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas" Name="TapizPrototoolHasVentanas" DisplayName="Tapiz Prototool Has Ventanas" Namespace="UPM_IPS.MPJAAMPrototool" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="14b11b21-846f-43a6-9885-0824651670ab" Description="Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.TapizPrototool" Name="TapizPrototool" DisplayName="Tapiz Prototool" PropertyName="Ventanas" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Ventanas">
-          <RolePlayer>
-            <DomainClassMoniker Name="TapizPrototool" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="7e36a506-3667-4514-862d-54320153c503" Description="Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.Ventana" Name="Ventana" DisplayName="Ventana" PropertyName="TapizPrototool" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Tapiz Prototool">
-          <RolePlayer>
-            <DomainClassMoniker Name="Ventana" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
     <DomainRelationship Id="3be2ce36-b4c4-4580-9cbb-d7fb155f7b72" Description="Description for UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria" Name="VPrincipalReferencesVSecundaria" DisplayName="VPrincipal References VSecundaria" Namespace="UPM_IPS.MPJAAMPrototool">
       <Source>
         <DomainRole Id="ffcbf736-e9ad-4c99-8f05-64c4ef7f42ae" Description="Description for UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.VentanaPrincipal" Name="VentanaPrincipal" DisplayName="Ventana Principal" PropertyName="VentanaSecundarium" PropertyDisplayName="Ventana Secundarium">
@@ -106,6 +98,38 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="5e0ffb4c-847d-4fa2-999b-467d8572cf7b" Description="Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal" Name="TapizPrototoolHasVentanaPrincipal" DisplayName="Tapiz Prototool Has Ventana Principal" Namespace="UPM_IPS.MPJAAMPrototool" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="07dc0c16-0f98-4d58-9371-d9cb7cd01241" Description="Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.TapizPrototool" Name="TapizPrototool" DisplayName="Tapiz Prototool" PropertyName="VentanaPrincipal" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Ventana Principal">
+          <RolePlayer>
+            <DomainClassMoniker Name="TapizPrototool" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="8cddf1f0-f7bb-4788-8781-6f13adf4728f" Description="Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.VentanaPrincipal" Name="VentanaPrincipal" DisplayName="Ventana Principal" PropertyName="TapizPrototool" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Tapiz Prototool">
+          <RolePlayer>
+            <DomainClassMoniker Name="VentanaPrincipal" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="2087e3fb-77d1-46a2-814e-c7e0d98e91c7" Description="Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium" Name="TapizPrototoolHasVentanaSecundarium" DisplayName="Tapiz Prototool Has Ventana Secundarium" Namespace="UPM_IPS.MPJAAMPrototool" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="423162ad-ba77-4cc2-b093-58e402742531" Description="Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.TapizPrototool" Name="TapizPrototool" DisplayName="Tapiz Prototool" PropertyName="VentanaSecundarium" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Ventana Secundarium">
+          <RolePlayer>
+            <DomainClassMoniker Name="TapizPrototool" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="bc4b6a58-b595-49f7-b54d-6ca614273fd4" Description="Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.VentanaSecundaria" Name="VentanaSecundaria" DisplayName="Ventana Secundaria" PropertyName="TapizPrototool" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Tapiz Prototool">
+          <RolePlayer>
+            <DomainClassMoniker Name="VentanaSecundaria" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -125,7 +149,6 @@
     <ExternalType Name="Char" Namespace="System" />
   </Types>
   <Shapes>
-    <GeometryShape Id="181e5844-2c81-4869-9439-f2a2d9c596db" Description="Description for UPM_IPS.MPJAAMPrototool.VPrincipalMetafora" Name="VPrincipalMetafora" DisplayName="VPrincipal Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VPrincipal Metafora" InitialHeight="1" Geometry="Rectangle" />
     <GeometryShape Id="11acde97-c2e4-4602-bc09-a73e80a07735" Description="Description for UPM_IPS.MPJAAMPrototool.VSecundariaMetafora" Name="VSecundariaMetafora" DisplayName="VSecundaria Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VSecundaria Metafora" InitialHeight="1" Geometry="Rectangle" />
   </Shapes>
   <Connectors>
@@ -140,8 +163,11 @@
           <XmlPropertyData XmlName="nombreAplicacion">
             <DomainPropertyMoniker Name="TapizPrototool/nombreAplicacion" />
           </XmlPropertyData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="ventanas">
-            <DomainRelationshipMoniker Name="TapizPrototoolHasVentanas" />
+          <XmlRelationshipData UseFullForm="true" RoleElementName="ventanaPrincipal">
+            <DomainRelationshipMoniker Name="TapizPrototoolHasVentanaPrincipal" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="ventanaSecundarium">
+            <DomainRelationshipMoniker Name="TapizPrototoolHasVentanaSecundarium" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -161,9 +187,6 @@
             <DomainPropertyMoniker Name="Ventana/altura" />
           </XmlPropertyData>
         </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="TapizPrototoolHasVentanas" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizPrototoolHasVentanasMoniker" ElementName="tapizPrototoolHasVentanas" MonikerTypeName="TapizPrototoolHasVentanasMoniker">
-        <DomainRelationshipMoniker Name="TapizPrototoolHasVentanas" />
       </XmlClassData>
       <XmlClassData TypeName="VentanaPrincipal" MonikerAttributeName="" SerializeId="true" MonikerElementName="ventanaPrincipalMoniker" ElementName="ventanaPrincipal" MonikerTypeName="VentanaPrincipalMoniker">
         <DomainClassMoniker Name="VentanaPrincipal" />
@@ -190,9 +213,6 @@
       <XmlClassData TypeName="VSecundariaReferencesVSecundaria" MonikerAttributeName="" SerializeId="true" MonikerElementName="vSecundariaReferencesVSecundariaMoniker" ElementName="vSecundariaReferencesVSecundaria" MonikerTypeName="VSecundariaReferencesVSecundariaMoniker">
         <DomainRelationshipMoniker Name="VSecundariaReferencesVSecundaria" />
       </XmlClassData>
-      <XmlClassData TypeName="VPrincipalMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="vPrincipalMetaforaMoniker" ElementName="vPrincipalMetafora" MonikerTypeName="VPrincipalMetaforaMoniker">
-        <GeometryShapeMoniker Name="VPrincipalMetafora" />
-      </XmlClassData>
       <XmlClassData TypeName="VSecundariaMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="vSecundariaMetaforaMoniker" ElementName="vSecundariaMetafora" MonikerTypeName="VSecundariaMetaforaMoniker">
         <GeometryShapeMoniker Name="VSecundariaMetafora" />
       </XmlClassData>
@@ -201,6 +221,12 @@
       </XmlClassData>
       <XmlClassData TypeName="VS_VSMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="vS_VSMetaforaMoniker" ElementName="vS_VSMetafora" MonikerTypeName="VS_VSMetaforaMoniker">
         <ConnectorMoniker Name="VS_VSMetafora" />
+      </XmlClassData>
+      <XmlClassData TypeName="TapizPrototoolHasVentanaPrincipal" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizPrototoolHasVentanaPrincipalMoniker" ElementName="tapizPrototoolHasVentanaPrincipal" MonikerTypeName="TapizPrototoolHasVentanaPrincipalMoniker">
+        <DomainRelationshipMoniker Name="TapizPrototoolHasVentanaPrincipal" />
+      </XmlClassData>
+      <XmlClassData TypeName="TapizPrototoolHasVentanaSecundarium" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizPrototoolHasVentanaSecundariumMoniker" ElementName="tapizPrototoolHasVentanaSecundarium" MonikerTypeName="TapizPrototoolHasVentanaSecundariumMoniker">
+        <DomainRelationshipMoniker Name="TapizPrototoolHasVentanaSecundarium" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -249,32 +275,6 @@
     <Class>
       <DomainClassMoniker Name="TapizPrototool" />
     </Class>
-    <ShapeMaps>
-      <ShapeMap>
-        <DomainClassMoniker Name="VentanaPrincipal" />
-        <ParentElementPath>
-          <DomainPath>TapizPrototoolHasVentanas.TapizPrototool/!TapizPrototool</DomainPath>
-        </ParentElementPath>
-        <GeometryShapeMoniker Name="VPrincipalMetafora" />
-      </ShapeMap>
-      <ShapeMap>
-        <DomainClassMoniker Name="VentanaSecundaria" />
-        <ParentElementPath>
-          <DomainPath>TapizPrototoolHasVentanas.TapizPrototool/!TapizPrototool</DomainPath>
-        </ParentElementPath>
-        <GeometryShapeMoniker Name="VSecundariaMetafora" />
-      </ShapeMap>
-    </ShapeMaps>
-    <ConnectorMaps>
-      <ConnectorMap>
-        <ConnectorMoniker Name="VP_VSMetafora" />
-        <DomainRelationshipMoniker Name="VPrincipalReferencesVSecundaria" />
-      </ConnectorMap>
-      <ConnectorMap>
-        <ConnectorMoniker Name="VS_VSMetafora" />
-        <DomainRelationshipMoniker Name="VSecundariaReferencesVSecundaria" />
-      </ConnectorMap>
-    </ConnectorMaps>
   </Diagram>
   <Designer CopyPasteGeneration="CopyPasteOnly" FileExtension="MPJAAMPrototool" EditorGuid="142bbe36-9ea0-47c5-a280-7f7d5fac1d12">
     <RootClass>
