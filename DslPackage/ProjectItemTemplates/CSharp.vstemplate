@@ -1,2 +1,17 @@
-<!-- Placeholder for content that will be generated when the solution is built for the first time -->
-<VSTemplate xmlns="http://schemas.microsoft.com/developer/vstemplate/2005"/>
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<TemplateID>{da15fd81-91d2-4a72-84f5-f5df2423333c}</TemplateID>
+		<Name Package="{4bf83fc1-2eec-4878-ba16-e6d035ae9e87}" ID="103"/>
+		<Description Package="{4bf83fc1-2eec-4878-ba16-e6d035ae9e87}" ID="102"/>
+		<Icon Package="{4bf83fc1-2eec-4878-ba16-e6d035ae9e87}" ID="201" />
+		<ProjectType>CSharp</ProjectType>
+		<SortOrder>360</SortOrder>
+		<DefaultName>MPJAAMPrototool.MPJAAMPrototool</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.MPJAAMPrototool">MPJAAMPrototool.MPJAAMPrototool</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.MPJAAMPrototool.diagram">MPJAAMPrototool.diagram</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+
