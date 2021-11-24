@@ -78,6 +78,29 @@ namespace UPM_IPS.MPJAAMPrototool
 		}
 
 		/// <summary>
+		/// Name of the toolbox tab that should be displayed when the diagram is opened.
+		/// </summary>
+		protected override string DefaultToolboxTabName
+		{
+			get
+			{
+				return global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolToolboxHelper.DefaultToolboxTabName;
+			}
+		}
+		
+		/// <summary>
+		/// Returns the toolbox items count in the default tool box tab.
+		/// </summary>
+		protected override int DefaultToolboxTabToolboxItemsCount
+		{
+			get
+			{
+				return global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolToolboxHelper.DefaultToolboxTabToolboxItemsCount;			
+			}
+		}
+		
+		
+		/// <summary>
 		/// Context menu displayed when the user right-clicks on the design surface.
 		/// </summary>
 		protected override global::System.ComponentModel.Design.CommandID ContextMenuId

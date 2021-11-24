@@ -68,7 +68,19 @@ namespace UPM_IPS.MPJAAMPrototool
 			return new global::System.Type[]
 			{
 				typeof(TapizPrototool),
+				typeof(Ventana),
+				typeof(VentanaPrincipal),
+				typeof(VentanaSecundaria),
+				typeof(TapizPrototoolHasVentanas),
+				typeof(VPrincipalReferencesVSecundaria),
+				typeof(VSecundariaReferencesVSecundaria),
 				typeof(MPJAAMPrototoolDiagram),
+				typeof(VP_VSMetafora),
+				typeof(VS_VSMetafora),
+				typeof(VPrincipalMetafora),
+				typeof(VSecundariaMetafora),
+				typeof(global::UPM_IPS.MPJAAMPrototool.FixUpDiagram),
+				typeof(global::UPM_IPS.MPJAAMPrototool.ConnectorRolePlayerChanged),
 			};
 		}
 		/// <summary>
@@ -81,6 +93,26 @@ namespace UPM_IPS.MPJAAMPrototool
 			return new DomainMemberInfo[]
 			{
 				new DomainMemberInfo(typeof(TapizPrototool), "nombreAplicacion", TapizPrototool.nombreAplicacionDomainPropertyId, typeof(TapizPrototool.nombreAplicacionPropertyHandler)),
+				new DomainMemberInfo(typeof(Ventana), "nombre", Ventana.nombreDomainPropertyId, typeof(Ventana.nombrePropertyHandler)),
+				new DomainMemberInfo(typeof(Ventana), "ancho", Ventana.anchoDomainPropertyId, typeof(Ventana.anchoPropertyHandler)),
+				new DomainMemberInfo(typeof(Ventana), "altura", Ventana.alturaDomainPropertyId, typeof(Ventana.alturaPropertyHandler)),
+				new DomainMemberInfo(typeof(VentanaSecundaria), "modal", VentanaSecundaria.modalDomainPropertyId, typeof(VentanaSecundaria.modalPropertyHandler)),
+			};
+		}
+		/// <summary>
+		/// Gets the list of generated domain roles.
+		/// </summary>
+		/// <returns>List of role data.</returns>
+		protected sealed override DomainRolePlayerInfo[] GetGeneratedDomainRoles()
+		{
+			return new DomainRolePlayerInfo[]
+			{
+				new DomainRolePlayerInfo(typeof(TapizPrototoolHasVentanas), "TapizPrototool", TapizPrototoolHasVentanas.TapizPrototoolDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizPrototoolHasVentanas), "Ventana", TapizPrototoolHasVentanas.VentanaDomainRoleId),
+				new DomainRolePlayerInfo(typeof(VPrincipalReferencesVSecundaria), "VentanaPrincipal", VPrincipalReferencesVSecundaria.VentanaPrincipalDomainRoleId),
+				new DomainRolePlayerInfo(typeof(VPrincipalReferencesVSecundaria), "VentanaSecundaria", VPrincipalReferencesVSecundaria.VentanaSecundariaDomainRoleId),
+				new DomainRolePlayerInfo(typeof(VSecundariaReferencesVSecundaria), "SourceVentanaSecundaria", VSecundariaReferencesVSecundaria.SourceVentanaSecundariaDomainRoleId),
+				new DomainRolePlayerInfo(typeof(VSecundariaReferencesVSecundaria), "TargetVentanaSecundaria", VSecundariaReferencesVSecundaria.TargetVentanaSecundariaDomainRoleId),
 			};
 		}
 		#endregion
@@ -102,9 +134,15 @@ namespace UPM_IPS.MPJAAMPrototool
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(2);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(9);
 				createElementMap.Add(typeof(TapizPrototool), 0);
-				createElementMap.Add(typeof(MPJAAMPrototoolDiagram), 1);
+				createElementMap.Add(typeof(VentanaPrincipal), 1);
+				createElementMap.Add(typeof(VentanaSecundaria), 2);
+				createElementMap.Add(typeof(MPJAAMPrototoolDiagram), 3);
+				createElementMap.Add(typeof(VP_VSMetafora), 4);
+				createElementMap.Add(typeof(VS_VSMetafora), 5);
+				createElementMap.Add(typeof(VPrincipalMetafora), 6);
+				createElementMap.Add(typeof(VSecundariaMetafora), 7);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -119,7 +157,13 @@ namespace UPM_IPS.MPJAAMPrototool
 			switch (index)
 			{
 				case 0: return new TapizPrototool(partition, propertyAssignments);
-				case 1: return new MPJAAMPrototoolDiagram(partition, propertyAssignments);
+				case 1: return new VentanaPrincipal(partition, propertyAssignments);
+				case 2: return new VentanaSecundaria(partition, propertyAssignments);
+				case 3: return new MPJAAMPrototoolDiagram(partition, propertyAssignments);
+				case 4: return new VP_VSMetafora(partition, propertyAssignments);
+				case 5: return new VS_VSMetafora(partition, propertyAssignments);
+				case 6: return new VPrincipalMetafora(partition, propertyAssignments);
+				case 7: return new VSecundariaMetafora(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -142,7 +186,10 @@ namespace UPM_IPS.MPJAAMPrototool
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(0);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(3);
+				createElementLinkMap.Add(typeof(TapizPrototoolHasVentanas), 0);
+				createElementLinkMap.Add(typeof(VPrincipalReferencesVSecundaria), 1);
+				createElementLinkMap.Add(typeof(VSecundariaReferencesVSecundaria), 2);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -157,6 +204,9 @@ namespace UPM_IPS.MPJAAMPrototool
 			}
 			switch (index)
 			{
+				case 0: return new TapizPrototoolHasVentanas(partition, roleAssignments, propertyAssignments);
+				case 1: return new VPrincipalReferencesVSecundaria(partition, roleAssignments, propertyAssignments);
+				case 2: return new VSecundariaReferencesVSecundaria(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -237,6 +287,7 @@ namespace UPM_IPS.MPJAAMPrototool
 					DslModeling::ChainingElementVisitorFilter copyFilter = new DslModeling::ChainingElementVisitorFilter();
 					copyFilter.AddFilter(new MPJAAMPrototoolCopyClosure());
 					copyFilter.AddFilter(new DslModeling::CoreCopyClosure());
+					copyFilter.AddFilter(new DslDiagrams::CoreDesignSurfaceCopyClosure());
 					
 					MPJAAMPrototoolDomainModel.copyClosure = copyFilter;
 				}
@@ -256,6 +307,7 @@ namespace UPM_IPS.MPJAAMPrototool
 					DslModeling::ChainingElementVisitorFilter removeFilter = new DslModeling::ChainingElementVisitorFilter();
 					removeFilter.AddFilter(new MPJAAMPrototoolDeleteClosure());
 					removeFilter.AddFilter(new DslModeling::CoreDeleteClosure());
+					removeFilter.AddFilter(new DslDiagrams::CoreDesignSurfaceDeleteClosure());
 		
 					MPJAAMPrototoolDomainModel.removeClosure = removeFilter;
 				}
@@ -274,6 +326,8 @@ namespace UPM_IPS.MPJAAMPrototool
 			if(store == null) throw new global::System.ArgumentNullException("store");
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
+			ruleManager.EnableRule(typeof(global::UPM_IPS.MPJAAMPrototool.FixUpDiagram));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.MPJAAMPrototool.ConnectorRolePlayerChanged));
 		}
 		
 		/// <summary>
@@ -284,6 +338,8 @@ namespace UPM_IPS.MPJAAMPrototool
 			if(store == null) throw new global::System.ArgumentNullException("store");
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
+			ruleManager.DisableRule(typeof(global::UPM_IPS.MPJAAMPrototool.FixUpDiagram));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.MPJAAMPrototool.ConnectorRolePlayerChanged));
 		}
 		#endregion
 	}
@@ -319,6 +375,7 @@ namespace UPM_IPS.MPJAAMPrototool
 		public MPJAAMPrototoolDeleteClosureBase()
 		{
 			#region Initialize DomainData Table
+			DomainRoles.Add(global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.VentanaDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>

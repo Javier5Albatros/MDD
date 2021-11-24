@@ -27,6 +27,40 @@ namespace UPM_IPS.MPJAAMPrototool
 	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true)]
 	[VSShell::ProvideToolWindow(typeof(MPJAAMPrototoolExplorerToolWindow), MultiInstances = false, Style = VSShell::VsDockStyle.Tabbed, Orientation = VSShell::ToolWindowOrientation.Right, Window = "{3AE79031-E1BC-11D0-8F78-00A0C9110057}")]
 	[VSShell::ProvideToolWindowVisibility(typeof(MPJAAMPrototoolExplorerToolWindow), Constants.MPJAAMPrototoolEditorFactoryId)]
+	[VSShell::ProvideStaticToolboxGroup("@VentanasToolboxTab;UPM_IPS.MPJAAMPrototool.Dsl.dll", "UPM_IPS.MPJAAMPrototool.VentanasToolboxTab")]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.MPJAAMPrototool.VentanasToolboxTab",
+					"@VPrincipalToolToolboxItem;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
+					"UPM_IPS.MPJAAMPrototool.VPrincipalToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"VPrincipalTool", 
+					"@VPrincipalToolToolboxBitmap;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
+					0xff00ff,
+					Index = 0)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.MPJAAMPrototool.VentanasToolboxTab",
+					"@VSecundariaToolToolboxItem;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
+					"UPM_IPS.MPJAAMPrototool.VSecundariaToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"VSecundariaTool", 
+					"@VSecundariaToolToolboxBitmap;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
+					0xff00ff,
+					Index = 1)]
+	[VSShell::ProvideStaticToolboxGroup("@RelacionesToolboxTab;UPM_IPS.MPJAAMPrototool.Dsl.dll", "UPM_IPS.MPJAAMPrototool.RelacionesToolboxTab")]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.MPJAAMPrototool.RelacionesToolboxTab",
+					"@VP_VSToolToolboxItem;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
+					"UPM_IPS.MPJAAMPrototool.VP_VSToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"VP_VSTool", 
+					"@VP_VSToolToolboxBitmap;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
+					0xff00ff,
+					Index = 2)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.MPJAAMPrototool.RelacionesToolboxTab",
+					"@VS_VSToolToolboxItem;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
+					"UPM_IPS.MPJAAMPrototool.VS_VSToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"VS_VSTool", 
+					"@VS_VSToolToolboxBitmap;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
+					0xff00ff,
+					Index = 3)]
 	[VSShell::ProvideEditorFactory(typeof(MPJAAMPrototoolEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(MPJAAMPrototoolEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(MPJAAMPrototoolEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer
@@ -100,6 +134,20 @@ namespace UPM_IPS.MPJAAMPrototool
 			}
 		}
 		
+		
+		/// <summary>
+		/// Given a toolbox item "unique ID" and a data format identifier, returns the content of
+		/// the data format. 
+		/// </summary>
+		/// <param name="itemId">The unique ToolboxItem to retrieve data for</param>
+		/// <param name="format">The desired format of the resulting data</param>
+		protected override object GetToolboxItemData(string itemId, DataFormats.Format format)
+		{
+			Debug.Assert(toolboxHelper != null, "Toolbox helper is not initialized");
+		
+			// Retrieve the specified ToolboxItem from the DSL
+			return toolboxHelper.GetToolboxItemData(itemId, format);
+		}
 	}
 
 }
