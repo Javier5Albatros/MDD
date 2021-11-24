@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mPJAAMPrototoolDiagram dslVersion="1.0.0.0" Id="9efd54c4-f384-4616-bb6d-c2d335842f23" absoluteBounds="0, 0, 11, 8.5" name="Sample">
+  <exampleModelMoniker Id="1a7a0ebe-8c64-4e55-aa20-c8dbbe1c97ee" />
+  <nestedChildShapes>
+    <exampleShape Id="adf1a02d-c620-4637-89b5-bc624c02e098" absoluteBounds="0.5, 1.75, 2, 0.75">
+      <exampleElementMoniker name="/1a7a0ebe-8c64-4e55-aa20-c8dbbe1c97ee/ExampleElement1" />
+    </exampleShape>
+    <exampleShape Id="1f90e9c4-76c7-4a12-89c0-fb3243256373" absoluteBounds="3, 0.5, 2, 0.75">
+      <exampleElementMoniker name="/1a7a0ebe-8c64-4e55-aa20-c8dbbe1c97ee/ExampleElement2" />
+    </exampleShape>
+    <exampleConnector Id="b099a198-cf39-4174-92ee-73c2373e31a4" edgePoints="[(1.5 : 1.75); (1.5 : 0.875); (3 : 0.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="90b1ba68-51b9-4834-957b-066e2e0c309a">
+      <nodes>
+        <exampleShapeMoniker Id="adf1a02d-c620-4637-89b5-bc624c02e098" />
+        <exampleShapeMoniker Id="1f90e9c4-76c7-4a12-89c0-fb3243256373" />
+      </nodes>
+    </exampleConnector>
+  </nestedChildShapes>
+</mPJAAMPrototoolDiagram>
