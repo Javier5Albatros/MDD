@@ -12,245 +12,6 @@ using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 namespace UPM_IPS.MPJAAMPrototool
 {
 	/// <summary>
-	/// DomainRelationship TapizPrototoolHasVentanas
-	/// Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas
-	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship(IsEmbedding=true)]
-	[DslModeling::DomainObjectId("3110b838-aee1-4ede-8d3b-159c68d0c5f5")]
-	public partial class TapizPrototoolHasVentanas : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// TapizPrototoolHasVentanas domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x3110b838, 0xaee1, 0x4ede, 0x8d, 0x3b, 0x15, 0x9c, 0x68, 0xd0, 0xc5, 0xf5);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a TapizPrototoolHasVentanas link in the same Partition as the given TapizPrototool
-		/// </summary>
-		/// <param name="source">TapizPrototool to use as the source of the relationship.</param>
-		/// <param name="target">Ventana to use as the target of the relationship.</param>
-		public TapizPrototoolHasVentanas(TapizPrototool source, Ventana target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(TapizPrototoolHasVentanas.TapizPrototoolDomainRoleId, source), new DslModeling::RoleAssignment(TapizPrototoolHasVentanas.VentanaDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public TapizPrototoolHasVentanas(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public TapizPrototoolHasVentanas(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public TapizPrototoolHasVentanas(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public TapizPrototoolHasVentanas(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region TapizPrototool domain role code
-		
-		/// <summary>
-		/// TapizPrototool domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid TapizPrototoolDomainRoleId = new global::System.Guid(0x14b11b21, 0x846f, 0x43a6, 0x98, 0x85, 0x08, 0x24, 0x65, 0x16, 0x70, 0xab);
-		
-		/// <summary>
-		/// DomainRole TapizPrototool
-		/// Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.TapizPrototool
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas/TapizPrototool.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas/TapizPrototool.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Ventanas", PropertyDisplayNameKey="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas/TapizPrototool.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("14b11b21-846f-43a6-9885-0824651670ab")]
-		public virtual TapizPrototool TapizPrototool
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (TapizPrototool)DslModeling::DomainRoleInfo.GetRolePlayer(this, TapizPrototoolDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, TapizPrototoolDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access TapizPrototool of a Ventana
-		/// <summary>
-		/// Gets TapizPrototool.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static TapizPrototool GetTapizPrototool(Ventana element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, VentanaDomainRoleId) as TapizPrototool;
-		}
-		
-		/// <summary>
-		/// Sets TapizPrototool.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetTapizPrototool(Ventana element, TapizPrototool newTapizPrototool)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, VentanaDomainRoleId, newTapizPrototool);
-		}
-		#endregion
-		#region Ventana domain role code
-		
-		/// <summary>
-		/// Ventana domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid VentanaDomainRoleId = new global::System.Guid(0x7e36a506, 0x3667, 0x4514, 0x86, 0x2d, 0x54, 0x32, 0x01, 0x53, 0xc5, 0x03);
-		
-		/// <summary>
-		/// DomainRole Ventana
-		/// Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.Ventana
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas/Ventana.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas/Ventana.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "TapizPrototool", PropertyDisplayNameKey="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas/Ventana.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("7e36a506-3667-4514-862d-54320153c503")]
-		public virtual Ventana Ventana
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Ventana)DslModeling::DomainRoleInfo.GetRolePlayer(this, VentanaDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, VentanaDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Ventanas of a TapizPrototool
-		/// <summary>
-		/// Gets a list of Ventanas.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Ventana> GetVentanas(TapizPrototool element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Ventana>, Ventana>(element, TapizPrototoolDomainRoleId);
-		}
-		#endregion
-		#region TapizPrototool link accessor
-		/// <summary>
-		/// Get the list of TapizPrototoolHasVentanas links to a TapizPrototool.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas> GetLinksToVentanas ( global::UPM_IPS.MPJAAMPrototool.TapizPrototool tapizPrototoolInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas>(tapizPrototoolInstance, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.TapizPrototoolDomainRoleId);
-		}
-		#endregion
-		#region Ventana link accessor
-		/// <summary>
-		/// Get the TapizPrototoolHasVentanas link to a Ventana.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas GetLinkToTapizPrototool (global::UPM_IPS.MPJAAMPrototool.Ventana ventanaInstance)
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas>(ventanaInstance, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.VentanaDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Ventana not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region TapizPrototoolHasVentanas instance accessors
-		
-		/// <summary>
-		/// Get any TapizPrototoolHasVentanas links between a given TapizPrototool and a Ventana.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas> GetLinks( global::UPM_IPS.MPJAAMPrototool.TapizPrototool source, global::UPM_IPS.MPJAAMPrototool.Ventana target )
-		{
-			global::System.Collections.Generic.List<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas>();
-			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas>(source, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.TapizPrototoolDomainRoleId);
-			foreach ( global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas link in links )
-			{
-				if ( target.Equals(link.Ventana) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one TapizPrototoolHasVentanas link between a given TapizPrototooland a Ventana.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas GetLink( global::UPM_IPS.MPJAAMPrototool.TapizPrototool source, global::UPM_IPS.MPJAAMPrototool.Ventana target )
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas>(source, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.TapizPrototoolDomainRoleId);
-			foreach ( global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas link in links )
-			{
-				if ( target.Equals(link.Ventana) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace UPM_IPS.MPJAAMPrototool
-{
-	/// <summary>
 	/// DomainRelationship VPrincipalReferencesVSecundaria
 	/// Description for UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria
 	/// </summary>
@@ -701,6 +462,507 @@ namespace UPM_IPS.MPJAAMPrototool
 			foreach ( global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria link in links )
 			{
 				if ( target.Equals(link.TargetVentanaSecundaria) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.MPJAAMPrototool
+{
+	/// <summary>
+	/// DomainRelationship TapizPrototoolHasVentanaPrincipal
+	/// Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("5e0ffb4c-847d-4fa2-999b-467d8572cf7b")]
+	public partial class TapizPrototoolHasVentanaPrincipal : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// TapizPrototoolHasVentanaPrincipal domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x5e0ffb4c, 0x847d, 0x4fa2, 0x99, 0x9b, 0x46, 0x7d, 0x85, 0x72, 0xcf, 0x7b);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a TapizPrototoolHasVentanaPrincipal link in the same Partition as the given TapizPrototool
+		/// </summary>
+		/// <param name="source">TapizPrototool to use as the source of the relationship.</param>
+		/// <param name="target">VentanaPrincipal to use as the target of the relationship.</param>
+		public TapizPrototoolHasVentanaPrincipal(TapizPrototool source, VentanaPrincipal target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(TapizPrototoolHasVentanaPrincipal.TapizPrototoolDomainRoleId, source), new DslModeling::RoleAssignment(TapizPrototoolHasVentanaPrincipal.VentanaPrincipalDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TapizPrototoolHasVentanaPrincipal(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TapizPrototoolHasVentanaPrincipal(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TapizPrototoolHasVentanaPrincipal(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TapizPrototoolHasVentanaPrincipal(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region TapizPrototool domain role code
+		
+		/// <summary>
+		/// TapizPrototool domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid TapizPrototoolDomainRoleId = new global::System.Guid(0x07dc0c16, 0x0f98, 0x4d58, 0x93, 0x71, 0xd9, 0xcb, 0x7c, 0xd0, 0x12, 0x41);
+		
+		/// <summary>
+		/// DomainRole TapizPrototool
+		/// Description for
+		/// UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.TapizPrototool
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal/TapizPrototool.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal/TapizPrototool.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "VentanaPrincipal", PropertyDisplayNameKey="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal/TapizPrototool.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("07dc0c16-0f98-4d58-9371-d9cb7cd01241")]
+		public virtual TapizPrototool TapizPrototool
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (TapizPrototool)DslModeling::DomainRoleInfo.GetRolePlayer(this, TapizPrototoolDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, TapizPrototoolDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access TapizPrototool of a VentanaPrincipal
+		/// <summary>
+		/// Gets TapizPrototool.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static TapizPrototool GetTapizPrototool(VentanaPrincipal element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, VentanaPrincipalDomainRoleId) as TapizPrototool;
+		}
+		
+		/// <summary>
+		/// Sets TapizPrototool.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetTapizPrototool(VentanaPrincipal element, TapizPrototool newTapizPrototool)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, VentanaPrincipalDomainRoleId, newTapizPrototool);
+		}
+		#endregion
+		#region VentanaPrincipal domain role code
+		
+		/// <summary>
+		/// VentanaPrincipal domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid VentanaPrincipalDomainRoleId = new global::System.Guid(0x8cddf1f0, 0xf7bb, 0x4788, 0x87, 0x81, 0x6f, 0x13, 0xad, 0xf4, 0x72, 0x8f);
+		
+		/// <summary>
+		/// DomainRole VentanaPrincipal
+		/// Description for
+		/// UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.VentanaPrincipal
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal/VentanaPrincipal.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal/VentanaPrincipal.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "TapizPrototool", PropertyDisplayNameKey="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal/VentanaPrincipal.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("8cddf1f0-f7bb-4788-8781-6f13adf4728f")]
+		public virtual VentanaPrincipal VentanaPrincipal
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (VentanaPrincipal)DslModeling::DomainRoleInfo.GetRolePlayer(this, VentanaPrincipalDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, VentanaPrincipalDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access VentanaPrincipal of a TapizPrototool
+		/// <summary>
+		/// Gets VentanaPrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static VentanaPrincipal GetVentanaPrincipal(TapizPrototool element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, TapizPrototoolDomainRoleId) as VentanaPrincipal;
+		}
+		
+		/// <summary>
+		/// Sets VentanaPrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetVentanaPrincipal(TapizPrototool element, VentanaPrincipal newVentanaPrincipal)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, TapizPrototoolDomainRoleId, newVentanaPrincipal);
+		}
+		#endregion
+		#region TapizPrototool link accessor
+		/// <summary>
+		/// Get the TapizPrototoolHasVentanaPrincipal link to a TapizPrototool.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal GetLinkToVentanaPrincipal (global::UPM_IPS.MPJAAMPrototool.TapizPrototool tapizPrototoolInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal>(tapizPrototoolInstance, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.TapizPrototoolDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of TapizPrototool not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region VentanaPrincipal link accessor
+		/// <summary>
+		/// Get the TapizPrototoolHasVentanaPrincipal link to a VentanaPrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal GetLinkToTapizPrototool (global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal ventanaPrincipalInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal>(ventanaPrincipalInstance, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.VentanaPrincipalDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of VentanaPrincipal not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region TapizPrototoolHasVentanaPrincipal instance accessors
+		
+		/// <summary>
+		/// Get any TapizPrototoolHasVentanaPrincipal links between a given TapizPrototool and a VentanaPrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal> GetLinks( global::UPM_IPS.MPJAAMPrototool.TapizPrototool source, global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal>(source, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.TapizPrototoolDomainRoleId);
+			foreach ( global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal link in links )
+			{
+				if ( target.Equals(link.VentanaPrincipal) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one TapizPrototoolHasVentanaPrincipal link between a given TapizPrototooland a VentanaPrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal GetLink( global::UPM_IPS.MPJAAMPrototool.TapizPrototool source, global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal>(source, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.TapizPrototoolDomainRoleId);
+			foreach ( global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal link in links )
+			{
+				if ( target.Equals(link.VentanaPrincipal) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.MPJAAMPrototool
+{
+	/// <summary>
+	/// DomainRelationship TapizPrototoolHasVentanaSecundarium
+	/// Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("2087e3fb-77d1-46a2-814e-c7e0d98e91c7")]
+	public partial class TapizPrototoolHasVentanaSecundarium : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// TapizPrototoolHasVentanaSecundarium domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x2087e3fb, 0x77d1, 0x46a2, 0x81, 0x4e, 0xc7, 0xe0, 0xd9, 0x8e, 0x91, 0xc7);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a TapizPrototoolHasVentanaSecundarium link in the same Partition as the given TapizPrototool
+		/// </summary>
+		/// <param name="source">TapizPrototool to use as the source of the relationship.</param>
+		/// <param name="target">VentanaSecundaria to use as the target of the relationship.</param>
+		public TapizPrototoolHasVentanaSecundarium(TapizPrototool source, VentanaSecundaria target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(TapizPrototoolHasVentanaSecundarium.TapizPrototoolDomainRoleId, source), new DslModeling::RoleAssignment(TapizPrototoolHasVentanaSecundarium.VentanaSecundariaDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TapizPrototoolHasVentanaSecundarium(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TapizPrototoolHasVentanaSecundarium(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TapizPrototoolHasVentanaSecundarium(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TapizPrototoolHasVentanaSecundarium(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region TapizPrototool domain role code
+		
+		/// <summary>
+		/// TapizPrototool domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid TapizPrototoolDomainRoleId = new global::System.Guid(0x423162ad, 0xba77, 0x4cc2, 0xb0, 0x93, 0x58, 0xe4, 0x02, 0x74, 0x25, 0x31);
+		
+		/// <summary>
+		/// DomainRole TapizPrototool
+		/// Description for
+		/// UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.TapizPrototool
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium/TapizPrototool.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium/TapizPrototool.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "VentanaSecundarium", PropertyDisplayNameKey="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium/TapizPrototool.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("423162ad-ba77-4cc2-b093-58e402742531")]
+		public virtual TapizPrototool TapizPrototool
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (TapizPrototool)DslModeling::DomainRoleInfo.GetRolePlayer(this, TapizPrototoolDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, TapizPrototoolDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access TapizPrototool of a VentanaSecundaria
+		/// <summary>
+		/// Gets TapizPrototool.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static TapizPrototool GetTapizPrototool(VentanaSecundaria element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, VentanaSecundariaDomainRoleId) as TapizPrototool;
+		}
+		
+		/// <summary>
+		/// Sets TapizPrototool.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetTapizPrototool(VentanaSecundaria element, TapizPrototool newTapizPrototool)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, VentanaSecundariaDomainRoleId, newTapizPrototool);
+		}
+		#endregion
+		#region VentanaSecundaria domain role code
+		
+		/// <summary>
+		/// VentanaSecundaria domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid VentanaSecundariaDomainRoleId = new global::System.Guid(0xbc4b6a58, 0xb595, 0x49f7, 0xb5, 0x4d, 0x6c, 0xa6, 0x14, 0x27, 0x3f, 0xd4);
+		
+		/// <summary>
+		/// DomainRole VentanaSecundaria
+		/// Description for
+		/// UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.VentanaSecundaria
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium/VentanaSecundaria.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium/VentanaSecundaria.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "TapizPrototool", PropertyDisplayNameKey="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium/VentanaSecundaria.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("bc4b6a58-b595-49f7-b54d-6ca614273fd4")]
+		public virtual VentanaSecundaria VentanaSecundaria
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (VentanaSecundaria)DslModeling::DomainRoleInfo.GetRolePlayer(this, VentanaSecundariaDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, VentanaSecundariaDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access VentanaSecundarium of a TapizPrototool
+		/// <summary>
+		/// Gets a list of VentanaSecundarium.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<VentanaSecundaria> GetVentanaSecundarium(TapizPrototool element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<VentanaSecundaria>, VentanaSecundaria>(element, TapizPrototoolDomainRoleId);
+		}
+		#endregion
+		#region TapizPrototool link accessor
+		/// <summary>
+		/// Get the list of TapizPrototoolHasVentanaSecundarium links to a TapizPrototool.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium> GetLinksToVentanaSecundarium ( global::UPM_IPS.MPJAAMPrototool.TapizPrototool tapizPrototoolInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium>(tapizPrototoolInstance, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.TapizPrototoolDomainRoleId);
+		}
+		#endregion
+		#region VentanaSecundaria link accessor
+		/// <summary>
+		/// Get the TapizPrototoolHasVentanaSecundarium link to a VentanaSecundaria.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium GetLinkToTapizPrototool (global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria ventanaSecundariaInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium>(ventanaSecundariaInstance, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.VentanaSecundariaDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of VentanaSecundaria not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region TapizPrototoolHasVentanaSecundarium instance accessors
+		
+		/// <summary>
+		/// Get any TapizPrototoolHasVentanaSecundarium links between a given TapizPrototool and a VentanaSecundaria.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium> GetLinks( global::UPM_IPS.MPJAAMPrototool.TapizPrototool source, global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium>(source, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.TapizPrototoolDomainRoleId);
+			foreach ( global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium link in links )
+			{
+				if ( target.Equals(link.VentanaSecundaria) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one TapizPrototoolHasVentanaSecundarium link between a given TapizPrototooland a VentanaSecundaria.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium GetLink( global::UPM_IPS.MPJAAMPrototool.TapizPrototool source, global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium>(source, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.TapizPrototoolDomainRoleId);
+			foreach ( global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium link in links )
+			{
+				if ( target.Equals(link.VentanaSecundaria) )
 				{
 					return link;
 				}

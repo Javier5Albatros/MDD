@@ -44,8 +44,8 @@ namespace UPM_IPS.MPJAAMPrototool
 					"@VSecundariaToolToolboxBitmap;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
 					0xff00ff,
 					Index = 1)]
-	[VSShell::ProvideStaticToolboxGroup("@RelacionesToolboxTab;UPM_IPS.MPJAAMPrototool.Dsl.dll", "UPM_IPS.MPJAAMPrototool.RelacionesToolboxTab")]
-	[VSShell::ProvideStaticToolboxItem("UPM_IPS.MPJAAMPrototool.RelacionesToolboxTab",
+	[VSShell::ProvideStaticToolboxGroup("@ConexionesToolboxTab;UPM_IPS.MPJAAMPrototool.Dsl.dll", "UPM_IPS.MPJAAMPrototool.ConexionesToolboxTab")]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.MPJAAMPrototool.ConexionesToolboxTab",
 					"@VP_VSToolToolboxItem;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
 					"UPM_IPS.MPJAAMPrototool.VP_VSToolToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
@@ -53,7 +53,7 @@ namespace UPM_IPS.MPJAAMPrototool
 					"@VP_VSToolToolboxBitmap;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
 					0xff00ff,
 					Index = 2)]
-	[VSShell::ProvideStaticToolboxItem("UPM_IPS.MPJAAMPrototool.RelacionesToolboxTab",
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.MPJAAMPrototool.ConexionesToolboxTab",
 					"@VS_VSToolToolboxItem;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
 					"UPM_IPS.MPJAAMPrototool.VS_VSToolToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 

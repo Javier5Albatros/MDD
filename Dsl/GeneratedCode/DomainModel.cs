@@ -71,9 +71,10 @@ namespace UPM_IPS.MPJAAMPrototool
 				typeof(Ventana),
 				typeof(VentanaPrincipal),
 				typeof(VentanaSecundaria),
-				typeof(TapizPrototoolHasVentanas),
 				typeof(VPrincipalReferencesVSecundaria),
 				typeof(VSecundariaReferencesVSecundaria),
+				typeof(TapizPrototoolHasVentanaPrincipal),
+				typeof(TapizPrototoolHasVentanaSecundarium),
 				typeof(MPJAAMPrototoolDiagram),
 				typeof(VP_VSMetafora),
 				typeof(VS_VSMetafora),
@@ -107,12 +108,14 @@ namespace UPM_IPS.MPJAAMPrototool
 		{
 			return new DomainRolePlayerInfo[]
 			{
-				new DomainRolePlayerInfo(typeof(TapizPrototoolHasVentanas), "TapizPrototool", TapizPrototoolHasVentanas.TapizPrototoolDomainRoleId),
-				new DomainRolePlayerInfo(typeof(TapizPrototoolHasVentanas), "Ventana", TapizPrototoolHasVentanas.VentanaDomainRoleId),
 				new DomainRolePlayerInfo(typeof(VPrincipalReferencesVSecundaria), "VentanaPrincipal", VPrincipalReferencesVSecundaria.VentanaPrincipalDomainRoleId),
 				new DomainRolePlayerInfo(typeof(VPrincipalReferencesVSecundaria), "VentanaSecundaria", VPrincipalReferencesVSecundaria.VentanaSecundariaDomainRoleId),
 				new DomainRolePlayerInfo(typeof(VSecundariaReferencesVSecundaria), "SourceVentanaSecundaria", VSecundariaReferencesVSecundaria.SourceVentanaSecundariaDomainRoleId),
 				new DomainRolePlayerInfo(typeof(VSecundariaReferencesVSecundaria), "TargetVentanaSecundaria", VSecundariaReferencesVSecundaria.TargetVentanaSecundariaDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizPrototoolHasVentanaPrincipal), "TapizPrototool", TapizPrototoolHasVentanaPrincipal.TapizPrototoolDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizPrototoolHasVentanaPrincipal), "VentanaPrincipal", TapizPrototoolHasVentanaPrincipal.VentanaPrincipalDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizPrototoolHasVentanaSecundarium), "TapizPrototool", TapizPrototoolHasVentanaSecundarium.TapizPrototoolDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizPrototoolHasVentanaSecundarium), "VentanaSecundaria", TapizPrototoolHasVentanaSecundarium.VentanaSecundariaDomainRoleId),
 			};
 		}
 		#endregion
@@ -186,10 +189,11 @@ namespace UPM_IPS.MPJAAMPrototool
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(3);
-				createElementLinkMap.Add(typeof(TapizPrototoolHasVentanas), 0);
-				createElementLinkMap.Add(typeof(VPrincipalReferencesVSecundaria), 1);
-				createElementLinkMap.Add(typeof(VSecundariaReferencesVSecundaria), 2);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(4);
+				createElementLinkMap.Add(typeof(VPrincipalReferencesVSecundaria), 0);
+				createElementLinkMap.Add(typeof(VSecundariaReferencesVSecundaria), 1);
+				createElementLinkMap.Add(typeof(TapizPrototoolHasVentanaPrincipal), 2);
+				createElementLinkMap.Add(typeof(TapizPrototoolHasVentanaSecundarium), 3);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -204,9 +208,10 @@ namespace UPM_IPS.MPJAAMPrototool
 			}
 			switch (index)
 			{
-				case 0: return new TapizPrototoolHasVentanas(partition, roleAssignments, propertyAssignments);
-				case 1: return new VPrincipalReferencesVSecundaria(partition, roleAssignments, propertyAssignments);
-				case 2: return new VSecundariaReferencesVSecundaria(partition, roleAssignments, propertyAssignments);
+				case 0: return new VPrincipalReferencesVSecundaria(partition, roleAssignments, propertyAssignments);
+				case 1: return new VSecundariaReferencesVSecundaria(partition, roleAssignments, propertyAssignments);
+				case 2: return new TapizPrototoolHasVentanaPrincipal(partition, roleAssignments, propertyAssignments);
+				case 3: return new TapizPrototoolHasVentanaSecundarium(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -375,7 +380,8 @@ namespace UPM_IPS.MPJAAMPrototool
 		public MPJAAMPrototoolDeleteClosureBase()
 		{
 			#region Initialize DomainData Table
-			DomainRoles.Add(global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.VentanaDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.VentanaPrincipalDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.VentanaSecundariaDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>

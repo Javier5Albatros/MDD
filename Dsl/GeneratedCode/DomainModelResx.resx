@@ -197,38 +197,6 @@
     <value>Modal</value>
     <comment>DisplayName for DomainProperty &apos;modal&apos; on DomainClass &apos;VentanaSecundaria&apos;</comment>
   </data>
-  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas</value>
-    <comment>Description for DomainClass &apos;TapizPrototoolHasVentanas&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.DisplayName" xml:space="preserve">
-    <value>Tapiz Prototool Has Ventanas</value>
-    <comment>DisplayName for DomainClass &apos;TapizPrototoolHasVentanas&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas/TapizPrototool.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.TapizPrototool</value>
-    <comment>Description for DomainRole &apos;TapizPrototool&apos; on DomainRelationship &apos;TapizPrototoolHasVentanas&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas/TapizPrototool.DisplayName" xml:space="preserve">
-    <value>Tapiz Prototool</value>
-    <comment>DisplayName for DomainRole &apos;TapizPrototool&apos; on DomainRelationship &apos;TapizPrototoolHasVentanas&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas/TapizPrototool.PropertyDisplayName" xml:space="preserve">
-    <value>Ventanas</value>
-    <comment>PropertyDisplayName for DomainRole &apos;TapizPrototool&apos; on DomainRelationship &apos;TapizPrototoolHasVentanas&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas/Ventana.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.Ventana</value>
-    <comment>Description for DomainRole &apos;Ventana&apos; on DomainRelationship &apos;TapizPrototoolHasVentanas&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas/Ventana.DisplayName" xml:space="preserve">
-    <value>Ventana</value>
-    <comment>DisplayName for DomainRole &apos;Ventana&apos; on DomainRelationship &apos;TapizPrototoolHasVentanas&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas/Ventana.PropertyDisplayName" xml:space="preserve">
-    <value>Tapiz Prototool</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Ventana&apos; on DomainRelationship &apos;TapizPrototoolHasVentanas&apos;</comment>
-  </data>
   <data name="UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria</value>
     <comment>Description for DomainClass &apos;VPrincipalReferencesVSecundaria&apos;</comment>
@@ -293,6 +261,70 @@
     <value>Source Ventana Secundarium</value>
     <comment>PropertyDisplayName for DomainRole &apos;TargetVentanaSecundaria&apos; on DomainRelationship &apos;VSecundariaReferencesVSecundaria&apos;</comment>
   </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal</value>
+    <comment>Description for DomainClass &apos;TapizPrototoolHasVentanaPrincipal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.DisplayName" xml:space="preserve">
+    <value>Tapiz Prototool Has Ventana Principal</value>
+    <comment>DisplayName for DomainClass &apos;TapizPrototoolHasVentanaPrincipal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal/TapizPrototool.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.TapizPrototool</value>
+    <comment>Description for DomainRole &apos;TapizPrototool&apos; on DomainRelationship &apos;TapizPrototoolHasVentanaPrincipal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal/TapizPrototool.DisplayName" xml:space="preserve">
+    <value>Tapiz Prototool</value>
+    <comment>DisplayName for DomainRole &apos;TapizPrototool&apos; on DomainRelationship &apos;TapizPrototoolHasVentanaPrincipal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal/TapizPrototool.PropertyDisplayName" xml:space="preserve">
+    <value>Ventana Principal</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TapizPrototool&apos; on DomainRelationship &apos;TapizPrototoolHasVentanaPrincipal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal/VentanaPrincipal.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.VentanaPrincipal</value>
+    <comment>Description for DomainRole &apos;VentanaPrincipal&apos; on DomainRelationship &apos;TapizPrototoolHasVentanaPrincipal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal/VentanaPrincipal.DisplayName" xml:space="preserve">
+    <value>Ventana Principal</value>
+    <comment>DisplayName for DomainRole &apos;VentanaPrincipal&apos; on DomainRelationship &apos;TapizPrototoolHasVentanaPrincipal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal/VentanaPrincipal.PropertyDisplayName" xml:space="preserve">
+    <value>Tapiz Prototool</value>
+    <comment>PropertyDisplayName for DomainRole &apos;VentanaPrincipal&apos; on DomainRelationship &apos;TapizPrototoolHasVentanaPrincipal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium</value>
+    <comment>Description for DomainClass &apos;TapizPrototoolHasVentanaSecundarium&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.DisplayName" xml:space="preserve">
+    <value>Tapiz Prototool Has Ventana Secundarium</value>
+    <comment>DisplayName for DomainClass &apos;TapizPrototoolHasVentanaSecundarium&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium/TapizPrototool.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.TapizPrototool</value>
+    <comment>Description for DomainRole &apos;TapizPrototool&apos; on DomainRelationship &apos;TapizPrototoolHasVentanaSecundarium&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium/TapizPrototool.DisplayName" xml:space="preserve">
+    <value>Tapiz Prototool</value>
+    <comment>DisplayName for DomainRole &apos;TapizPrototool&apos; on DomainRelationship &apos;TapizPrototoolHasVentanaSecundarium&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium/TapizPrototool.PropertyDisplayName" xml:space="preserve">
+    <value>Ventana Secundarium</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TapizPrototool&apos; on DomainRelationship &apos;TapizPrototoolHasVentanaSecundarium&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium/VentanaSecundaria.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.VentanaSecundaria</value>
+    <comment>Description for DomainRole &apos;VentanaSecundaria&apos; on DomainRelationship &apos;TapizPrototoolHasVentanaSecundarium&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium/VentanaSecundaria.DisplayName" xml:space="preserve">
+    <value>Ventana Secundaria</value>
+    <comment>DisplayName for DomainRole &apos;VentanaSecundaria&apos; on DomainRelationship &apos;TapizPrototoolHasVentanaSecundarium&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium/VentanaSecundaria.PropertyDisplayName" xml:space="preserve">
+    <value>Tapiz Prototool</value>
+    <comment>PropertyDisplayName for DomainRole &apos;VentanaSecundaria&apos; on DomainRelationship &apos;TapizPrototoolHasVentanaSecundarium&apos;</comment>
+  </data>
   <data name="UPM_IPS.MPJAAMPrototool.VPrincipalMetafora.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MPJAAMPrototool.VPrincipalMetafora</value>
     <comment>Description for DomainClass &apos;VPrincipalMetafora&apos;</comment>
@@ -354,19 +386,19 @@
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="VSecundariaToolToolboxItem" xml:space="preserve">
-    <value>Ventana Secundaria</value>
+    <value>VSecundariaTool</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="VSecundariaToolToolboxTooltip" xml:space="preserve">
     <value>VSecundaria Tool</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="RelacionesToolboxTab" xml:space="preserve">
-    <value>Relaciones</value>
+  <data name="ConexionesToolboxTab" xml:space="preserve">
+    <value>Conexiones</value>
     <comment>Toolbox item tab name</comment>
   </data>
   <data name="VP_VSToolToolboxItem" xml:space="preserve">
-    <value>Ventana Principal con Secundaria</value>
+    <value>Ventana Principal con Ventana Secundaria</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="VP_VSToolToolboxTooltip" xml:space="preserve">
@@ -374,7 +406,7 @@
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="VS_VSToolToolboxItem" xml:space="preserve">
-    <value>Ventana Secundaria con Secundaria</value>
+    <value>Ventana Secundaria con Ventana Secundaria</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="VS_VSToolToolboxTooltip" xml:space="preserve">

@@ -149,11 +149,12 @@
     <ExternalType Name="Char" Namespace="System" />
   </Types>
   <Shapes>
-    <GeometryShape Id="11acde97-c2e4-4602-bc09-a73e80a07735" Description="Description for UPM_IPS.MPJAAMPrototool.VSecundariaMetafora" Name="VSecundariaMetafora" DisplayName="VSecundaria Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VSecundaria Metafora" InitialHeight="1" Geometry="Rectangle" />
+    <GeometryShape Id="c7127e7b-b27c-4549-af5c-ce04ae45a14c" Description="Description for UPM_IPS.MPJAAMPrototool.VPrincipalMetafora" Name="VPrincipalMetafora" DisplayName="VPrincipal Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VPrincipal Metafora" InitialHeight="1" Geometry="Rectangle" />
+    <GeometryShape Id="fee9cf50-5a97-4e31-b7c5-e45a1b98feb2" Description="Description for UPM_IPS.MPJAAMPrototool.VSecundariaMetafora" Name="VSecundariaMetafora" DisplayName="VSecundaria Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VSecundaria Metafora" InitialHeight="1" Geometry="Rectangle" />
   </Shapes>
   <Connectors>
-    <Connector Id="10b2925a-a73d-4810-9491-d1c3079055b6" Description="Description for UPM_IPS.MPJAAMPrototool.VP_VSMetafora" Name="VP_VSMetafora" DisplayName="VP_ VSMetafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VP_ VSMetafora" />
-    <Connector Id="add56dd6-e7fc-4fdd-9ada-91ff2cd8d5b2" Description="Description for UPM_IPS.MPJAAMPrototool.VS_VSMetafora" Name="VS_VSMetafora" DisplayName="VS_ VSMetafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VS_ VSMetafora" />
+    <Connector Id="b1c7ce97-7361-4e4c-ae1d-1d7cf2fbb553" Description="Description for UPM_IPS.MPJAAMPrototool.VP_VSMetafora" Name="VP_VSMetafora" DisplayName="VP_ VSMetafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VP_ VSMetafora" />
+    <Connector Id="1255b363-a6c2-4cd0-963f-5196b76addac" Description="Description for UPM_IPS.MPJAAMPrototool.VS_VSMetafora" Name="VS_VSMetafora" DisplayName="VS_ VSMetafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VS_ VSMetafora" />
   </Connectors>
   <XmlSerializationBehavior Name="MPJAAMPrototoolSerializationBehavior" Namespace="UPM_IPS.MPJAAMPrototool">
     <ClassData>
@@ -213,6 +214,15 @@
       <XmlClassData TypeName="VSecundariaReferencesVSecundaria" MonikerAttributeName="" SerializeId="true" MonikerElementName="vSecundariaReferencesVSecundariaMoniker" ElementName="vSecundariaReferencesVSecundaria" MonikerTypeName="VSecundariaReferencesVSecundariaMoniker">
         <DomainRelationshipMoniker Name="VSecundariaReferencesVSecundaria" />
       </XmlClassData>
+      <XmlClassData TypeName="TapizPrototoolHasVentanaPrincipal" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizPrototoolHasVentanaPrincipalMoniker" ElementName="tapizPrototoolHasVentanaPrincipal" MonikerTypeName="TapizPrototoolHasVentanaPrincipalMoniker">
+        <DomainRelationshipMoniker Name="TapizPrototoolHasVentanaPrincipal" />
+      </XmlClassData>
+      <XmlClassData TypeName="TapizPrototoolHasVentanaSecundarium" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizPrototoolHasVentanaSecundariumMoniker" ElementName="tapizPrototoolHasVentanaSecundarium" MonikerTypeName="TapizPrototoolHasVentanaSecundariumMoniker">
+        <DomainRelationshipMoniker Name="TapizPrototoolHasVentanaSecundarium" />
+      </XmlClassData>
+      <XmlClassData TypeName="VPrincipalMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="vPrincipalMetaforaMoniker" ElementName="vPrincipalMetafora" MonikerTypeName="VPrincipalMetaforaMoniker">
+        <GeometryShapeMoniker Name="VPrincipalMetafora" />
+      </XmlClassData>
       <XmlClassData TypeName="VSecundariaMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="vSecundariaMetaforaMoniker" ElementName="vSecundariaMetafora" MonikerTypeName="VSecundariaMetaforaMoniker">
         <GeometryShapeMoniker Name="VSecundariaMetafora" />
       </XmlClassData>
@@ -221,12 +231,6 @@
       </XmlClassData>
       <XmlClassData TypeName="VS_VSMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="vS_VSMetaforaMoniker" ElementName="vS_VSMetafora" MonikerTypeName="VS_VSMetaforaMoniker">
         <ConnectorMoniker Name="VS_VSMetafora" />
-      </XmlClassData>
-      <XmlClassData TypeName="TapizPrototoolHasVentanaPrincipal" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizPrototoolHasVentanaPrincipalMoniker" ElementName="tapizPrototoolHasVentanaPrincipal" MonikerTypeName="TapizPrototoolHasVentanaPrincipalMoniker">
-        <DomainRelationshipMoniker Name="TapizPrototoolHasVentanaPrincipal" />
-      </XmlClassData>
-      <XmlClassData TypeName="TapizPrototoolHasVentanaSecundarium" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizPrototoolHasVentanaSecundariumMoniker" ElementName="tapizPrototoolHasVentanaSecundarium" MonikerTypeName="TapizPrototoolHasVentanaSecundariumMoniker">
-        <DomainRelationshipMoniker Name="TapizPrototoolHasVentanaSecundarium" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -275,6 +279,32 @@
     <Class>
       <DomainClassMoniker Name="TapizPrototool" />
     </Class>
+    <ShapeMaps>
+      <ShapeMap>
+        <DomainClassMoniker Name="VentanaPrincipal" />
+        <ParentElementPath>
+          <DomainPath>TapizPrototoolHasVentanaPrincipal.TapizPrototool/!TapizPrototool</DomainPath>
+        </ParentElementPath>
+        <GeometryShapeMoniker Name="VPrincipalMetafora" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="VentanaSecundaria" />
+        <ParentElementPath>
+          <DomainPath>TapizPrototoolHasVentanaSecundarium.TapizPrototool/!TapizPrototool</DomainPath>
+        </ParentElementPath>
+        <GeometryShapeMoniker Name="VSecundariaMetafora" />
+      </ShapeMap>
+    </ShapeMaps>
+    <ConnectorMaps>
+      <ConnectorMap>
+        <ConnectorMoniker Name="VP_VSMetafora" />
+        <DomainRelationshipMoniker Name="VPrincipalReferencesVSecundaria" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="VS_VSMetafora" />
+        <DomainRelationshipMoniker Name="VSecundariaReferencesVSecundaria" />
+      </ConnectorMap>
+    </ConnectorMaps>
   </Diagram>
   <Designer CopyPasteGeneration="CopyPasteOnly" FileExtension="MPJAAMPrototool" EditorGuid="142bbe36-9ea0-47c5-a280-7f7d5fac1d12">
     <RootClass>
@@ -287,15 +317,15 @@
       <ElementTool Name="VPrincipalTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Ventana Principal" Tooltip="VPrincipal Tool" HelpKeyword="VPrincipalTool">
         <DomainClassMoniker Name="VentanaPrincipal" />
       </ElementTool>
-      <ElementTool Name="VSecundariaTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Ventana Secundaria" Tooltip="VSecundaria Tool" HelpKeyword="VSecundariaTool">
+      <ElementTool Name="VSecundariaTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="VSecundariaTool" Tooltip="VSecundaria Tool" HelpKeyword="VSecundariaTool">
         <DomainClassMoniker Name="VentanaSecundaria" />
       </ElementTool>
     </ToolboxTab>
-    <ToolboxTab TabText="Relaciones">
-      <ConnectionTool Name="VP_VSTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="Ventana Principal con Secundaria" Tooltip="VP_ VSTool" HelpKeyword="VP_VSTool">
+    <ToolboxTab TabText="Conexiones">
+      <ConnectionTool Name="VP_VSTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="Ventana Principal con Ventana Secundaria" Tooltip="VP_ VSTool" HelpKeyword="VP_VSTool">
         <ConnectionBuilderMoniker Name="MPJAAMPrototool/VPrincipalReferencesVSecundariaBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="VS_VSTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="Ventana Secundaria con Secundaria" Tooltip="VS_ VSTool" HelpKeyword="VS_VSTool">
+      <ConnectionTool Name="VS_VSTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="Ventana Secundaria con Ventana Secundaria" Tooltip="VS_ VSTool" HelpKeyword="VS_VSTool">
         <ConnectionBuilderMoniker Name="MPJAAMPrototool/VSecundariaReferencesVSecundariaBuilder" />
       </ConnectionTool>
     </ToolboxTab>

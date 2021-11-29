@@ -444,14 +444,14 @@ namespace UPM_IPS.MPJAAMPrototool
 					DslDiagrams::Diagram.FixUpDiagram(parentElement, childElement);
 				}
 			}
-			public static global::UPM_IPS.MPJAAMPrototool.TapizPrototool GetParentForVentanaPrincipal( global::UPM_IPS.MPJAAMPrototool.Ventana root )
+			public static global::UPM_IPS.MPJAAMPrototool.TapizPrototool GetParentForVentanaPrincipal( global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal root )
 			{
 				// Segments 0 and 1
 				global::UPM_IPS.MPJAAMPrototool.TapizPrototool result = root.TapizPrototool;
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::UPM_IPS.MPJAAMPrototool.TapizPrototool GetParentForVentanaSecundaria( global::UPM_IPS.MPJAAMPrototool.Ventana root )
+			public static global::UPM_IPS.MPJAAMPrototool.TapizPrototool GetParentForVentanaSecundaria( global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria root )
 			{
 				// Segments 0 and 1
 				global::UPM_IPS.MPJAAMPrototool.TapizPrototool result = root.TapizPrototool;

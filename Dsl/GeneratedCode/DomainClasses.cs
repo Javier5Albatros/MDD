@@ -135,18 +135,39 @@ namespace UPM_IPS.MPJAAMPrototool
 		}
 		
 		#endregion
-		#region Ventanas opposite domain role accessor
-		
+		#region VentanaPrincipal opposite domain role accessor
 		/// <summary>
-		/// Gets a list of Ventanas.
-		/// Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.TapizPrototool
+		/// Gets or sets VentanaPrincipal.
+		/// Description for
+		/// UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.TapizPrototool
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Ventana> Ventanas
+		public virtual VentanaPrincipal VentanaPrincipal
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Ventana>, Ventana>(global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.TapizPrototoolDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.TapizPrototoolDomainRoleId) as VentanaPrincipal;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.TapizPrototoolDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region VentanaSecundarium opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of VentanaSecundarium.
+		/// Description for
+		/// UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.TapizPrototool
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<VentanaSecundaria> VentanaSecundarium
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<VentanaSecundaria>, VentanaSecundaria>(global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.TapizPrototoolDomainRoleId);
 			}
 		}
 		#endregion
@@ -170,7 +191,17 @@ namespace UPM_IPS.MPJAAMPrototool
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.MPJAAMPrototool.Ventana.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal.DomainClassId)) 
+				{
+					// Check that creating a link with this path doesn't cause multiplicity overflow: TapizPrototoolHasVentanaPrincipal.VentanaPrincipal
+					if (this.VentanaPrincipal != null)
+					{
+						return false;
+					}
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria.DomainClassId)) 
 				{
 					return true;
 				}
@@ -199,11 +230,20 @@ namespace UPM_IPS.MPJAAMPrototool
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::UPM_IPS.MPJAAMPrototool.Ventana sourceVentana1 = sourceElement as global::UPM_IPS.MPJAAMPrototool.Ventana;
-			if (sourceVentana1 != null)
+			global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal sourceVentanaPrincipal1 = sourceElement as global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal;
+			if (sourceVentanaPrincipal1 != null)
 			{
-				// Create link for path TapizPrototoolHasVentanas.Ventanas
-				this.Ventanas.Add(sourceVentana1);
+				// Create link for path TapizPrototoolHasVentanaPrincipal.VentanaPrincipal
+				this.VentanaPrincipal = sourceVentanaPrincipal1;
+
+				return;
+			}
+				
+			global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria sourceVentanaSecundaria2 = sourceElement as global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria;
+			if (sourceVentanaSecundaria2 != null)
+			{
+				// Create link for path TapizPrototoolHasVentanaSecundarium.VentanaSecundarium
+				this.VentanaSecundarium.Add(sourceVentanaSecundaria2);
 
 				return;
 			}
@@ -230,15 +270,29 @@ namespace UPM_IPS.MPJAAMPrototool
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::UPM_IPS.MPJAAMPrototool.Ventana sourceVentana1 = sourceElement as global::UPM_IPS.MPJAAMPrototool.Ventana;
-			if (sourceVentana1 != null)
+			global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal sourceVentanaPrincipal1 = sourceElement as global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal;
+			if (sourceVentanaPrincipal1 != null)
 			{
-				// Delete link for path TapizPrototoolHasVentanas.Ventanas
+				// Delete link for path TapizPrototoolHasVentanaPrincipal.VentanaPrincipal
 				
-				foreach (DslModeling::ElementLink link in global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.GetLinks((global::UPM_IPS.MPJAAMPrototool.TapizPrototool)this, sourceVentana1))
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.GetLinks((global::UPM_IPS.MPJAAMPrototool.TapizPrototool)this, sourceVentanaPrincipal1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.TapizPrototoolDomainRoleId, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.VentanaDomainRoleId);
+					link.Delete(global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.TapizPrototoolDomainRoleId, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.VentanaPrincipalDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria sourceVentanaSecundaria2 = sourceElement as global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria;
+			if (sourceVentanaSecundaria2 != null)
+			{
+				// Delete link for path TapizPrototoolHasVentanaSecundarium.VentanaSecundarium
+				
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.GetLinks((global::UPM_IPS.MPJAAMPrototool.TapizPrototool)this, sourceVentanaSecundaria2))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.TapizPrototoolDomainRoleId, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.VentanaSecundariaDomainRoleId);
 				}
 
 				return;
@@ -539,25 +593,6 @@ namespace UPM_IPS.MPJAAMPrototool
 		}
 		
 		#endregion
-		#region TapizPrototool opposite domain role accessor
-		/// <summary>
-		/// Gets or sets TapizPrototool.
-		/// Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.Ventana
-		/// </summary>
-		public virtual TapizPrototool TapizPrototool
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.VentanaDomainRoleId) as TapizPrototool;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanas.VentanaDomainRoleId, value);
-			}
-		}
-		#endregion
 	}
 }
 namespace UPM_IPS.MPJAAMPrototool
@@ -612,6 +647,26 @@ namespace UPM_IPS.MPJAAMPrototool
 			get
 			{
 				return GetRoleCollection<DslModeling::LinkedElementCollection<VentanaSecundaria>, VentanaSecundaria>(global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.VentanaPrincipalDomainRoleId);
+			}
+		}
+		#endregion
+		#region TapizPrototool opposite domain role accessor
+		/// <summary>
+		/// Gets or sets TapizPrototool.
+		/// Description for
+		/// UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.VentanaPrincipal
+		/// </summary>
+		public virtual TapizPrototool TapizPrototool
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.VentanaPrincipalDomainRoleId) as TapizPrototool;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.VentanaPrincipalDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -792,6 +847,26 @@ namespace UPM_IPS.MPJAAMPrototool
 			get
 			{
 				return GetRoleCollection<DslModeling::LinkedElementCollection<VentanaSecundaria>, VentanaSecundaria>(global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria.TargetVentanaSecundariaDomainRoleId);
+			}
+		}
+		#endregion
+		#region TapizPrototool opposite domain role accessor
+		/// <summary>
+		/// Gets or sets TapizPrototool.
+		/// Description for
+		/// UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.VentanaSecundaria
+		/// </summary>
+		public virtual TapizPrototool TapizPrototool
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.VentanaSecundariaDomainRoleId) as TapizPrototool;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.VentanaSecundariaDomainRoleId, value);
 			}
 		}
 		#endregion

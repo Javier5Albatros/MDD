@@ -21,7 +21,7 @@ namespace UPM_IPS.MPJAAMPrototool
 	[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.VPrincipalMetafora.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("181e5844-2c81-4869-9439-f2a2d9c596db")]
+	[DslModeling::DomainObjectId("c7127e7b-b27c-4549-af5c-ce04ae45a14c")]
 	public partial class VPrincipalMetafora : DslDiagrams::NodeShape
 	{
 		#region DiagramElement boilerplate
@@ -137,7 +137,7 @@ namespace UPM_IPS.MPJAAMPrototool
 		/// <summary>
 		/// VPrincipalMetafora domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x181e5844, 0x2c81, 0x4869, 0x94, 0x39, 0xf2, 0xa2, 0xd9, 0xc5, 0x96, 0xdb);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc7127e7b, 0xb27c, 0x4549, 0xaf, 0x5c, 0xce, 0x04, 0xae, 0x45, 0xa1, 0x4c);
 		/// <summary>
 		/// Constructor
 		/// </summary>
@@ -170,7 +170,7 @@ namespace UPM_IPS.MPJAAMPrototool
 	[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.VSecundariaMetafora.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("11acde97-c2e4-4602-bc09-a73e80a07735")]
+	[DslModeling::DomainObjectId("fee9cf50-5a97-4e31-b7c5-e45a1b98feb2")]
 	public partial class VSecundariaMetafora : DslDiagrams::NodeShape
 	{
 		#region DiagramElement boilerplate
@@ -286,7 +286,7 @@ namespace UPM_IPS.MPJAAMPrototool
 		/// <summary>
 		/// VSecundariaMetafora domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x11acde97, 0xc2e4, 0x4602, 0xbc, 0x09, 0xa7, 0x3e, 0x80, 0xa0, 0x77, 0x35);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xfee9cf50, 0x5a97, 0x4e31, 0xb7, 0xc5, 0xe4, 0x5a, 0x1b, 0x98, 0xfe, 0xb2);
 		/// <summary>
 		/// Constructor
 		/// </summary>

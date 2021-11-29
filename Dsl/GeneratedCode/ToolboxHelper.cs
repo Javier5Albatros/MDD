@@ -191,8 +191,8 @@ namespace UPM_IPS.MPJAAMPrototool
 						1, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("VP_VSToolToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("VP_VSToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
-						"UPM_IPS.MPJAAMPrototool.RelacionesToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("RelacionesToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"UPM_IPS.MPJAAMPrototool.ConexionesToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("ConexionesToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
 						"VP_VSTool", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("VP_VSToolToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						null, // Connector toolbox items do not have an underlying data object.
@@ -209,8 +209,8 @@ namespace UPM_IPS.MPJAAMPrototool
 						2, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("VS_VSToolToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("VS_VSToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
-						"UPM_IPS.MPJAAMPrototool.RelacionesToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("RelacionesToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"UPM_IPS.MPJAAMPrototool.ConexionesToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("ConexionesToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
 						"VS_VSTool", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("VS_VSToolToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						null, // Connector toolbox items do not have an underlying data object.
