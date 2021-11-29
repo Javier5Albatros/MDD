@@ -46,6 +46,16 @@
           </Type>
         </DomainProperty>
       </Properties>
+      <ElementMergeDirectives>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="Menu" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>VentanaHasMenu.Menu</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+      </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="90e96a9e-4ba2-4b8c-87bc-69070af1dee8" Description="Description for UPM_IPS.MPJAAMPrototool.VentanaPrincipal" Name="VentanaPrincipal" DisplayName="Ventana Principal" Namespace="UPM_IPS.MPJAAMPrototool">
       <BaseClass>
@@ -60,6 +70,15 @@
         <DomainProperty Id="7fc1921b-e289-4f2b-9ba0-c2e1b82d0f71" Description="Description for UPM_IPS.MPJAAMPrototool.VentanaSecundaria.Modal" Name="modal" DisplayName="Modal">
           <Type>
             <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="d2960eac-6a31-4129-b123-a712ed039d1d" Description="Description for UPM_IPS.MPJAAMPrototool.Menu" Name="Menu" DisplayName="Menu" Namespace="UPM_IPS.MPJAAMPrototool">
+      <Properties>
+        <DomainProperty Id="815f45a4-3eac-41a4-866d-a4f34ca31eae" Description="Description for UPM_IPS.MPJAAMPrototool.Menu.Titulo" Name="titulo" DisplayName="Titulo">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -130,6 +149,22 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="7b4c7b91-0c91-4795-b7d1-842f2ff92cfa" Description="Description for UPM_IPS.MPJAAMPrototool.VentanaHasMenu" Name="VentanaHasMenu" DisplayName="Ventana Has Menu" Namespace="UPM_IPS.MPJAAMPrototool" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="fb27c7e3-2f51-4751-bc69-8178b9565906" Description="Description for UPM_IPS.MPJAAMPrototool.VentanaHasMenu.Ventana" Name="Ventana" DisplayName="Ventana" PropertyName="Menu" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Menu">
+          <RolePlayer>
+            <DomainClassMoniker Name="Ventana" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="81c5c7a0-cdd6-459b-a50d-d37ce561024c" Description="Description for UPM_IPS.MPJAAMPrototool.VentanaHasMenu.Menu" Name="Menu" DisplayName="Menu" PropertyName="Ventana" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Ventana">
+          <RolePlayer>
+            <DomainClassMoniker Name="Menu" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -151,10 +186,16 @@
   <Shapes>
     <GeometryShape Id="c7127e7b-b27c-4549-af5c-ce04ae45a14c" Description="Description for UPM_IPS.MPJAAMPrototool.VPrincipalMetafora" Name="VPrincipalMetafora" DisplayName="VPrincipal Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VPrincipal Metafora" InitialHeight="1" Geometry="Rectangle" />
     <GeometryShape Id="fee9cf50-5a97-4e31-b7c5-e45a1b98feb2" Description="Description for UPM_IPS.MPJAAMPrototool.VSecundariaMetafora" Name="VSecundariaMetafora" DisplayName="VSecundaria Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VSecundaria Metafora" InitialHeight="1" Geometry="Rectangle" />
+    <GeometryShape Id="a51afa20-ae51-470c-835e-abb8fcfdc75b" Description="Description for UPM_IPS.MPJAAMPrototool.MenuMetafora" Name="MenuMetafora" DisplayName="Menu Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Menu Metafora" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="titulo" DisplayName="Titulo" DefaultText="titulo" />
+      </ShapeHasDecorators>
+    </GeometryShape>
   </Shapes>
   <Connectors>
     <Connector Id="b1c7ce97-7361-4e4c-ae1d-1d7cf2fbb553" Description="Description for UPM_IPS.MPJAAMPrototool.VP_VSMetafora" Name="VP_VSMetafora" DisplayName="VP_ VSMetafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VP_ VSMetafora" />
     <Connector Id="1255b363-a6c2-4cd0-963f-5196b76addac" Description="Description for UPM_IPS.MPJAAMPrototool.VS_VSMetafora" Name="VS_VSMetafora" DisplayName="VS_ VSMetafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VS_ VSMetafora" />
+    <Connector Id="c3c4464d-b95c-41fc-b1f6-d3a64923df88" Description="Description for UPM_IPS.MPJAAMPrototool.VentanaMenuMetafora" Name="VentanaMenuMetafora" DisplayName="Ventana Menu Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Ventana Menu Metafora" />
   </Connectors>
   <XmlSerializationBehavior Name="MPJAAMPrototoolSerializationBehavior" Namespace="UPM_IPS.MPJAAMPrototool">
     <ClassData>
@@ -187,6 +228,9 @@
           <XmlPropertyData XmlName="altura">
             <DomainPropertyMoniker Name="Ventana/altura" />
           </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="menu">
+            <DomainRelationshipMoniker Name="VentanaHasMenu" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="VentanaPrincipal" MonikerAttributeName="" SerializeId="true" MonikerElementName="ventanaPrincipalMoniker" ElementName="ventanaPrincipal" MonikerTypeName="VentanaPrincipalMoniker">
@@ -231,6 +275,23 @@
       </XmlClassData>
       <XmlClassData TypeName="VS_VSMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="vS_VSMetaforaMoniker" ElementName="vS_VSMetafora" MonikerTypeName="VS_VSMetaforaMoniker">
         <ConnectorMoniker Name="VS_VSMetafora" />
+      </XmlClassData>
+      <XmlClassData TypeName="Menu" MonikerAttributeName="" SerializeId="true" MonikerElementName="menuMoniker" ElementName="menu" MonikerTypeName="MenuMoniker">
+        <DomainClassMoniker Name="Menu" />
+        <ElementData>
+          <XmlPropertyData XmlName="titulo">
+            <DomainPropertyMoniker Name="Menu/titulo" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="VentanaHasMenu" MonikerAttributeName="" SerializeId="true" MonikerElementName="ventanaHasMenuMoniker" ElementName="ventanaHasMenu" MonikerTypeName="VentanaHasMenuMoniker">
+        <DomainRelationshipMoniker Name="VentanaHasMenu" />
+      </XmlClassData>
+      <XmlClassData TypeName="MenuMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="menuMetaforaMoniker" ElementName="menuMetafora" MonikerTypeName="MenuMetaforaMoniker">
+        <GeometryShapeMoniker Name="MenuMetafora" />
+      </XmlClassData>
+      <XmlClassData TypeName="VentanaMenuMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="ventanaMenuMetaforaMoniker" ElementName="ventanaMenuMetafora" MonikerTypeName="VentanaMenuMetaforaMoniker">
+        <ConnectorMoniker Name="VentanaMenuMetafora" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -294,6 +355,18 @@
         </ParentElementPath>
         <GeometryShapeMoniker Name="VSecundariaMetafora" />
       </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="Menu" />
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MenuMetafora/titulo" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Menu/titulo" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="MenuMetafora" />
+      </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
       <ConnectorMap>
@@ -303,6 +376,10 @@
       <ConnectorMap>
         <ConnectorMoniker Name="VS_VSMetafora" />
         <DomainRelationshipMoniker Name="VSecundariaReferencesVSecundaria" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="VentanaMenuMetafora" />
+        <DomainRelationshipMoniker Name="VentanaHasMenu" />
       </ConnectorMap>
     </ConnectorMaps>
   </Diagram>
@@ -328,6 +405,11 @@
       <ConnectionTool Name="VS_VSTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="Ventana Secundaria con Ventana Secundaria" Tooltip="VS_ VSTool" HelpKeyword="VS_VSTool">
         <ConnectionBuilderMoniker Name="MPJAAMPrototool/VSecundariaReferencesVSecundariaBuilder" />
       </ConnectionTool>
+    </ToolboxTab>
+    <ToolboxTab TabText="Navegación">
+      <ElementTool Name="MenuTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Menu" Tooltip="Menu Tool" HelpKeyword="MenuTool">
+        <DomainClassMoniker Name="Menu" />
+      </ElementTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="MPJAAMPrototoolDiagram" />
