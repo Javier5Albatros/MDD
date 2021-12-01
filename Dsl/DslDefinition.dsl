@@ -26,6 +26,14 @@
             <DomainPath>TapizPrototoolHasVentanaSecundarium.VentanaSecundarium</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="EstadoFin" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>TapizPrototoolHasEstadoFin.EstadoFin</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="163f86dd-d69b-4142-abb2-ee5c55283e68" Description="Description for UPM_IPS.MPJAAMPrototool.Ventana" Name="Ventana" DisplayName="Ventana" InheritanceModifier="Abstract" Namespace="UPM_IPS.MPJAAMPrototool">
@@ -120,40 +128,9 @@
         <DomainClassMoniker Name="ItemNavegacion" />
       </BaseClass>
     </DomainClass>
+    <DomainClass Id="77dfd0bb-b447-4434-a513-3975dbc65cd4" Description="Description for UPM_IPS.MPJAAMPrototool.EstadoFin" Name="EstadoFin" DisplayName="Estado Fin" Namespace="UPM_IPS.MPJAAMPrototool" />
   </Classes>
   <Relationships>
-    <DomainRelationship Id="3be2ce36-b4c4-4580-9cbb-d7fb155f7b72" Description="Description for UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria" Name="VPrincipalReferencesVSecundaria" DisplayName="VPrincipal References VSecundaria" Namespace="UPM_IPS.MPJAAMPrototool">
-      <Source>
-        <DomainRole Id="ffcbf736-e9ad-4c99-8f05-64c4ef7f42ae" Description="Description for UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.VentanaPrincipal" Name="VentanaPrincipal" DisplayName="Ventana Principal" PropertyName="VentanaSecundarium" PropertyDisplayName="Ventana Secundarium">
-          <RolePlayer>
-            <DomainClassMoniker Name="VentanaPrincipal" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="0c7b80d1-26f0-4ba8-a59d-67b381ed62e8" Description="Description for UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.VentanaSecundaria" Name="VentanaSecundaria" DisplayName="Ventana Secundaria" PropertyName="VentanaPrincipal" Multiplicity="One" PropertyDisplayName="Ventana Principal">
-          <RolePlayer>
-            <DomainClassMoniker Name="VentanaSecundaria" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="38b37c86-44e6-4201-9e04-13f79fc72b59" Description="Description for UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria" Name="VSecundariaReferencesVSecundaria" DisplayName="VSecundaria References VSecundaria" Namespace="UPM_IPS.MPJAAMPrototool">
-      <Source>
-        <DomainRole Id="795aa0d5-489e-49cc-961d-98b661f06525" Description="Description for UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria.SourceVentanaSecundaria" Name="SourceVentanaSecundaria" DisplayName="Source Ventana Secundaria" PropertyName="TargetVentanaSecundarium" PropertyDisplayName="Target Ventana Secundarium">
-          <RolePlayer>
-            <DomainClassMoniker Name="VentanaSecundaria" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="30e95320-ab9b-4f49-ad85-4aa41e0b4c21" Description="Description for UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria.TargetVentanaSecundaria" Name="TargetVentanaSecundaria" DisplayName="Target Ventana Secundaria" PropertyName="SourceVentanaSecundarium" PropertyDisplayName="Source Ventana Secundarium">
-          <RolePlayer>
-            <DomainClassMoniker Name="VentanaSecundaria" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
     <DomainRelationship Id="5e0ffb4c-847d-4fa2-999b-467d8572cf7b" Description="Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal" Name="TapizPrototoolHasVentanaPrincipal" DisplayName="Tapiz Prototool Has Ventana Principal" Namespace="UPM_IPS.MPJAAMPrototool" IsEmbedding="true">
       <Source>
         <DomainRole Id="07dc0c16-0f98-4d58-9371-d9cb7cd01241" Description="Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.TapizPrototool" Name="TapizPrototool" DisplayName="Tapiz Prototool" PropertyName="VentanaPrincipal" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Ventana Principal">
@@ -227,9 +204,57 @@
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="3c8bcb9c-66b8-4844-8364-46f462d6804e" Description="Description for UPM_IPS.MPJAAMPrototool.VentanaHasBotons.Boton" Name="Boton" DisplayName="Boton" PropertyName="Ventana" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Ventana">
+        <DomainRole Id="3c8bcb9c-66b8-4844-8364-46f462d6804e" Description="Description for UPM_IPS.MPJAAMPrototool.VentanaHasBotons.Boton" Name="Boton" DisplayName="Boton" PropertyName="VentanaBoton" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Ventana Boton">
           <RolePlayer>
             <DomainClassMoniker Name="Boton" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="09a6f54e-7f94-49d1-be9a-0bf7bc2650ca" Description="Description for UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana" Name="ItemNavegacionReferencesVentana" DisplayName="Item Navegacion References Ventana" Namespace="UPM_IPS.MPJAAMPrototool">
+      <Source>
+        <DomainRole Id="7281afb6-89f3-4dbd-8ad0-1f2f5f0e0ce7" Description="Description for UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana.ItemNavegacion" Name="ItemNavegacion" DisplayName="Item Navegacion" PropertyName="Ventana" Multiplicity="One" PropertyDisplayName="Ventana">
+          <RolePlayer>
+            <DomainClassMoniker Name="ItemNavegacion" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="20a06814-1ad5-4bb7-b43a-c54023a489ff" Description="Description for UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana.Ventana" Name="Ventana" DisplayName="Ventana" PropertyName="ItemNavegacioned" PropertyDisplayName="Item Navegacioned">
+          <RolePlayer>
+            <DomainClassMoniker Name="Ventana" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="85997d99-8be6-4365-ad93-445b7cb6c9ef" Description="Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin" Name="TapizPrototoolHasEstadoFin" DisplayName="Tapiz Prototool Has Estado Fin" Namespace="UPM_IPS.MPJAAMPrototool" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="2e3dde9f-c4db-4872-a2b4-25912e43bbbe" Description="Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.TapizPrototool" Name="TapizPrototool" DisplayName="Tapiz Prototool" PropertyName="EstadoFin" Multiplicity="ZeroOne" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estado Fin">
+          <RolePlayer>
+            <DomainClassMoniker Name="TapizPrototool" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="d0d9c04e-5b38-4df8-9d86-6390d00ff69b" Description="Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.EstadoFin" Name="EstadoFin" DisplayName="Estado Fin" PropertyName="TapizPrototool" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Tapiz Prototool">
+          <RolePlayer>
+            <DomainClassMoniker Name="EstadoFin" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="5c900347-5b39-4a99-876d-79030aeb2e5c" Description="Description for UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin" Name="ItemNavegacionReferencesEstadoFin" DisplayName="Item Navegacion References Estado Fin" Namespace="UPM_IPS.MPJAAMPrototool">
+      <Source>
+        <DomainRole Id="7def55a9-12c8-47b6-868e-e17182b2e1df" Description="Description for UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin.ItemNavegacion" Name="ItemNavegacion" DisplayName="Item Navegacion" PropertyName="EstadoFin" Multiplicity="ZeroOne" PropertyDisplayName="Estado Fin">
+          <RolePlayer>
+            <DomainClassMoniker Name="ItemNavegacion" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="3eac95ef-12e5-4773-91a9-1c5e8c1eda0e" Description="Description for UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin.EstadoFin" Name="EstadoFin" DisplayName="Estado Fin" PropertyName="ItemNavegacioned" PropertyDisplayName="Item Navegacioned">
+          <RolePlayer>
+            <DomainClassMoniker Name="EstadoFin" />
           </RolePlayer>
         </DomainRole>
       </Target>
@@ -258,13 +283,14 @@
     <GeometryShape Id="b24d4e6f-0bf9-4c9e-8a2f-98f9901d4de8" Description="Description for UPM_IPS.MPJAAMPrototool.MenuMetafora" Name="MenuMetafora" DisplayName="Menu Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Menu Metafora" InitialHeight="1" Geometry="Rectangle" />
     <GeometryShape Id="e8bb4e90-98e1-4557-9aa6-f06061a6b44e" Description="Description for UPM_IPS.MPJAAMPrototool.ItemMenuMetafora" Name="ItemMenuMetafora" DisplayName="Item Menu Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Item Menu Metafora" InitialHeight="1" Geometry="Rectangle" />
     <GeometryShape Id="fc60b7e7-f543-4cf1-95a2-028b8e83140e" Description="Description for UPM_IPS.MPJAAMPrototool.BotonMetafora" Name="BotonMetafora" DisplayName="Boton Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Boton Metafora" InitialHeight="1" Geometry="Rectangle" />
+    <GeometryShape Id="84a36636-25aa-4378-b822-7077eaa66e78" Description="Description for UPM_IPS.MPJAAMPrototool.EstadoFinMetafora" Name="EstadoFinMetafora" DisplayName="Estado Fin Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Estado Fin Metafora" InitialHeight="1" Geometry="Rectangle" />
   </Shapes>
   <Connectors>
-    <Connector Id="b1c7ce97-7361-4e4c-ae1d-1d7cf2fbb553" Description="Description for UPM_IPS.MPJAAMPrototool.VP_VSMetafora" Name="VP_VSMetafora" DisplayName="VP_ VSMetafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VP_ VSMetafora" />
-    <Connector Id="1255b363-a6c2-4cd0-963f-5196b76addac" Description="Description for UPM_IPS.MPJAAMPrototool.VS_VSMetafora" Name="VS_VSMetafora" DisplayName="VS_ VSMetafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VS_ VSMetafora" />
     <Connector Id="7ce11ce2-bfae-47e4-a000-9e2222570f8e" Description="Description for UPM_IPS.MPJAAMPrototool.Ventana_MenuMetafora" Name="Ventana_MenuMetafora" DisplayName="Ventana_ Menu Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Ventana_ Menu Metafora" />
     <Connector Id="419f5bd0-b769-49ef-9494-be35525b38ce" Description="Description for UPM_IPS.MPJAAMPrototool.Menu_ItemMenuMetafora" Name="Menu_ItemMenuMetafora" DisplayName="Menu_ Item Menu Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Menu_ Item Menu Metafora" />
     <Connector Id="f66cb58a-e21c-4706-bc34-6ea6b23bc064" Description="Description for UPM_IPS.MPJAAMPrototool.Ventana_BotonMetafora" Name="Ventana_BotonMetafora" DisplayName="Ventana_ Boton Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Ventana_ Boton Metafora" />
+    <Connector Id="753407dd-edb2-4483-912b-db98fabf920e" Description="Description for UPM_IPS.MPJAAMPrototool.ItemNavegacion_Ventana" Name="ItemNavegacion_Ventana" DisplayName="Item Navegacion_ Ventana" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Item Navegacion_ Ventana" />
+    <Connector Id="32dcfaab-8fe4-4e11-95ec-2692e0d7bfe5" Description="Description for UPM_IPS.MPJAAMPrototool.ItemNavegacion_EstadoFinMetafora" Name="ItemNavegacion_EstadoFinMetafora" DisplayName="Item Navegacion_ Estado Fin Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Item Navegacion_ Estado Fin Metafora" />
   </Connectors>
   <XmlSerializationBehavior Name="MPJAAMPrototoolSerializationBehavior" Namespace="UPM_IPS.MPJAAMPrototool">
     <ClassData>
@@ -279,6 +305,9 @@
           </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="ventanaSecundarium">
             <DomainRelationshipMoniker Name="TapizPrototoolHasVentanaSecundarium" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="estadoFin">
+            <DomainRelationshipMoniker Name="TapizPrototoolHasEstadoFin" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -307,11 +336,6 @@
       </XmlClassData>
       <XmlClassData TypeName="VentanaPrincipal" MonikerAttributeName="" SerializeId="true" MonikerElementName="ventanaPrincipalMoniker" ElementName="ventanaPrincipal" MonikerTypeName="VentanaPrincipalMoniker">
         <DomainClassMoniker Name="VentanaPrincipal" />
-        <ElementData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="ventanaSecundarium">
-            <DomainRelationshipMoniker Name="VPrincipalReferencesVSecundaria" />
-          </XmlRelationshipData>
-        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="VentanaSecundaria" MonikerAttributeName="" SerializeId="true" MonikerElementName="ventanaSecundariaMoniker" ElementName="ventanaSecundaria" MonikerTypeName="VentanaSecundariaMoniker">
         <DomainClassMoniker Name="VentanaSecundaria" />
@@ -319,16 +343,7 @@
           <XmlPropertyData XmlName="modal">
             <DomainPropertyMoniker Name="VentanaSecundaria/modal" />
           </XmlPropertyData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="targetVentanaSecundarium">
-            <DomainRelationshipMoniker Name="VSecundariaReferencesVSecundaria" />
-          </XmlRelationshipData>
         </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="VPrincipalReferencesVSecundaria" MonikerAttributeName="" SerializeId="true" MonikerElementName="vPrincipalReferencesVSecundariaMoniker" ElementName="vPrincipalReferencesVSecundaria" MonikerTypeName="VPrincipalReferencesVSecundariaMoniker">
-        <DomainRelationshipMoniker Name="VPrincipalReferencesVSecundaria" />
-      </XmlClassData>
-      <XmlClassData TypeName="VSecundariaReferencesVSecundaria" MonikerAttributeName="" SerializeId="true" MonikerElementName="vSecundariaReferencesVSecundariaMoniker" ElementName="vSecundariaReferencesVSecundaria" MonikerTypeName="VSecundariaReferencesVSecundariaMoniker">
-        <DomainRelationshipMoniker Name="VSecundariaReferencesVSecundaria" />
       </XmlClassData>
       <XmlClassData TypeName="TapizPrototoolHasVentanaPrincipal" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizPrototoolHasVentanaPrincipalMoniker" ElementName="tapizPrototoolHasVentanaPrincipal" MonikerTypeName="TapizPrototoolHasVentanaPrincipalMoniker">
         <DomainRelationshipMoniker Name="TapizPrototoolHasVentanaPrincipal" />
@@ -341,12 +356,6 @@
       </XmlClassData>
       <XmlClassData TypeName="VSecundariaMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="vSecundariaMetaforaMoniker" ElementName="vSecundariaMetafora" MonikerTypeName="VSecundariaMetaforaMoniker">
         <GeometryShapeMoniker Name="VSecundariaMetafora" />
-      </XmlClassData>
-      <XmlClassData TypeName="VP_VSMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="vP_VSMetaforaMoniker" ElementName="vP_VSMetafora" MonikerTypeName="VP_VSMetaforaMoniker">
-        <ConnectorMoniker Name="VP_VSMetafora" />
-      </XmlClassData>
-      <XmlClassData TypeName="VS_VSMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="vS_VSMetaforaMoniker" ElementName="vS_VSMetafora" MonikerTypeName="VS_VSMetaforaMoniker">
-        <ConnectorMoniker Name="VS_VSMetafora" />
       </XmlClassData>
       <XmlClassData TypeName="Menu" MonikerAttributeName="" SerializeId="true" MonikerElementName="menuMoniker" ElementName="menu" MonikerTypeName="MenuMoniker">
         <DomainClassMoniker Name="Menu" />
@@ -374,6 +383,12 @@
           <XmlPropertyData XmlName="titulo">
             <DomainPropertyMoniker Name="ItemNavegacion/titulo" />
           </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="ventana">
+            <DomainRelationshipMoniker Name="ItemNavegacionReferencesVentana" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="estadoFin">
+            <DomainRelationshipMoniker Name="ItemNavegacionReferencesEstadoFin" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ItemMenu" MonikerAttributeName="" SerializeId="true" MonikerElementName="itemMenuMoniker" ElementName="itemMenu" MonikerTypeName="ItemMenuMoniker">
@@ -400,43 +415,64 @@
       <XmlClassData TypeName="Ventana_BotonMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="ventana_BotonMetaforaMoniker" ElementName="ventana_BotonMetafora" MonikerTypeName="Ventana_BotonMetaforaMoniker">
         <ConnectorMoniker Name="Ventana_BotonMetafora" />
       </XmlClassData>
+      <XmlClassData TypeName="EstadoFin" MonikerAttributeName="" SerializeId="true" MonikerElementName="estadoFinMoniker" ElementName="estadoFin" MonikerTypeName="EstadoFinMoniker">
+        <DomainClassMoniker Name="EstadoFin" />
+      </XmlClassData>
+      <XmlClassData TypeName="EstadoFinMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="estadoFinMetaforaMoniker" ElementName="estadoFinMetafora" MonikerTypeName="EstadoFinMetaforaMoniker">
+        <GeometryShapeMoniker Name="EstadoFinMetafora" />
+      </XmlClassData>
+      <XmlClassData TypeName="ItemNavegacionReferencesVentana" MonikerAttributeName="" SerializeId="true" MonikerElementName="itemNavegacionReferencesVentanaMoniker" ElementName="itemNavegacionReferencesVentana" MonikerTypeName="ItemNavegacionReferencesVentanaMoniker">
+        <DomainRelationshipMoniker Name="ItemNavegacionReferencesVentana" />
+      </XmlClassData>
+      <XmlClassData TypeName="ItemNavegacion_Ventana" MonikerAttributeName="" SerializeId="true" MonikerElementName="itemNavegacion_VentanaMoniker" ElementName="itemNavegacion_Ventana" MonikerTypeName="ItemNavegacion_VentanaMoniker">
+        <ConnectorMoniker Name="ItemNavegacion_Ventana" />
+      </XmlClassData>
+      <XmlClassData TypeName="TapizPrototoolHasEstadoFin" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizPrototoolHasEstadoFinMoniker" ElementName="tapizPrototoolHasEstadoFin" MonikerTypeName="TapizPrototoolHasEstadoFinMoniker">
+        <DomainRelationshipMoniker Name="TapizPrototoolHasEstadoFin" />
+      </XmlClassData>
+      <XmlClassData TypeName="ItemNavegacionReferencesEstadoFin" MonikerAttributeName="" SerializeId="true" MonikerElementName="itemNavegacionReferencesEstadoFinMoniker" ElementName="itemNavegacionReferencesEstadoFin" MonikerTypeName="ItemNavegacionReferencesEstadoFinMoniker">
+        <DomainRelationshipMoniker Name="ItemNavegacionReferencesEstadoFin" />
+      </XmlClassData>
+      <XmlClassData TypeName="ItemNavegacion_EstadoFinMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="itemNavegacion_EstadoFinMetaforaMoniker" ElementName="itemNavegacion_EstadoFinMetafora" MonikerTypeName="ItemNavegacion_EstadoFinMetaforaMoniker">
+        <ConnectorMoniker Name="ItemNavegacion_EstadoFinMetafora" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="MPJAAMPrototoolExplorer" />
   <ConnectionBuilders>
-    <ConnectionBuilder Name="VPrincipalReferencesVSecundariaBuilder">
+    <ConnectionBuilder Name="ItemNavegacionReferencesVentanaBuilder">
       <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="VPrincipalReferencesVSecundaria" />
+        <DomainRelationshipMoniker Name="ItemNavegacionReferencesVentana" />
         <SourceDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
-              <DomainClassMoniker Name="VentanaPrincipal" />
+              <DomainClassMoniker Name="ItemNavegacion" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </SourceDirectives>
         <TargetDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
-              <DomainClassMoniker Name="VentanaSecundaria" />
+              <DomainClassMoniker Name="Ventana" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </TargetDirectives>
       </LinkConnectDirective>
     </ConnectionBuilder>
-    <ConnectionBuilder Name="VSecundariaReferencesVSecundariaBuilder">
+    <ConnectionBuilder Name="ItemNavegacionReferencesEstadoFinBuilder">
       <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="VSecundariaReferencesVSecundaria" />
+        <DomainRelationshipMoniker Name="ItemNavegacionReferencesEstadoFin" />
         <SourceDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
-              <DomainClassMoniker Name="VentanaSecundaria" />
+              <DomainClassMoniker Name="ItemNavegacion" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </SourceDirectives>
         <TargetDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
-              <DomainClassMoniker Name="VentanaSecundaria" />
+              <DomainClassMoniker Name="EstadoFin" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </TargetDirectives>
@@ -477,16 +513,15 @@
         <DomainClassMoniker Name="Boton" />
         <GeometryShapeMoniker Name="BotonMetafora" />
       </ShapeMap>
+      <ShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="EstadoFin" />
+        <ParentElementPath>
+          <DomainPath />
+        </ParentElementPath>
+        <GeometryShapeMoniker Name="EstadoFinMetafora" />
+      </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
-      <ConnectorMap>
-        <ConnectorMoniker Name="VP_VSMetafora" />
-        <DomainRelationshipMoniker Name="VPrincipalReferencesVSecundaria" />
-      </ConnectorMap>
-      <ConnectorMap>
-        <ConnectorMoniker Name="VS_VSMetafora" />
-        <DomainRelationshipMoniker Name="VSecundariaReferencesVSecundaria" />
-      </ConnectorMap>
       <ConnectorMap>
         <ConnectorMoniker Name="Ventana_MenuMetafora" />
         <DomainRelationshipMoniker Name="VentanaHasMenus" />
@@ -498,6 +533,14 @@
       <ConnectorMap>
         <ConnectorMoniker Name="Ventana_BotonMetafora" />
         <DomainRelationshipMoniker Name="VentanaHasBotons" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="ItemNavegacion_Ventana" />
+        <DomainRelationshipMoniker Name="ItemNavegacionReferencesVentana" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="ItemNavegacion_EstadoFinMetafora" />
+        <DomainRelationshipMoniker Name="ItemNavegacionReferencesEstadoFin" />
       </ConnectorMap>
     </ConnectorMaps>
   </Diagram>
@@ -516,14 +559,6 @@
         <DomainClassMoniker Name="VentanaSecundaria" />
       </ElementTool>
     </ToolboxTab>
-    <ToolboxTab TabText="Conexiones">
-      <ConnectionTool Name="VP_VSTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="Ventana Principal con Ventana Secundaria" Tooltip="VP_ VSTool" HelpKeyword="VP_VSTool">
-        <ConnectionBuilderMoniker Name="MPJAAMPrototool/VPrincipalReferencesVSecundariaBuilder" />
-      </ConnectionTool>
-      <ConnectionTool Name="VS_VSTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="Ventana Secundaria con Ventana Secundaria" Tooltip="VS_ VSTool" HelpKeyword="VS_VSTool">
-        <ConnectionBuilderMoniker Name="MPJAAMPrototool/VSecundariaReferencesVSecundariaBuilder" />
-      </ConnectionTool>
-    </ToolboxTab>
     <ToolboxTab TabText="Navegación">
       <ElementTool Name="MenuTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Menu" Tooltip="Menu Tool" HelpKeyword="MenuTool">
         <DomainClassMoniker Name="Menu" />
@@ -534,6 +569,15 @@
       <ElementTool Name="BotonTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Boton" Tooltip="Boton Tool" HelpKeyword="BotonTool">
         <DomainClassMoniker Name="Boton" />
       </ElementTool>
+      <ElementTool Name="EstadoFinTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Estado de Fin" Tooltip="Estado Fin Tool" HelpKeyword="EstadoFinTool">
+        <DomainClassMoniker Name="EstadoFin" />
+      </ElementTool>
+      <ConnectionTool Name="ItemNavegacion_VentanaTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="ItemNavegacion_VentanaTool" Tooltip="Item Navegacion_ Ventana Tool" HelpKeyword="ItemNavegacion_VentanaTool">
+        <ConnectionBuilderMoniker Name="MPJAAMPrototool/ItemNavegacionReferencesVentanaBuilder" />
+      </ConnectionTool>
+      <ConnectionTool Name="ItemNavegacion_EstadoFinTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="Item Navegacion con Estado de Fin" Tooltip="Item Navegacion_ Estado Fin Tool" HelpKeyword="ItemNavegacion_EstadoFinTool">
+        <ConnectionBuilderMoniker Name="MPJAAMPrototool/ItemNavegacionReferencesEstadoFinBuilder" />
+      </ConnectionTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="MPJAAMPrototoolDiagram" />

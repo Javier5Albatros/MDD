@@ -12,469 +12,6 @@ using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 namespace UPM_IPS.MPJAAMPrototool
 {
 	/// <summary>
-	/// DomainRelationship VPrincipalReferencesVSecundaria
-	/// Description for UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria
-	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship()]
-	[DslModeling::DomainObjectId("3be2ce36-b4c4-4580-9cbb-d7fb155f7b72")]
-	public partial class VPrincipalReferencesVSecundaria : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// VPrincipalReferencesVSecundaria domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x3be2ce36, 0xb4c4, 0x4580, 0x9c, 0xbb, 0xd7, 0xfb, 0x15, 0x5f, 0x7b, 0x72);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a VPrincipalReferencesVSecundaria link in the same Partition as the given VentanaPrincipal
-		/// </summary>
-		/// <param name="source">VentanaPrincipal to use as the source of the relationship.</param>
-		/// <param name="target">VentanaSecundaria to use as the target of the relationship.</param>
-		public VPrincipalReferencesVSecundaria(VentanaPrincipal source, VentanaSecundaria target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(VPrincipalReferencesVSecundaria.VentanaPrincipalDomainRoleId, source), new DslModeling::RoleAssignment(VPrincipalReferencesVSecundaria.VentanaSecundariaDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public VPrincipalReferencesVSecundaria(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public VPrincipalReferencesVSecundaria(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public VPrincipalReferencesVSecundaria(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public VPrincipalReferencesVSecundaria(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region VentanaPrincipal domain role code
-		
-		/// <summary>
-		/// VentanaPrincipal domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid VentanaPrincipalDomainRoleId = new global::System.Guid(0xffcbf736, 0xe9ad, 0x4c99, 0x8f, 0x05, 0x64, 0xc4, 0xef, 0x7f, 0x42, 0xae);
-		
-		/// <summary>
-		/// DomainRole VentanaPrincipal
-		/// Description for
-		/// UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.VentanaPrincipal
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria/VentanaPrincipal.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria/VentanaPrincipal.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "VentanaSecundarium", PropertyDisplayNameKey="UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria/VentanaPrincipal.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("ffcbf736-e9ad-4c99-8f05-64c4ef7f42ae")]
-		public virtual VentanaPrincipal VentanaPrincipal
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (VentanaPrincipal)DslModeling::DomainRoleInfo.GetRolePlayer(this, VentanaPrincipalDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, VentanaPrincipalDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access VentanaPrincipal of a VentanaSecundaria
-		/// <summary>
-		/// Gets VentanaPrincipal.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static VentanaPrincipal GetVentanaPrincipal(VentanaSecundaria element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, VentanaSecundariaDomainRoleId) as VentanaPrincipal;
-		}
-		
-		/// <summary>
-		/// Sets VentanaPrincipal.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetVentanaPrincipal(VentanaSecundaria element, VentanaPrincipal newVentanaPrincipal)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, VentanaSecundariaDomainRoleId, newVentanaPrincipal);
-		}
-		#endregion
-		#region VentanaSecundaria domain role code
-		
-		/// <summary>
-		/// VentanaSecundaria domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid VentanaSecundariaDomainRoleId = new global::System.Guid(0x0c7b80d1, 0x26f0, 0x4ba8, 0xa5, 0x9d, 0x67, 0xb3, 0x81, 0xed, 0x62, 0xe8);
-		
-		/// <summary>
-		/// DomainRole VentanaSecundaria
-		/// Description for
-		/// UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.VentanaSecundaria
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria/VentanaSecundaria.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria/VentanaSecundaria.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "VentanaPrincipal", PropertyDisplayNameKey="UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria/VentanaSecundaria.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("0c7b80d1-26f0-4ba8-a59d-67b381ed62e8")]
-		public virtual VentanaSecundaria VentanaSecundaria
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (VentanaSecundaria)DslModeling::DomainRoleInfo.GetRolePlayer(this, VentanaSecundariaDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, VentanaSecundariaDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access VentanaSecundarium of a VentanaPrincipal
-		/// <summary>
-		/// Gets a list of VentanaSecundarium.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<VentanaSecundaria> GetVentanaSecundarium(VentanaPrincipal element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<VentanaSecundaria>, VentanaSecundaria>(element, VentanaPrincipalDomainRoleId);
-		}
-		#endregion
-		#region VentanaPrincipal link accessor
-		/// <summary>
-		/// Get the list of VPrincipalReferencesVSecundaria links to a VentanaPrincipal.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria> GetLinksToVentanaSecundarium ( global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal ventanaPrincipalInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria>(ventanaPrincipalInstance, global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.VentanaPrincipalDomainRoleId);
-		}
-		#endregion
-		#region VentanaSecundaria link accessor
-		/// <summary>
-		/// Get the VPrincipalReferencesVSecundaria link to a VentanaSecundaria.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria GetLinkToVentanaPrincipal (global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria ventanaSecundariaInstance)
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria>(ventanaSecundariaInstance, global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.VentanaSecundariaDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of VentanaSecundaria not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region VPrincipalReferencesVSecundaria instance accessors
-		
-		/// <summary>
-		/// Get any VPrincipalReferencesVSecundaria links between a given VentanaPrincipal and a VentanaSecundaria.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria> GetLinks( global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal source, global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria target )
-		{
-			global::System.Collections.Generic.List<global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria>();
-			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria>(source, global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.VentanaPrincipalDomainRoleId);
-			foreach ( global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria link in links )
-			{
-				if ( target.Equals(link.VentanaSecundaria) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one VPrincipalReferencesVSecundaria link between a given VentanaPrincipaland a VentanaSecundaria.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria GetLink( global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal source, global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria target )
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria>(source, global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.VentanaPrincipalDomainRoleId);
-			foreach ( global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria link in links )
-			{
-				if ( target.Equals(link.VentanaSecundaria) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace UPM_IPS.MPJAAMPrototool
-{
-	/// <summary>
-	/// DomainRelationship VSecundariaReferencesVSecundaria
-	/// Description for UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria
-	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship()]
-	[DslModeling::DomainObjectId("38b37c86-44e6-4201-9e04-13f79fc72b59")]
-	public partial class VSecundariaReferencesVSecundaria : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// VSecundariaReferencesVSecundaria domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x38b37c86, 0x44e6, 0x4201, 0x9e, 0x04, 0x13, 0xf7, 0x9f, 0xc7, 0x2b, 0x59);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a VSecundariaReferencesVSecundaria link in the same Partition as the given VentanaSecundaria
-		/// </summary>
-		/// <param name="source">VentanaSecundaria to use as the source of the relationship.</param>
-		/// <param name="target">VentanaSecundaria to use as the target of the relationship.</param>
-		public VSecundariaReferencesVSecundaria(VentanaSecundaria source, VentanaSecundaria target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(VSecundariaReferencesVSecundaria.SourceVentanaSecundariaDomainRoleId, source), new DslModeling::RoleAssignment(VSecundariaReferencesVSecundaria.TargetVentanaSecundariaDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public VSecundariaReferencesVSecundaria(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public VSecundariaReferencesVSecundaria(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public VSecundariaReferencesVSecundaria(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public VSecundariaReferencesVSecundaria(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region SourceVentanaSecundaria domain role code
-		
-		/// <summary>
-		/// SourceVentanaSecundaria domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid SourceVentanaSecundariaDomainRoleId = new global::System.Guid(0x795aa0d5, 0x489e, 0x49cc, 0x96, 0x1d, 0x98, 0xb6, 0x61, 0xf0, 0x65, 0x25);
-		
-		/// <summary>
-		/// DomainRole SourceVentanaSecundaria
-		/// Description for
-		/// UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria.SourceVentanaSecundaria
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria/SourceVentanaSecundaria.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria/SourceVentanaSecundaria.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "TargetVentanaSecundarium", PropertyDisplayNameKey="UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria/SourceVentanaSecundaria.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("795aa0d5-489e-49cc-961d-98b661f06525")]
-		public virtual VentanaSecundaria SourceVentanaSecundaria
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (VentanaSecundaria)DslModeling::DomainRoleInfo.GetRolePlayer(this, SourceVentanaSecundariaDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, SourceVentanaSecundariaDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access SourceVentanaSecundarium of a VentanaSecundaria
-		/// <summary>
-		/// Gets a list of SourceVentanaSecundarium.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<VentanaSecundaria> GetSourceVentanaSecundarium(VentanaSecundaria element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<VentanaSecundaria>, VentanaSecundaria>(element, TargetVentanaSecundariaDomainRoleId);
-		}
-		#endregion
-		#region TargetVentanaSecundaria domain role code
-		
-		/// <summary>
-		/// TargetVentanaSecundaria domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid TargetVentanaSecundariaDomainRoleId = new global::System.Guid(0x30e95320, 0xab9b, 0x4f49, 0xad, 0x85, 0x4a, 0xa4, 0x1e, 0x0b, 0x4c, 0x21);
-		
-		/// <summary>
-		/// DomainRole TargetVentanaSecundaria
-		/// Description for
-		/// UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria.TargetVentanaSecundaria
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria/TargetVentanaSecundaria.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria/TargetVentanaSecundaria.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "SourceVentanaSecundarium", PropertyDisplayNameKey="UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria/TargetVentanaSecundaria.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("30e95320-ab9b-4f49-ad85-4aa41e0b4c21")]
-		public virtual VentanaSecundaria TargetVentanaSecundaria
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (VentanaSecundaria)DslModeling::DomainRoleInfo.GetRolePlayer(this, TargetVentanaSecundariaDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, TargetVentanaSecundariaDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access TargetVentanaSecundarium of a VentanaSecundaria
-		/// <summary>
-		/// Gets a list of TargetVentanaSecundarium.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<VentanaSecundaria> GetTargetVentanaSecundarium(VentanaSecundaria element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<VentanaSecundaria>, VentanaSecundaria>(element, SourceVentanaSecundariaDomainRoleId);
-		}
-		#endregion
-		#region SourceVentanaSecundaria link accessor
-		/// <summary>
-		/// Get the list of VSecundariaReferencesVSecundaria links to a VentanaSecundaria.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria> GetLinksToTargetVentanaSecundarium ( global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria sourceVentanaSecundariaInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria>(sourceVentanaSecundariaInstance, global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria.SourceVentanaSecundariaDomainRoleId);
-		}
-		#endregion
-		#region TargetVentanaSecundaria link accessor
-		/// <summary>
-		/// Get the list of VSecundariaReferencesVSecundaria links to a VentanaSecundaria.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria> GetLinksToSourceVentanaSecundarium ( global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria targetVentanaSecundariaInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria>(targetVentanaSecundariaInstance, global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria.TargetVentanaSecundariaDomainRoleId);
-		}
-		#endregion
-		#region VSecundariaReferencesVSecundaria instance accessors
-		
-		/// <summary>
-		/// Get any VSecundariaReferencesVSecundaria links between a given VentanaSecundaria and a VentanaSecundaria.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria> GetLinks( global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria source, global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria target )
-		{
-			global::System.Collections.Generic.List<global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria>();
-			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria>(source, global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria.SourceVentanaSecundariaDomainRoleId);
-			foreach ( global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria link in links )
-			{
-				if ( target.Equals(link.TargetVentanaSecundaria) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one VSecundariaReferencesVSecundaria link between a given VentanaSecundariaand a VentanaSecundaria.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria GetLink( global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria source, global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria target )
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria>(source, global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria.SourceVentanaSecundariaDomainRoleId);
-			foreach ( global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria link in links )
-			{
-				if ( target.Equals(link.TargetVentanaSecundaria) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace UPM_IPS.MPJAAMPrototool
-{
-	/// <summary>
 	/// DomainRelationship TapizPrototoolHasVentanaPrincipal
 	/// Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal
 	/// </summary>
@@ -1556,23 +1093,23 @@ namespace UPM_IPS.MPJAAMPrototool
 		}
 				
 		#endregion
-		#region Static methods to access Ventana of a Boton
+		#region Static methods to access VentanaBoton of a Boton
 		/// <summary>
-		/// Gets Ventana.
+		/// Gets VentanaBoton.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static Ventana GetVentana(Boton element)
+		public static Ventana GetVentanaBoton(Boton element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, BotonDomainRoleId) as Ventana;
 		}
 		
 		/// <summary>
-		/// Sets Ventana.
+		/// Sets VentanaBoton.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetVentana(Boton element, Ventana newVentana)
+		public static void SetVentanaBoton(Boton element, Ventana newVentana)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, BotonDomainRoleId, newVentana);
 		}
@@ -1590,7 +1127,7 @@ namespace UPM_IPS.MPJAAMPrototool
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.VentanaHasBotons/Boton.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.VentanaHasBotons/Boton.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Ventana", PropertyDisplayNameKey="UPM_IPS.MPJAAMPrototool.VentanaHasBotons/Boton.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "VentanaBoton", PropertyDisplayNameKey="UPM_IPS.MPJAAMPrototool.VentanaHasBotons/Boton.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("3c8bcb9c-66b8-4844-8364-46f462d6804e")]
 		public virtual Boton Boton
 		{
@@ -1635,7 +1172,7 @@ namespace UPM_IPS.MPJAAMPrototool
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.MPJAAMPrototool.VentanaHasBotons GetLinkToVentana (global::UPM_IPS.MPJAAMPrototool.Boton botonInstance)
+		public static global::UPM_IPS.MPJAAMPrototool.VentanaHasBotons GetLinkToVentanaBoton (global::UPM_IPS.MPJAAMPrototool.Boton botonInstance)
 		{
 			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.VentanaHasBotons> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.VentanaHasBotons>(botonInstance, global::UPM_IPS.MPJAAMPrototool.VentanaHasBotons.BotonDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Boton not obeyed.");
@@ -1680,6 +1217,746 @@ namespace UPM_IPS.MPJAAMPrototool
 			foreach ( global::UPM_IPS.MPJAAMPrototool.VentanaHasBotons link in links )
 			{
 				if ( target.Equals(link.Boton) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.MPJAAMPrototool
+{
+	/// <summary>
+	/// DomainRelationship ItemNavegacionReferencesVentana
+	/// Description for UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("09a6f54e-7f94-49d1-be9a-0bf7bc2650ca")]
+	public partial class ItemNavegacionReferencesVentana : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ItemNavegacionReferencesVentana domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x09a6f54e, 0x7f94, 0x49d1, 0xbe, 0x9a, 0x0b, 0xf7, 0xbc, 0x26, 0x50, 0xca);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ItemNavegacionReferencesVentana link in the same Partition as the given ItemNavegacion
+		/// </summary>
+		/// <param name="source">ItemNavegacion to use as the source of the relationship.</param>
+		/// <param name="target">Ventana to use as the target of the relationship.</param>
+		public ItemNavegacionReferencesVentana(ItemNavegacion source, Ventana target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ItemNavegacionReferencesVentana.ItemNavegacionDomainRoleId, source), new DslModeling::RoleAssignment(ItemNavegacionReferencesVentana.VentanaDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ItemNavegacionReferencesVentana(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ItemNavegacionReferencesVentana(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ItemNavegacionReferencesVentana(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ItemNavegacionReferencesVentana(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ItemNavegacion domain role code
+		
+		/// <summary>
+		/// ItemNavegacion domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ItemNavegacionDomainRoleId = new global::System.Guid(0x7281afb6, 0x89f3, 0x4dbd, 0x8a, 0xd0, 0x1f, 0x2f, 0x5f, 0x0e, 0x0c, 0xe7);
+		
+		/// <summary>
+		/// DomainRole ItemNavegacion
+		/// Description for
+		/// UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana.ItemNavegacion
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana/ItemNavegacion.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana/ItemNavegacion.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Ventana", PropertyDisplayNameKey="UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana/ItemNavegacion.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("7281afb6-89f3-4dbd-8ad0-1f2f5f0e0ce7")]
+		public virtual ItemNavegacion ItemNavegacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ItemNavegacion)DslModeling::DomainRoleInfo.GetRolePlayer(this, ItemNavegacionDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ItemNavegacionDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ItemNavegacioned of a Ventana
+		/// <summary>
+		/// Gets a list of ItemNavegacioned.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<ItemNavegacion> GetItemNavegacioned(Ventana element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<ItemNavegacion>, ItemNavegacion>(element, VentanaDomainRoleId);
+		}
+		#endregion
+		#region Ventana domain role code
+		
+		/// <summary>
+		/// Ventana domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid VentanaDomainRoleId = new global::System.Guid(0x20a06814, 0x1ad5, 0x4bb7, 0xb4, 0x3a, 0xc5, 0x40, 0x23, 0xa4, 0x89, 0xff);
+		
+		/// <summary>
+		/// DomainRole Ventana
+		/// Description for UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana.Ventana
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana/Ventana.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana/Ventana.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ItemNavegacioned", PropertyDisplayNameKey="UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana/Ventana.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("20a06814-1ad5-4bb7-b43a-c54023a489ff")]
+		public virtual Ventana Ventana
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Ventana)DslModeling::DomainRoleInfo.GetRolePlayer(this, VentanaDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, VentanaDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Ventana of a ItemNavegacion
+		/// <summary>
+		/// Gets Ventana.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Ventana GetVentana(ItemNavegacion element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ItemNavegacionDomainRoleId) as Ventana;
+		}
+		
+		/// <summary>
+		/// Sets Ventana.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetVentana(ItemNavegacion element, Ventana newVentana)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ItemNavegacionDomainRoleId, newVentana);
+		}
+		#endregion
+		#region ItemNavegacion link accessor
+		/// <summary>
+		/// Get the ItemNavegacionReferencesVentana link to a ItemNavegacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana GetLinkToVentana (global::UPM_IPS.MPJAAMPrototool.ItemNavegacion itemNavegacionInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana>(itemNavegacionInstance, global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana.ItemNavegacionDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ItemNavegacion not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region Ventana link accessor
+		/// <summary>
+		/// Get the list of ItemNavegacionReferencesVentana links to a Ventana.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana> GetLinksToItemNavegacioned ( global::UPM_IPS.MPJAAMPrototool.Ventana ventanaInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana>(ventanaInstance, global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana.VentanaDomainRoleId);
+		}
+		#endregion
+		#region ItemNavegacionReferencesVentana instance accessors
+		
+		/// <summary>
+		/// Get any ItemNavegacionReferencesVentana links between a given ItemNavegacion and a Ventana.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana> GetLinks( global::UPM_IPS.MPJAAMPrototool.ItemNavegacion source, global::UPM_IPS.MPJAAMPrototool.Ventana target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana>(source, global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana.ItemNavegacionDomainRoleId);
+			foreach ( global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana link in links )
+			{
+				if ( target.Equals(link.Ventana) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ItemNavegacionReferencesVentana link between a given ItemNavegacionand a Ventana.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana GetLink( global::UPM_IPS.MPJAAMPrototool.ItemNavegacion source, global::UPM_IPS.MPJAAMPrototool.Ventana target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana>(source, global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana.ItemNavegacionDomainRoleId);
+			foreach ( global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana link in links )
+			{
+				if ( target.Equals(link.Ventana) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.MPJAAMPrototool
+{
+	/// <summary>
+	/// DomainRelationship TapizPrototoolHasEstadoFin
+	/// Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("85997d99-8be6-4365-ad93-445b7cb6c9ef")]
+	public partial class TapizPrototoolHasEstadoFin : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// TapizPrototoolHasEstadoFin domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x85997d99, 0x8be6, 0x4365, 0xad, 0x93, 0x44, 0x5b, 0x7c, 0xb6, 0xc9, 0xef);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a TapizPrototoolHasEstadoFin link in the same Partition as the given TapizPrototool
+		/// </summary>
+		/// <param name="source">TapizPrototool to use as the source of the relationship.</param>
+		/// <param name="target">EstadoFin to use as the target of the relationship.</param>
+		public TapizPrototoolHasEstadoFin(TapizPrototool source, EstadoFin target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(TapizPrototoolHasEstadoFin.TapizPrototoolDomainRoleId, source), new DslModeling::RoleAssignment(TapizPrototoolHasEstadoFin.EstadoFinDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TapizPrototoolHasEstadoFin(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TapizPrototoolHasEstadoFin(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TapizPrototoolHasEstadoFin(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TapizPrototoolHasEstadoFin(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region TapizPrototool domain role code
+		
+		/// <summary>
+		/// TapizPrototool domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid TapizPrototoolDomainRoleId = new global::System.Guid(0x2e3dde9f, 0xc4db, 0x4872, 0xa2, 0xb4, 0x25, 0x91, 0x2e, 0x43, 0xbb, 0xbe);
+		
+		/// <summary>
+		/// DomainRole TapizPrototool
+		/// Description for
+		/// UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.TapizPrototool
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin/TapizPrototool.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin/TapizPrototool.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstadoFin", PropertyDisplayNameKey="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin/TapizPrototool.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
+		[DslModeling::DomainObjectId("2e3dde9f-c4db-4872-a2b4-25912e43bbbe")]
+		public virtual TapizPrototool TapizPrototool
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (TapizPrototool)DslModeling::DomainRoleInfo.GetRolePlayer(this, TapizPrototoolDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, TapizPrototoolDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access TapizPrototool of a EstadoFin
+		/// <summary>
+		/// Gets TapizPrototool.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static TapizPrototool GetTapizPrototool(EstadoFin element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, EstadoFinDomainRoleId) as TapizPrototool;
+		}
+		
+		/// <summary>
+		/// Sets TapizPrototool.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetTapizPrototool(EstadoFin element, TapizPrototool newTapizPrototool)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, EstadoFinDomainRoleId, newTapizPrototool);
+		}
+		#endregion
+		#region EstadoFin domain role code
+		
+		/// <summary>
+		/// EstadoFin domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid EstadoFinDomainRoleId = new global::System.Guid(0xd0d9c04e, 0x5b38, 0x4df8, 0x9d, 0x86, 0x63, 0x90, 0xd0, 0x0f, 0xf6, 0x9b);
+		
+		/// <summary>
+		/// DomainRole EstadoFin
+		/// Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.EstadoFin
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin/EstadoFin.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin/EstadoFin.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "TapizPrototool", PropertyDisplayNameKey="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin/EstadoFin.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("d0d9c04e-5b38-4df8-9d86-6390d00ff69b")]
+		public virtual EstadoFin EstadoFin
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (EstadoFin)DslModeling::DomainRoleInfo.GetRolePlayer(this, EstadoFinDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, EstadoFinDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access EstadoFin of a TapizPrototool
+		/// <summary>
+		/// Gets EstadoFin.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static EstadoFin GetEstadoFin(TapizPrototool element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, TapizPrototoolDomainRoleId) as EstadoFin;
+		}
+		
+		/// <summary>
+		/// Sets EstadoFin.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetEstadoFin(TapizPrototool element, EstadoFin newEstadoFin)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, TapizPrototoolDomainRoleId, newEstadoFin);
+		}
+		#endregion
+		#region TapizPrototool link accessor
+		/// <summary>
+		/// Get the TapizPrototoolHasEstadoFin link to a TapizPrototool.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin GetLinkToEstadoFin (global::UPM_IPS.MPJAAMPrototool.TapizPrototool tapizPrototoolInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin>(tapizPrototoolInstance, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.TapizPrototoolDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of TapizPrototool not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region EstadoFin link accessor
+		/// <summary>
+		/// Get the TapizPrototoolHasEstadoFin link to a EstadoFin.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin GetLinkToTapizPrototool (global::UPM_IPS.MPJAAMPrototool.EstadoFin estadoFinInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin>(estadoFinInstance, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.EstadoFinDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of EstadoFin not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region TapizPrototoolHasEstadoFin instance accessors
+		
+		/// <summary>
+		/// Get any TapizPrototoolHasEstadoFin links between a given TapizPrototool and a EstadoFin.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin> GetLinks( global::UPM_IPS.MPJAAMPrototool.TapizPrototool source, global::UPM_IPS.MPJAAMPrototool.EstadoFin target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin>(source, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.TapizPrototoolDomainRoleId);
+			foreach ( global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin link in links )
+			{
+				if ( target.Equals(link.EstadoFin) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one TapizPrototoolHasEstadoFin link between a given TapizPrototooland a EstadoFin.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin GetLink( global::UPM_IPS.MPJAAMPrototool.TapizPrototool source, global::UPM_IPS.MPJAAMPrototool.EstadoFin target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin>(source, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.TapizPrototoolDomainRoleId);
+			foreach ( global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin link in links )
+			{
+				if ( target.Equals(link.EstadoFin) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.MPJAAMPrototool
+{
+	/// <summary>
+	/// DomainRelationship ItemNavegacionReferencesEstadoFin
+	/// Description for UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("5c900347-5b39-4a99-876d-79030aeb2e5c")]
+	public partial class ItemNavegacionReferencesEstadoFin : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ItemNavegacionReferencesEstadoFin domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x5c900347, 0x5b39, 0x4a99, 0x87, 0x6d, 0x79, 0x03, 0x0a, 0xeb, 0x2e, 0x5c);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ItemNavegacionReferencesEstadoFin link in the same Partition as the given ItemNavegacion
+		/// </summary>
+		/// <param name="source">ItemNavegacion to use as the source of the relationship.</param>
+		/// <param name="target">EstadoFin to use as the target of the relationship.</param>
+		public ItemNavegacionReferencesEstadoFin(ItemNavegacion source, EstadoFin target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ItemNavegacionReferencesEstadoFin.ItemNavegacionDomainRoleId, source), new DslModeling::RoleAssignment(ItemNavegacionReferencesEstadoFin.EstadoFinDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ItemNavegacionReferencesEstadoFin(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ItemNavegacionReferencesEstadoFin(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ItemNavegacionReferencesEstadoFin(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ItemNavegacionReferencesEstadoFin(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ItemNavegacion domain role code
+		
+		/// <summary>
+		/// ItemNavegacion domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ItemNavegacionDomainRoleId = new global::System.Guid(0x7def55a9, 0x12c8, 0x47b6, 0x86, 0x8e, 0xe1, 0x71, 0x82, 0xb2, 0xe1, 0xdf);
+		
+		/// <summary>
+		/// DomainRole ItemNavegacion
+		/// Description for
+		/// UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin.ItemNavegacion
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin/ItemNavegacion.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin/ItemNavegacion.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstadoFin", PropertyDisplayNameKey="UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin/ItemNavegacion.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
+		[DslModeling::DomainObjectId("7def55a9-12c8-47b6-868e-e17182b2e1df")]
+		public virtual ItemNavegacion ItemNavegacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ItemNavegacion)DslModeling::DomainRoleInfo.GetRolePlayer(this, ItemNavegacionDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ItemNavegacionDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ItemNavegacioned of a EstadoFin
+		/// <summary>
+		/// Gets a list of ItemNavegacioned.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<ItemNavegacion> GetItemNavegacioned(EstadoFin element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<ItemNavegacion>, ItemNavegacion>(element, EstadoFinDomainRoleId);
+		}
+		#endregion
+		#region EstadoFin domain role code
+		
+		/// <summary>
+		/// EstadoFin domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid EstadoFinDomainRoleId = new global::System.Guid(0x3eac95ef, 0x12e5, 0x4773, 0x91, 0xa9, 0x1c, 0x5e, 0x8c, 0x1e, 0xda, 0x0e);
+		
+		/// <summary>
+		/// DomainRole EstadoFin
+		/// Description for
+		/// UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin.EstadoFin
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin/EstadoFin.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin/EstadoFin.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ItemNavegacioned", PropertyDisplayNameKey="UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin/EstadoFin.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("3eac95ef-12e5-4773-91a9-1c5e8c1eda0e")]
+		public virtual EstadoFin EstadoFin
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (EstadoFin)DslModeling::DomainRoleInfo.GetRolePlayer(this, EstadoFinDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, EstadoFinDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access EstadoFin of a ItemNavegacion
+		/// <summary>
+		/// Gets EstadoFin.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static EstadoFin GetEstadoFin(ItemNavegacion element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ItemNavegacionDomainRoleId) as EstadoFin;
+		}
+		
+		/// <summary>
+		/// Sets EstadoFin.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetEstadoFin(ItemNavegacion element, EstadoFin newEstadoFin)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ItemNavegacionDomainRoleId, newEstadoFin);
+		}
+		#endregion
+		#region ItemNavegacion link accessor
+		/// <summary>
+		/// Get the ItemNavegacionReferencesEstadoFin link to a ItemNavegacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin GetLinkToEstadoFin (global::UPM_IPS.MPJAAMPrototool.ItemNavegacion itemNavegacionInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin>(itemNavegacionInstance, global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin.ItemNavegacionDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ItemNavegacion not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region EstadoFin link accessor
+		/// <summary>
+		/// Get the list of ItemNavegacionReferencesEstadoFin links to a EstadoFin.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin> GetLinksToItemNavegacioned ( global::UPM_IPS.MPJAAMPrototool.EstadoFin estadoFinInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin>(estadoFinInstance, global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin.EstadoFinDomainRoleId);
+		}
+		#endregion
+		#region ItemNavegacionReferencesEstadoFin instance accessors
+		
+		/// <summary>
+		/// Get any ItemNavegacionReferencesEstadoFin links between a given ItemNavegacion and a EstadoFin.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin> GetLinks( global::UPM_IPS.MPJAAMPrototool.ItemNavegacion source, global::UPM_IPS.MPJAAMPrototool.EstadoFin target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin>(source, global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin.ItemNavegacionDomainRoleId);
+			foreach ( global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin link in links )
+			{
+				if ( target.Equals(link.EstadoFin) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ItemNavegacionReferencesEstadoFin link between a given ItemNavegacionand a EstadoFin.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin GetLink( global::UPM_IPS.MPJAAMPrototool.ItemNavegacion source, global::UPM_IPS.MPJAAMPrototool.EstadoFin target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin>(source, global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin.ItemNavegacionDomainRoleId);
+			foreach ( global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin link in links )
+			{
+				if ( target.Equals(link.EstadoFin) )
 				{
 					return link;
 				}

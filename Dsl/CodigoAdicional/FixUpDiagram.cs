@@ -15,7 +15,12 @@ namespace UPM_IPS.MPJAAMPrototool
 
         private ModelElement GetParentForBoton(Boton elem)
         {
-            return elem.Ventana;
+            return elem.VentanaBoton;
+        }
+
+        private ModelElement GetParentForEstadoFin(EstadoFin elem)
+        {
+            return elem.TapizPrototool;
         }
     }
 }

@@ -15,7 +15,7 @@ namespace UPM_IPS.MPJAAMPrototool
 	/// <summary>
 	/// ConnectionBuilder class to provide logic for constructing connections between elements.
 	/// </summary>
-	public static partial class VPrincipalReferencesVSecundariaBuilder
+	public static partial class ItemNavegacionReferencesVentanaBuilder
 	{
 		#region Accept Connection Methods
 		/// <summary>
@@ -27,7 +27,7 @@ namespace UPM_IPS.MPJAAMPrototool
 		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
 		{
 			if (candidate == null) return false;
-			else if (candidate is global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal)
+			else if (candidate is global::UPM_IPS.MPJAAMPrototool.ItemNavegacion)
 			{ 
 				return true;
 			}
@@ -44,7 +44,7 @@ namespace UPM_IPS.MPJAAMPrototool
 		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
 		{
 			if (candidate == null) return false;
-			else if (candidate is global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria)
+			else if (candidate is global::UPM_IPS.MPJAAMPrototool.Ventana)
 			{ 
 				return true;
 			}
@@ -83,14 +83,14 @@ namespace UPM_IPS.MPJAAMPrototool
 			}
 			else // Check combinations
 			{
-				if (candidateSource is global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal)
+				if (candidateSource is global::UPM_IPS.MPJAAMPrototool.ItemNavegacion)
 				{
-					if (candidateTarget is global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria)
+					if (candidateTarget is global::UPM_IPS.MPJAAMPrototool.Ventana)
 					{
-						global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal sourceVentanaPrincipal = (global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal)candidateSource;
-						global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria targetVentanaSecundaria = (global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria)candidateTarget;
-						if(targetVentanaSecundaria == null || global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.GetLinkToVentanaPrincipal(targetVentanaSecundaria) != null) return false;
-						if(targetVentanaSecundaria == null || sourceVentanaPrincipal == null || global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.GetLinks(sourceVentanaPrincipal, targetVentanaSecundaria).Count > 0) return false;
+						global::UPM_IPS.MPJAAMPrototool.ItemNavegacion sourceItemNavegacion = (global::UPM_IPS.MPJAAMPrototool.ItemNavegacion)candidateSource;
+						global::UPM_IPS.MPJAAMPrototool.Ventana targetVentana = (global::UPM_IPS.MPJAAMPrototool.Ventana)candidateTarget;
+						if(sourceItemNavegacion == null || global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana.GetLinkToVentana(sourceItemNavegacion) != null) return false;
+						if(targetVentana == null || sourceItemNavegacion == null || global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana.GetLinks(sourceItemNavegacion, targetVentana).Count > 0) return false;
 						return true;
 					}
 				}
@@ -122,13 +122,13 @@ namespace UPM_IPS.MPJAAMPrototool
 			
 			if (CanAcceptSourceAndTarget(source, target))
 			{
-				if (source is global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal)
+				if (source is global::UPM_IPS.MPJAAMPrototool.ItemNavegacion)
 				{
-					if (target is global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria)
+					if (target is global::UPM_IPS.MPJAAMPrototool.Ventana)
 					{
-						global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal sourceAccepted = (global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal)source;
-						global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria targetAccepted = (global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria)target;
-						DslModeling::ElementLink result = new global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria(sourceAccepted, targetAccepted);
+						global::UPM_IPS.MPJAAMPrototool.ItemNavegacion sourceAccepted = (global::UPM_IPS.MPJAAMPrototool.ItemNavegacion)source;
+						global::UPM_IPS.MPJAAMPrototool.Ventana targetAccepted = (global::UPM_IPS.MPJAAMPrototool.Ventana)target;
+						DslModeling::ElementLink result = new global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana(sourceAccepted, targetAccepted);
 						if (DslModeling::DomainClassInfo.HasNameProperty(result))
 						{
 							DslModeling::DomainClassInfo.SetUniqueName(result);
@@ -146,7 +146,7 @@ namespace UPM_IPS.MPJAAMPrototool
 	/// <summary>
 	/// ConnectionBuilder class to provide logic for constructing connections between elements.
 	/// </summary>
-	public static partial class VSecundariaReferencesVSecundariaBuilder
+	public static partial class ItemNavegacionReferencesEstadoFinBuilder
 	{
 		#region Accept Connection Methods
 		/// <summary>
@@ -158,7 +158,7 @@ namespace UPM_IPS.MPJAAMPrototool
 		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
 		{
 			if (candidate == null) return false;
-			else if (candidate is global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria)
+			else if (candidate is global::UPM_IPS.MPJAAMPrototool.ItemNavegacion)
 			{ 
 				return true;
 			}
@@ -175,7 +175,7 @@ namespace UPM_IPS.MPJAAMPrototool
 		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
 		{
 			if (candidate == null) return false;
-			else if (candidate is global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria)
+			else if (candidate is global::UPM_IPS.MPJAAMPrototool.EstadoFin)
 			{ 
 				return true;
 			}
@@ -214,13 +214,14 @@ namespace UPM_IPS.MPJAAMPrototool
 			}
 			else // Check combinations
 			{
-				if (candidateSource is global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria)
+				if (candidateSource is global::UPM_IPS.MPJAAMPrototool.ItemNavegacion)
 				{
-					if (candidateTarget is global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria)
+					if (candidateTarget is global::UPM_IPS.MPJAAMPrototool.EstadoFin)
 					{
-						global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria sourceVentanaSecundaria = (global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria)candidateSource;
-						global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria targetVentanaSecundaria = (global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria)candidateTarget;
-						if(targetVentanaSecundaria == null || sourceVentanaSecundaria == null || global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria.GetLinks(sourceVentanaSecundaria, targetVentanaSecundaria).Count > 0) return false;
+						global::UPM_IPS.MPJAAMPrototool.ItemNavegacion sourceItemNavegacion = (global::UPM_IPS.MPJAAMPrototool.ItemNavegacion)candidateSource;
+						global::UPM_IPS.MPJAAMPrototool.EstadoFin targetEstadoFin = (global::UPM_IPS.MPJAAMPrototool.EstadoFin)candidateTarget;
+						if(sourceItemNavegacion == null || global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin.GetLinkToEstadoFin(sourceItemNavegacion) != null) return false;
+						if(targetEstadoFin == null || sourceItemNavegacion == null || global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin.GetLinks(sourceItemNavegacion, targetEstadoFin).Count > 0) return false;
 						return true;
 					}
 				}
@@ -252,13 +253,13 @@ namespace UPM_IPS.MPJAAMPrototool
 			
 			if (CanAcceptSourceAndTarget(source, target))
 			{
-				if (source is global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria)
+				if (source is global::UPM_IPS.MPJAAMPrototool.ItemNavegacion)
 				{
-					if (target is global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria)
+					if (target is global::UPM_IPS.MPJAAMPrototool.EstadoFin)
 					{
-						global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria sourceAccepted = (global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria)source;
-						global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria targetAccepted = (global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria)target;
-						DslModeling::ElementLink result = new global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria(sourceAccepted, targetAccepted);
+						global::UPM_IPS.MPJAAMPrototool.ItemNavegacion sourceAccepted = (global::UPM_IPS.MPJAAMPrototool.ItemNavegacion)source;
+						global::UPM_IPS.MPJAAMPrototool.EstadoFin targetAccepted = (global::UPM_IPS.MPJAAMPrototool.EstadoFin)target;
+						DslModeling::ElementLink result = new global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin(sourceAccepted, targetAccepted);
 						if (DslModeling::DomainClassInfo.HasNameProperty(result))
 						{
 							DslModeling::DomainClassInfo.SetUniqueName(result);
@@ -277,14 +278,14 @@ namespace UPM_IPS.MPJAAMPrototool
  	/// <summary>
 	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
 	/// </summary>
-	internal partial class VP_VSToolConnectAction : DslDiagrams::ConnectAction
+	internal partial class ItemNavegacion_VentanaToolConnectAction : DslDiagrams::ConnectAction
 	{
 		private DslDiagrams::ConnectionType[] connectionTypes;
 		
 		/// <summary>
-		/// Constructs a new VP_VSToolConnectAction for the given Diagram.
+		/// Constructs a new ItemNavegacion_VentanaToolConnectAction for the given Diagram.
 		/// </summary>
-		public VP_VSToolConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		public ItemNavegacion_VentanaToolConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
 		{
 		}
 		
@@ -314,24 +315,24 @@ namespace UPM_IPS.MPJAAMPrototool
 		
 		
 		/// <summary>
-		/// Returns the VP_VSToolConnectionType associated with this action.
+		/// Returns the ItemNavegacion_VentanaToolConnectionType associated with this action.
 		/// </summary>
 		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
 		{
 			if(this.connectionTypes == null)
 			{
-				this.connectionTypes = new DslDiagrams::ConnectionType[] { new VP_VSToolConnectionType() };
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new ItemNavegacion_VentanaToolConnectionType() };
 			}
 			
 			return this.connectionTypes;
 		}
 		
-		private partial class VP_VSToolConnectionTypeBase : DslDiagrams::ConnectionType
+		private partial class ItemNavegacion_VentanaToolConnectionTypeBase : DslDiagrams::ConnectionType
 		{
 			/// <summary>
-			/// Constructs a new the VP_VSToolConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the ItemNavegacion_VentanaToolConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			protected VP_VSToolConnectionTypeBase() : base() {}
+			protected ItemNavegacion_VentanaToolConnectionTypeBase() : base() {}
 			
 			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
 			{
@@ -351,7 +352,7 @@ namespace UPM_IPS.MPJAAMPrototool
 			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder VPrincipalReferencesVSecundariaBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder ItemNavegacionReferencesVentanaBuilder.
 			/// </remarks>
 			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
 			{
@@ -377,11 +378,11 @@ namespace UPM_IPS.MPJAAMPrototool
 				{				
 					if(targetShapeElement == null)
 					{
-						return VPrincipalReferencesVSecundariaBuilder.CanAcceptSource(sourceElement);
+						return ItemNavegacionReferencesVentanaBuilder.CanAcceptSource(sourceElement);
 					}
 					else
 					{				
-						return VPrincipalReferencesVSecundariaBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+						return ItemNavegacionReferencesVentanaBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
 					}
 				}
 				else
@@ -406,7 +407,7 @@ namespace UPM_IPS.MPJAAMPrototool
 			/// Called by the base ConnectAction class to create the underlying relationship.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder VPrincipalReferencesVSecundariaBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder ItemNavegacionReferencesVentanaBuilder.
 			/// </remarks>
 			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
 			{
@@ -420,30 +421,30 @@ namespace UPM_IPS.MPJAAMPrototool
 				if(sourceElement == null) sourceElement = sourceShapeElement;
 				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
 				if(targetElement == null) targetElement = targetShapeElement;
-				VPrincipalReferencesVSecundariaBuilder.Connect(sourceElement, targetElement);
+				ItemNavegacionReferencesVentanaBuilder.Connect(sourceElement, targetElement);
 			}
 		}
 		
-		private partial class VP_VSToolConnectionType : VP_VSToolConnectionTypeBase
+		private partial class ItemNavegacion_VentanaToolConnectionType : ItemNavegacion_VentanaToolConnectionTypeBase
 		{
 			/// <summary>
-			/// Constructs a new the VP_VSToolConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the ItemNavegacion_VentanaToolConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			public VP_VSToolConnectionType() : base() {}
+			public ItemNavegacion_VentanaToolConnectionType() : base() {}
 		}
 	}
  	
  	/// <summary>
 	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
 	/// </summary>
-	internal partial class VS_VSToolConnectAction : DslDiagrams::ConnectAction
+	internal partial class ItemNavegacion_EstadoFinToolConnectAction : DslDiagrams::ConnectAction
 	{
 		private DslDiagrams::ConnectionType[] connectionTypes;
 		
 		/// <summary>
-		/// Constructs a new VS_VSToolConnectAction for the given Diagram.
+		/// Constructs a new ItemNavegacion_EstadoFinToolConnectAction for the given Diagram.
 		/// </summary>
-		public VS_VSToolConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		public ItemNavegacion_EstadoFinToolConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
 		{
 		}
 		
@@ -473,24 +474,24 @@ namespace UPM_IPS.MPJAAMPrototool
 		
 		
 		/// <summary>
-		/// Returns the VS_VSToolConnectionType associated with this action.
+		/// Returns the ItemNavegacion_EstadoFinToolConnectionType associated with this action.
 		/// </summary>
 		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
 		{
 			if(this.connectionTypes == null)
 			{
-				this.connectionTypes = new DslDiagrams::ConnectionType[] { new VS_VSToolConnectionType() };
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new ItemNavegacion_EstadoFinToolConnectionType() };
 			}
 			
 			return this.connectionTypes;
 		}
 		
-		private partial class VS_VSToolConnectionTypeBase : DslDiagrams::ConnectionType
+		private partial class ItemNavegacion_EstadoFinToolConnectionTypeBase : DslDiagrams::ConnectionType
 		{
 			/// <summary>
-			/// Constructs a new the VS_VSToolConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the ItemNavegacion_EstadoFinToolConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			protected VS_VSToolConnectionTypeBase() : base() {}
+			protected ItemNavegacion_EstadoFinToolConnectionTypeBase() : base() {}
 			
 			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
 			{
@@ -510,7 +511,7 @@ namespace UPM_IPS.MPJAAMPrototool
 			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder VSecundariaReferencesVSecundariaBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder ItemNavegacionReferencesEstadoFinBuilder.
 			/// </remarks>
 			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
 			{
@@ -536,11 +537,11 @@ namespace UPM_IPS.MPJAAMPrototool
 				{				
 					if(targetShapeElement == null)
 					{
-						return VSecundariaReferencesVSecundariaBuilder.CanAcceptSource(sourceElement);
+						return ItemNavegacionReferencesEstadoFinBuilder.CanAcceptSource(sourceElement);
 					}
 					else
 					{				
-						return VSecundariaReferencesVSecundariaBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+						return ItemNavegacionReferencesEstadoFinBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
 					}
 				}
 				else
@@ -565,7 +566,7 @@ namespace UPM_IPS.MPJAAMPrototool
 			/// Called by the base ConnectAction class to create the underlying relationship.
 			/// </summary>
 			/// <remarks>
-			/// This implementation delegates calls to the ConnectionBuilder VSecundariaReferencesVSecundariaBuilder.
+			/// This implementation delegates calls to the ConnectionBuilder ItemNavegacionReferencesEstadoFinBuilder.
 			/// </remarks>
 			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
 			{
@@ -579,16 +580,16 @@ namespace UPM_IPS.MPJAAMPrototool
 				if(sourceElement == null) sourceElement = sourceShapeElement;
 				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
 				if(targetElement == null) targetElement = targetShapeElement;
-				VSecundariaReferencesVSecundariaBuilder.Connect(sourceElement, targetElement);
+				ItemNavegacionReferencesEstadoFinBuilder.Connect(sourceElement, targetElement);
 			}
 		}
 		
-		private partial class VS_VSToolConnectionType : VS_VSToolConnectionTypeBase
+		private partial class ItemNavegacion_EstadoFinToolConnectionType : ItemNavegacion_EstadoFinToolConnectionTypeBase
 		{
 			/// <summary>
-			/// Constructs a new the VS_VSToolConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the ItemNavegacion_EstadoFinToolConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			public VS_VSToolConnectionType() : base() {}
+			public ItemNavegacion_EstadoFinToolConnectionType() : base() {}
 		}
 	}
 }

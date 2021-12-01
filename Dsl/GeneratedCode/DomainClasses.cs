@@ -171,6 +171,26 @@ namespace UPM_IPS.MPJAAMPrototool
 			}
 		}
 		#endregion
+		#region EstadoFin opposite domain role accessor
+		/// <summary>
+		/// Gets or sets EstadoFin.
+		/// Description for
+		/// UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.TapizPrototool
+		/// </summary>
+		public virtual EstadoFin EstadoFin
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.TapizPrototoolDomainRoleId) as EstadoFin;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.TapizPrototoolDomainRoleId, value);
+			}
+		}
+		#endregion
 		#region ElementGroupPrototype Merge methods
 		/// <summary>
 		/// Returns a value indicating whether the source element represented by the
@@ -203,6 +223,16 @@ namespace UPM_IPS.MPJAAMPrototool
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria.DomainClassId)) 
 				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.MPJAAMPrototool.EstadoFin.DomainClassId)) 
+				{
+					// Check that creating a link with this path doesn't cause multiplicity overflow: TapizPrototoolHasEstadoFin.EstadoFin
+					if (this.EstadoFin != null)
+					{
+						return false;
+					}
 					return true;
 				}
 			}
@@ -244,6 +274,15 @@ namespace UPM_IPS.MPJAAMPrototool
 			{
 				// Create link for path TapizPrototoolHasVentanaSecundarium.VentanaSecundarium
 				this.VentanaSecundarium.Add(sourceVentanaSecundaria2);
+
+				return;
+			}
+				
+			global::UPM_IPS.MPJAAMPrototool.EstadoFin sourceEstadoFin3 = sourceElement as global::UPM_IPS.MPJAAMPrototool.EstadoFin;
+			if (sourceEstadoFin3 != null)
+			{
+				// Create link for path TapizPrototoolHasEstadoFin.EstadoFin
+				this.EstadoFin = sourceEstadoFin3;
 
 				return;
 			}
@@ -293,6 +332,20 @@ namespace UPM_IPS.MPJAAMPrototool
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
 					link.Delete(global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.TapizPrototoolDomainRoleId, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaSecundarium.VentanaSecundariaDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::UPM_IPS.MPJAAMPrototool.EstadoFin sourceEstadoFin3 = sourceElement as global::UPM_IPS.MPJAAMPrototool.EstadoFin;
+			if (sourceEstadoFin3 != null)
+			{
+				// Delete link for path TapizPrototoolHasEstadoFin.EstadoFin
+				
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.GetLinks((global::UPM_IPS.MPJAAMPrototool.TapizPrototool)this, sourceEstadoFin3))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.TapizPrototoolDomainRoleId, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.EstadoFinDomainRoleId);
 				}
 
 				return;
@@ -623,6 +676,21 @@ namespace UPM_IPS.MPJAAMPrototool
 			}
 		}
 		#endregion
+		#region ItemNavegacioned opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of ItemNavegacioned.
+		/// Description for UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana.Ventana
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<ItemNavegacion> ItemNavegacioned
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ItemNavegacion>, ItemNavegacion>(global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana.VentanaDomainRoleId);
+			}
+		}
+		#endregion
 		#region ElementGroupPrototype Merge methods
 		/// <summary>
 		/// Returns a value indicating whether the source element represented by the
@@ -789,22 +857,6 @@ namespace UPM_IPS.MPJAAMPrototool
 		{
 		}
 		#endregion
-		#region VentanaSecundarium opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of VentanaSecundarium.
-		/// Description for
-		/// UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.VentanaPrincipal
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<VentanaSecundaria> VentanaSecundarium
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<VentanaSecundaria>, VentanaSecundaria>(global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.VentanaPrincipalDomainRoleId);
-			}
-		}
-		#endregion
 		#region TapizPrototool opposite domain role accessor
 		/// <summary>
 		/// Gets or sets TapizPrototool.
@@ -952,58 +1004,6 @@ namespace UPM_IPS.MPJAAMPrototool
 			}
 		}
 		
-		#endregion
-		#region VentanaPrincipal opposite domain role accessor
-		/// <summary>
-		/// Gets or sets VentanaPrincipal.
-		/// Description for
-		/// UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.VentanaSecundaria
-		/// </summary>
-		public virtual VentanaPrincipal VentanaPrincipal
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.VentanaSecundariaDomainRoleId) as VentanaPrincipal;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.VentanaSecundariaDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region TargetVentanaSecundarium opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of TargetVentanaSecundarium.
-		/// Description for
-		/// UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria.SourceVentanaSecundaria
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<VentanaSecundaria> TargetVentanaSecundarium
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<VentanaSecundaria>, VentanaSecundaria>(global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria.SourceVentanaSecundariaDomainRoleId);
-			}
-		}
-		#endregion
-		#region SourceVentanaSecundarium opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of SourceVentanaSecundarium.
-		/// Description for
-		/// UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria.TargetVentanaSecundaria
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<VentanaSecundaria> SourceVentanaSecundarium
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<VentanaSecundaria>, VentanaSecundaria>(global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria.TargetVentanaSecundariaDomainRoleId);
-			}
-		}
 		#endregion
 		#region TapizPrototool opposite domain role accessor
 		/// <summary>
@@ -1402,6 +1402,46 @@ namespace UPM_IPS.MPJAAMPrototool
 		}
 		
 		#endregion
+		#region Ventana opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Ventana.
+		/// Description for
+		/// UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana.ItemNavegacion
+		/// </summary>
+		public virtual Ventana Ventana
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana.ItemNavegacionDomainRoleId) as Ventana;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana.ItemNavegacionDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region EstadoFin opposite domain role accessor
+		/// <summary>
+		/// Gets or sets EstadoFin.
+		/// Description for
+		/// UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin.ItemNavegacion
+		/// </summary>
+		public virtual EstadoFin EstadoFin
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin.ItemNavegacionDomainRoleId) as EstadoFin;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin.ItemNavegacionDomainRoleId, value);
+			}
+		}
+		#endregion
 	}
 }
 namespace UPM_IPS.MPJAAMPrototool
@@ -1503,12 +1543,12 @@ namespace UPM_IPS.MPJAAMPrototool
 		{
 		}
 		#endregion
-		#region Ventana opposite domain role accessor
+		#region VentanaBoton opposite domain role accessor
 		/// <summary>
-		/// Gets or sets Ventana.
+		/// Gets or sets VentanaBoton.
 		/// Description for UPM_IPS.MPJAAMPrototool.VentanaHasBotons.Boton
 		/// </summary>
-		public virtual Ventana Ventana
+		public virtual Ventana VentanaBoton
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1519,6 +1559,82 @@ namespace UPM_IPS.MPJAAMPrototool
 			set
 			{
 				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.MPJAAMPrototool.VentanaHasBotons.BotonDomainRoleId, value);
+			}
+		}
+		#endregion
+	}
+}
+namespace UPM_IPS.MPJAAMPrototool
+{
+	/// <summary>
+	/// DomainClass EstadoFin
+	/// Description for UPM_IPS.MPJAAMPrototool.EstadoFin
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.EstadoFin.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.EstadoFin.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("77dfd0bb-b447-4434-a513-3975dbc65cd4")]
+	public partial class EstadoFin : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// EstadoFin domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x77dfd0bb, 0xb447, 0x4434, 0xa5, 0x13, 0x39, 0x75, 0xdb, 0xc6, 0x5c, 0xd4);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public EstadoFin(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public EstadoFin(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region TapizPrototool opposite domain role accessor
+		/// <summary>
+		/// Gets or sets TapizPrototool.
+		/// Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.EstadoFin
+		/// </summary>
+		public virtual TapizPrototool TapizPrototool
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.EstadoFinDomainRoleId) as TapizPrototool;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.EstadoFinDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region ItemNavegacioned opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of ItemNavegacioned.
+		/// Description for
+		/// UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin.EstadoFin
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<ItemNavegacion> ItemNavegacioned
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ItemNavegacion>, ItemNavegacion>(global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin.EstadoFinDomainRoleId);
 			}
 		}
 		#endregion

@@ -237,14 +237,10 @@ namespace UPM_IPS.MPJAAMPrototool
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria)
+			if(element is global::UPM_IPS.MPJAAMPrototool.EstadoFin)
 			{
-				global::UPM_IPS.MPJAAMPrototool.VP_VSMetafora newShape = new global::UPM_IPS.MPJAAMPrototool.VP_VSMetafora(this.Partition);
-				return newShape;
-			}
-			if(element is global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria)
-			{
-				global::UPM_IPS.MPJAAMPrototool.VS_VSMetafora newShape = new global::UPM_IPS.MPJAAMPrototool.VS_VSMetafora(this.Partition);
+				global::UPM_IPS.MPJAAMPrototool.EstadoFinMetafora newShape = new global::UPM_IPS.MPJAAMPrototool.EstadoFinMetafora(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
 			if(element is global::UPM_IPS.MPJAAMPrototool.VentanaHasMenus)
@@ -260,6 +256,16 @@ namespace UPM_IPS.MPJAAMPrototool
 			if(element is global::UPM_IPS.MPJAAMPrototool.VentanaHasBotons)
 			{
 				global::UPM_IPS.MPJAAMPrototool.Ventana_BotonMetafora newShape = new global::UPM_IPS.MPJAAMPrototool.Ventana_BotonMetafora(this.Partition);
+				return newShape;
+			}
+			if(element is global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana)
+			{
+				global::UPM_IPS.MPJAAMPrototool.ItemNavegacion_Ventana newShape = new global::UPM_IPS.MPJAAMPrototool.ItemNavegacion_Ventana(this.Partition);
+				return newShape;
+			}
+			if(element is global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin)
+			{
+				global::UPM_IPS.MPJAAMPrototool.ItemNavegacion_EstadoFinMetafora newShape = new global::UPM_IPS.MPJAAMPrototool.ItemNavegacion_EstadoFinMetafora(this.Partition);
 				return newShape;
 			}
 			return base.CreateChildShape(element);
@@ -279,8 +285,8 @@ namespace UPM_IPS.MPJAAMPrototool
 		
 		#region Connect actions
 		private bool changingMouseAction;
-		private global::UPM_IPS.MPJAAMPrototool.VP_VSToolConnectAction vP_VSToolConnectAction;
-		private global::UPM_IPS.MPJAAMPrototool.VS_VSToolConnectAction vS_VSToolConnectAction;
+		private global::UPM_IPS.MPJAAMPrototool.ItemNavegacion_VentanaToolConnectAction itemNavegacion_VentanaToolConnectAction;
+		private global::UPM_IPS.MPJAAMPrototool.ItemNavegacion_EstadoFinToolConnectAction itemNavegacion_EstadoFinToolConnectAction;
 		/// <summary>
 		/// Virtual method to provide a filter when to select the mouse action
 		/// </summary>
@@ -303,23 +309,23 @@ namespace UPM_IPS.MPJAAMPrototool
 			if(activeView != null)
 			{
 				DslDiagrams::MouseAction action = null;
-				if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolToolboxHelper.VP_VSToolFilterString))
+				if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolToolboxHelper.ItemNavegacion_VentanaToolFilterString))
 				{
-					if (this.vP_VSToolConnectAction == null)
+					if (this.itemNavegacion_VentanaToolConnectAction == null)
 					{
-						this.vP_VSToolConnectAction = new global::UPM_IPS.MPJAAMPrototool.VP_VSToolConnectAction(this);
-						this.vP_VSToolConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+						this.itemNavegacion_VentanaToolConnectAction = new global::UPM_IPS.MPJAAMPrototool.ItemNavegacion_VentanaToolConnectAction(this);
+						this.itemNavegacion_VentanaToolConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
-					action = this.vP_VSToolConnectAction;
+					action = this.itemNavegacion_VentanaToolConnectAction;
 				} 
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolToolboxHelper.VS_VSToolFilterString))
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolToolboxHelper.ItemNavegacion_EstadoFinToolFilterString))
 				{
-					if (this.vS_VSToolConnectAction == null)
+					if (this.itemNavegacion_EstadoFinToolConnectAction == null)
 					{
-						this.vS_VSToolConnectAction = new global::UPM_IPS.MPJAAMPrototool.VS_VSToolConnectAction(this);
-						this.vS_VSToolConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+						this.itemNavegacion_EstadoFinToolConnectAction = new global::UPM_IPS.MPJAAMPrototool.ItemNavegacion_EstadoFinToolConnectAction(this);
+						this.itemNavegacion_EstadoFinToolConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
-					action = this.vS_VSToolConnectAction;
+					action = this.itemNavegacion_EstadoFinToolConnectAction;
 				} 
 				else
 				{
@@ -378,15 +384,15 @@ namespace UPM_IPS.MPJAAMPrototool
 			{
 				if(disposing)
 				{
-					if(this.vP_VSToolConnectAction != null)
+					if(this.itemNavegacion_VentanaToolConnectAction != null)
 					{
-						this.vP_VSToolConnectAction.Dispose();
-						this.vP_VSToolConnectAction = null;
+						this.itemNavegacion_VentanaToolConnectAction.Dispose();
+						this.itemNavegacion_VentanaToolConnectAction = null;
 					}
-					if(this.vS_VSToolConnectAction != null)
+					if(this.itemNavegacion_EstadoFinToolConnectAction != null)
 					{
-						this.vS_VSToolConnectAction.Dispose();
-						this.vS_VSToolConnectAction = null;
+						this.itemNavegacion_EstadoFinToolConnectAction.Dispose();
+						this.itemNavegacion_EstadoFinToolConnectAction = null;
 					}
 				}
 			}
@@ -446,11 +452,12 @@ namespace UPM_IPS.MPJAAMPrototool
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.ItemMenu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.Boton), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.Menu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.EstadoFin), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.VentanaHasMenus), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.MenuHasItemMenus), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.VentanaHasBotons), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -506,6 +513,17 @@ namespace UPM_IPS.MPJAAMPrototool
 					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
 					// of the shape created for this child.  If no shape should be created, the method should return null.
 					parentElement = GetParentForMenu((global::UPM_IPS.MPJAAMPrototool.Menu)childElement);
+				} else
+				if(childElement is global::UPM_IPS.MPJAAMPrototool.EstadoFin)
+				{
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForEstadoFin(EstadoFin childElement)
+					// {
+					// }
+					// must be implemented in a partial class of UPM_IPS.MPJAAMPrototool.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForEstadoFin((global::UPM_IPS.MPJAAMPrototool.EstadoFin)childElement);
 				} else
 				{
 					parentElement = null;
@@ -619,11 +637,11 @@ namespace UPM_IPS.MPJAAMPrototool
 		/// <summary>
 		/// Reroute a connector when the role players of its underlying relationship change
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.VentanaHasMenus), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.MenuHasItemMenus), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.VentanaHasBotons), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
 			/// <summary>

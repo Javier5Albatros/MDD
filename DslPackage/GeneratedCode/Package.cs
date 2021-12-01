@@ -44,23 +44,6 @@ namespace UPM_IPS.MPJAAMPrototool
 					"@VSecundariaToolToolboxBitmap;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
 					0xff00ff,
 					Index = 1)]
-	[VSShell::ProvideStaticToolboxGroup("@ConexionesToolboxTab;UPM_IPS.MPJAAMPrototool.Dsl.dll", "UPM_IPS.MPJAAMPrototool.ConexionesToolboxTab")]
-	[VSShell::ProvideStaticToolboxItem("UPM_IPS.MPJAAMPrototool.ConexionesToolboxTab",
-					"@VP_VSToolToolboxItem;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
-					"UPM_IPS.MPJAAMPrototool.VP_VSToolToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"VP_VSTool", 
-					"@VP_VSToolToolboxBitmap;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
-					0xff00ff,
-					Index = 2)]
-	[VSShell::ProvideStaticToolboxItem("UPM_IPS.MPJAAMPrototool.ConexionesToolboxTab",
-					"@VS_VSToolToolboxItem;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
-					"UPM_IPS.MPJAAMPrototool.VS_VSToolToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"VS_VSTool", 
-					"@VS_VSToolToolboxBitmap;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
-					0xff00ff,
-					Index = 3)]
 	[VSShell::ProvideStaticToolboxGroup("@NavegaciónToolboxTab;UPM_IPS.MPJAAMPrototool.Dsl.dll", "UPM_IPS.MPJAAMPrototool.NavegaciónToolboxTab")]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.MPJAAMPrototool.NavegaciónToolboxTab",
 					"@MenuToolToolboxItem;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
@@ -69,7 +52,7 @@ namespace UPM_IPS.MPJAAMPrototool
 					"MenuTool", 
 					"@MenuToolToolboxBitmap;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
 					0xff00ff,
-					Index = 4)]
+					Index = 2)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.MPJAAMPrototool.NavegaciónToolboxTab",
 					"@ItemMenuToolToolboxItem;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
 					"UPM_IPS.MPJAAMPrototool.ItemMenuToolToolboxItem", 
@@ -77,7 +60,7 @@ namespace UPM_IPS.MPJAAMPrototool
 					"ItemMenuTool", 
 					"@ItemMenuToolToolboxBitmap;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
 					0xff00ff,
-					Index = 5)]
+					Index = 3)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.MPJAAMPrototool.NavegaciónToolboxTab",
 					"@BotonToolToolboxItem;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
 					"UPM_IPS.MPJAAMPrototool.BotonToolToolboxItem", 
@@ -85,7 +68,31 @@ namespace UPM_IPS.MPJAAMPrototool
 					"BotonTool", 
 					"@BotonToolToolboxBitmap;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
 					0xff00ff,
+					Index = 4)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.MPJAAMPrototool.NavegaciónToolboxTab",
+					"@EstadoFinToolToolboxItem;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
+					"UPM_IPS.MPJAAMPrototool.EstadoFinToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"EstadoFinTool", 
+					"@EstadoFinToolToolboxBitmap;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
+					0xff00ff,
+					Index = 5)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.MPJAAMPrototool.NavegaciónToolboxTab",
+					"@ItemNavegacion_VentanaToolToolboxItem;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
+					"UPM_IPS.MPJAAMPrototool.ItemNavegacion_VentanaToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ItemNavegacion_VentanaTool", 
+					"@ItemNavegacion_VentanaToolToolboxBitmap;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
+					0xff00ff,
 					Index = 6)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.MPJAAMPrototool.NavegaciónToolboxTab",
+					"@ItemNavegacion_EstadoFinToolToolboxItem;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
+					"UPM_IPS.MPJAAMPrototool.ItemNavegacion_EstadoFinToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ItemNavegacion_EstadoFinTool", 
+					"@ItemNavegacion_EstadoFinToolToolboxBitmap;UPM_IPS.MPJAAMPrototool.Dsl.dll", 
+					0xff00ff,
+					Index = 7)]
 	[VSShell::ProvideEditorFactory(typeof(MPJAAMPrototoolEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(MPJAAMPrototoolEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(MPJAAMPrototoolEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

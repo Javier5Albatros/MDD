@@ -245,69 +245,13 @@
     <value>Boton</value>
     <comment>DisplayName for DomainClass &apos;Boton&apos;</comment>
   </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria</value>
-    <comment>Description for DomainClass &apos;VPrincipalReferencesVSecundaria&apos;</comment>
+  <data name="UPM_IPS.MPJAAMPrototool.EstadoFin.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.EstadoFin</value>
+    <comment>Description for DomainClass &apos;EstadoFin&apos;</comment>
   </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.DisplayName" xml:space="preserve">
-    <value>VPrincipal References VSecundaria</value>
-    <comment>DisplayName for DomainClass &apos;VPrincipalReferencesVSecundaria&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria/VentanaPrincipal.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.VentanaPrincipal</value>
-    <comment>Description for DomainRole &apos;VentanaPrincipal&apos; on DomainRelationship &apos;VPrincipalReferencesVSecundaria&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria/VentanaPrincipal.DisplayName" xml:space="preserve">
-    <value>Ventana Principal</value>
-    <comment>DisplayName for DomainRole &apos;VentanaPrincipal&apos; on DomainRelationship &apos;VPrincipalReferencesVSecundaria&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria/VentanaPrincipal.PropertyDisplayName" xml:space="preserve">
-    <value>Ventana Secundarium</value>
-    <comment>PropertyDisplayName for DomainRole &apos;VentanaPrincipal&apos; on DomainRelationship &apos;VPrincipalReferencesVSecundaria&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria/VentanaSecundaria.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria.VentanaSecundaria</value>
-    <comment>Description for DomainRole &apos;VentanaSecundaria&apos; on DomainRelationship &apos;VPrincipalReferencesVSecundaria&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria/VentanaSecundaria.DisplayName" xml:space="preserve">
-    <value>Ventana Secundaria</value>
-    <comment>DisplayName for DomainRole &apos;VentanaSecundaria&apos; on DomainRelationship &apos;VPrincipalReferencesVSecundaria&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VPrincipalReferencesVSecundaria/VentanaSecundaria.PropertyDisplayName" xml:space="preserve">
-    <value>Ventana Principal</value>
-    <comment>PropertyDisplayName for DomainRole &apos;VentanaSecundaria&apos; on DomainRelationship &apos;VPrincipalReferencesVSecundaria&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria</value>
-    <comment>Description for DomainClass &apos;VSecundariaReferencesVSecundaria&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria.DisplayName" xml:space="preserve">
-    <value>VSecundaria References VSecundaria</value>
-    <comment>DisplayName for DomainClass &apos;VSecundariaReferencesVSecundaria&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria/SourceVentanaSecundaria.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria.SourceVentanaSecundaria</value>
-    <comment>Description for DomainRole &apos;SourceVentanaSecundaria&apos; on DomainRelationship &apos;VSecundariaReferencesVSecundaria&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria/SourceVentanaSecundaria.DisplayName" xml:space="preserve">
-    <value>Source Ventana Secundaria</value>
-    <comment>DisplayName for DomainRole &apos;SourceVentanaSecundaria&apos; on DomainRelationship &apos;VSecundariaReferencesVSecundaria&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria/SourceVentanaSecundaria.PropertyDisplayName" xml:space="preserve">
-    <value>Target Ventana Secundarium</value>
-    <comment>PropertyDisplayName for DomainRole &apos;SourceVentanaSecundaria&apos; on DomainRelationship &apos;VSecundariaReferencesVSecundaria&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria/TargetVentanaSecundaria.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria.TargetVentanaSecundaria</value>
-    <comment>Description for DomainRole &apos;TargetVentanaSecundaria&apos; on DomainRelationship &apos;VSecundariaReferencesVSecundaria&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria/TargetVentanaSecundaria.DisplayName" xml:space="preserve">
-    <value>Target Ventana Secundaria</value>
-    <comment>DisplayName for DomainRole &apos;TargetVentanaSecundaria&apos; on DomainRelationship &apos;VSecundariaReferencesVSecundaria&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VSecundariaReferencesVSecundaria/TargetVentanaSecundaria.PropertyDisplayName" xml:space="preserve">
-    <value>Source Ventana Secundarium</value>
-    <comment>PropertyDisplayName for DomainRole &apos;TargetVentanaSecundaria&apos; on DomainRelationship &apos;VSecundariaReferencesVSecundaria&apos;</comment>
+  <data name="UPM_IPS.MPJAAMPrototool.EstadoFin.DisplayName" xml:space="preserve">
+    <value>Estado Fin</value>
+    <comment>DisplayName for DomainClass &apos;EstadoFin&apos;</comment>
   </data>
   <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasVentanaPrincipal</value>
@@ -466,8 +410,104 @@
     <comment>DisplayName for DomainRole &apos;Boton&apos; on DomainRelationship &apos;VentanaHasBotons&apos;</comment>
   </data>
   <data name="UPM_IPS.MPJAAMPrototool.VentanaHasBotons/Boton.PropertyDisplayName" xml:space="preserve">
-    <value>Ventana</value>
+    <value>Ventana Boton</value>
     <comment>PropertyDisplayName for DomainRole &apos;Boton&apos; on DomainRelationship &apos;VentanaHasBotons&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana</value>
+    <comment>Description for DomainClass &apos;ItemNavegacionReferencesVentana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana.DisplayName" xml:space="preserve">
+    <value>Item Navegacion References Ventana</value>
+    <comment>DisplayName for DomainClass &apos;ItemNavegacionReferencesVentana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana/ItemNavegacion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana.ItemNavegacion</value>
+    <comment>Description for DomainRole &apos;ItemNavegacion&apos; on DomainRelationship &apos;ItemNavegacionReferencesVentana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana/ItemNavegacion.DisplayName" xml:space="preserve">
+    <value>Item Navegacion</value>
+    <comment>DisplayName for DomainRole &apos;ItemNavegacion&apos; on DomainRelationship &apos;ItemNavegacionReferencesVentana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana/ItemNavegacion.PropertyDisplayName" xml:space="preserve">
+    <value>Ventana</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ItemNavegacion&apos; on DomainRelationship &apos;ItemNavegacionReferencesVentana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana/Ventana.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana.Ventana</value>
+    <comment>Description for DomainRole &apos;Ventana&apos; on DomainRelationship &apos;ItemNavegacionReferencesVentana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana/Ventana.DisplayName" xml:space="preserve">
+    <value>Ventana</value>
+    <comment>DisplayName for DomainRole &apos;Ventana&apos; on DomainRelationship &apos;ItemNavegacionReferencesVentana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana/Ventana.PropertyDisplayName" xml:space="preserve">
+    <value>Item Navegacioned</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Ventana&apos; on DomainRelationship &apos;ItemNavegacionReferencesVentana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin</value>
+    <comment>Description for DomainClass &apos;TapizPrototoolHasEstadoFin&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.DisplayName" xml:space="preserve">
+    <value>Tapiz Prototool Has Estado Fin</value>
+    <comment>DisplayName for DomainClass &apos;TapizPrototoolHasEstadoFin&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin/TapizPrototool.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.TapizPrototool</value>
+    <comment>Description for DomainRole &apos;TapizPrototool&apos; on DomainRelationship &apos;TapizPrototoolHasEstadoFin&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin/TapizPrototool.DisplayName" xml:space="preserve">
+    <value>Tapiz Prototool</value>
+    <comment>DisplayName for DomainRole &apos;TapizPrototool&apos; on DomainRelationship &apos;TapizPrototoolHasEstadoFin&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin/TapizPrototool.PropertyDisplayName" xml:space="preserve">
+    <value>Estado Fin</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TapizPrototool&apos; on DomainRelationship &apos;TapizPrototoolHasEstadoFin&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin/EstadoFin.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.EstadoFin</value>
+    <comment>Description for DomainRole &apos;EstadoFin&apos; on DomainRelationship &apos;TapizPrototoolHasEstadoFin&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin/EstadoFin.DisplayName" xml:space="preserve">
+    <value>Estado Fin</value>
+    <comment>DisplayName for DomainRole &apos;EstadoFin&apos; on DomainRelationship &apos;TapizPrototoolHasEstadoFin&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin/EstadoFin.PropertyDisplayName" xml:space="preserve">
+    <value>Tapiz Prototool</value>
+    <comment>PropertyDisplayName for DomainRole &apos;EstadoFin&apos; on DomainRelationship &apos;TapizPrototoolHasEstadoFin&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin</value>
+    <comment>Description for DomainClass &apos;ItemNavegacionReferencesEstadoFin&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin.DisplayName" xml:space="preserve">
+    <value>Item Navegacion References Estado Fin</value>
+    <comment>DisplayName for DomainClass &apos;ItemNavegacionReferencesEstadoFin&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin/ItemNavegacion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin.ItemNavegacion</value>
+    <comment>Description for DomainRole &apos;ItemNavegacion&apos; on DomainRelationship &apos;ItemNavegacionReferencesEstadoFin&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin/ItemNavegacion.DisplayName" xml:space="preserve">
+    <value>Item Navegacion</value>
+    <comment>DisplayName for DomainRole &apos;ItemNavegacion&apos; on DomainRelationship &apos;ItemNavegacionReferencesEstadoFin&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin/ItemNavegacion.PropertyDisplayName" xml:space="preserve">
+    <value>Estado Fin</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ItemNavegacion&apos; on DomainRelationship &apos;ItemNavegacionReferencesEstadoFin&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin/EstadoFin.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin.EstadoFin</value>
+    <comment>Description for DomainRole &apos;EstadoFin&apos; on DomainRelationship &apos;ItemNavegacionReferencesEstadoFin&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin/EstadoFin.DisplayName" xml:space="preserve">
+    <value>Estado Fin</value>
+    <comment>DisplayName for DomainRole &apos;EstadoFin&apos; on DomainRelationship &apos;ItemNavegacionReferencesEstadoFin&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin/EstadoFin.PropertyDisplayName" xml:space="preserve">
+    <value>Item Navegacioned</value>
+    <comment>PropertyDisplayName for DomainRole &apos;EstadoFin&apos; on DomainRelationship &apos;ItemNavegacionReferencesEstadoFin&apos;</comment>
   </data>
   <data name="UPM_IPS.MPJAAMPrototool.VPrincipalMetafora.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MPJAAMPrototool.VPrincipalMetafora</value>
@@ -509,21 +549,13 @@
     <value>Boton Metafora</value>
     <comment>DisplayName for DomainClass &apos;BotonMetafora&apos;</comment>
   </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VP_VSMetafora.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MPJAAMPrototool.VP_VSMetafora</value>
-    <comment>Description for DomainClass &apos;VP_VSMetafora&apos;</comment>
+  <data name="UPM_IPS.MPJAAMPrototool.EstadoFinMetafora.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.EstadoFinMetafora</value>
+    <comment>Description for DomainClass &apos;EstadoFinMetafora&apos;</comment>
   </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VP_VSMetafora.DisplayName" xml:space="preserve">
-    <value>VP_ VSMetafora</value>
-    <comment>DisplayName for DomainClass &apos;VP_VSMetafora&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VS_VSMetafora.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MPJAAMPrototool.VS_VSMetafora</value>
-    <comment>Description for DomainClass &apos;VS_VSMetafora&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VS_VSMetafora.DisplayName" xml:space="preserve">
-    <value>VS_ VSMetafora</value>
-    <comment>DisplayName for DomainClass &apos;VS_VSMetafora&apos;</comment>
+  <data name="UPM_IPS.MPJAAMPrototool.EstadoFinMetafora.DisplayName" xml:space="preserve">
+    <value>Estado Fin Metafora</value>
+    <comment>DisplayName for DomainClass &apos;EstadoFinMetafora&apos;</comment>
   </data>
   <data name="UPM_IPS.MPJAAMPrototool.Ventana_MenuMetafora.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MPJAAMPrototool.Ventana_MenuMetafora</value>
@@ -548,6 +580,22 @@
   <data name="UPM_IPS.MPJAAMPrototool.Ventana_BotonMetafora.DisplayName" xml:space="preserve">
     <value>Ventana_ Boton Metafora</value>
     <comment>DisplayName for DomainClass &apos;Ventana_BotonMetafora&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacion_Ventana.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.ItemNavegacion_Ventana</value>
+    <comment>Description for DomainClass &apos;ItemNavegacion_Ventana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacion_Ventana.DisplayName" xml:space="preserve">
+    <value>Item Navegacion_ Ventana</value>
+    <comment>DisplayName for DomainClass &apos;ItemNavegacion_Ventana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacion_EstadoFinMetafora.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.ItemNavegacion_EstadoFinMetafora</value>
+    <comment>Description for DomainClass &apos;ItemNavegacion_EstadoFinMetafora&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacion_EstadoFinMetafora.DisplayName" xml:space="preserve">
+    <value>Item Navegacion_ Estado Fin Metafora</value>
+    <comment>DisplayName for DomainClass &apos;ItemNavegacion_EstadoFinMetafora&apos;</comment>
   </data>
   <data name="FormatList" xml:space="preserve">
     <value>MPJAAMPrototool (*.MPJAAMPrototool)|*.MPJAAMPrototool</value>
@@ -585,26 +633,6 @@
     <value>VSecundaria Tool</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="ConexionesToolboxTab" xml:space="preserve">
-    <value>Conexiones</value>
-    <comment>Toolbox item tab name</comment>
-  </data>
-  <data name="VP_VSToolToolboxItem" xml:space="preserve">
-    <value>Ventana Principal con Ventana Secundaria</value>
-    <comment>Toolbox item name</comment>
-  </data>
-  <data name="VP_VSToolToolboxTooltip" xml:space="preserve">
-    <value>VP_ VSTool</value>
-    <comment>Toolbox tooltip text</comment>
-  </data>
-  <data name="VS_VSToolToolboxItem" xml:space="preserve">
-    <value>Ventana Secundaria con Ventana Secundaria</value>
-    <comment>Toolbox item name</comment>
-  </data>
-  <data name="VS_VSToolToolboxTooltip" xml:space="preserve">
-    <value>VS_ VSTool</value>
-    <comment>Toolbox tooltip text</comment>
-  </data>
   <data name="NavegaciónToolboxTab" xml:space="preserve">
     <value>Navegación</value>
     <comment>Toolbox item tab name</comment>
@@ -631,6 +659,30 @@
   </data>
   <data name="BotonToolToolboxTooltip" xml:space="preserve">
     <value>Boton Tool</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="EstadoFinToolToolboxItem" xml:space="preserve">
+    <value>Estado de Fin</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="EstadoFinToolToolboxTooltip" xml:space="preserve">
+    <value>Estado Fin Tool</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ItemNavegacion_VentanaToolToolboxItem" xml:space="preserve">
+    <value>ItemNavegacion_VentanaTool</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ItemNavegacion_VentanaToolToolboxTooltip" xml:space="preserve">
+    <value>Item Navegacion_ Ventana Tool</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ItemNavegacion_EstadoFinToolToolboxItem" xml:space="preserve">
+    <value>Item Navegacion con Estado de Fin</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ItemNavegacion_EstadoFinToolToolboxTooltip" xml:space="preserve">
+    <value>Item Navegacion_ Estado Fin Tool</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -766,14 +818,6 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="VP_VSToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Toolbox item image</comment>
-  </data>
-  <data name="VS_VSToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Toolbox item image</comment>
-  </data>
   <data name="MenuToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
@@ -784,6 +828,18 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <data name="BotonToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="EstadoFinToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ItemNavegacion_VentanaToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ItemNavegacion_EstadoFinToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>

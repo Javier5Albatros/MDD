@@ -75,24 +75,27 @@ namespace UPM_IPS.MPJAAMPrototool
 				typeof(ItemNavegacion),
 				typeof(ItemMenu),
 				typeof(Boton),
-				typeof(VPrincipalReferencesVSecundaria),
-				typeof(VSecundariaReferencesVSecundaria),
+				typeof(EstadoFin),
 				typeof(TapizPrototoolHasVentanaPrincipal),
 				typeof(TapizPrototoolHasVentanaSecundarium),
 				typeof(VentanaHasMenus),
 				typeof(MenuHasItemMenus),
 				typeof(VentanaHasBotons),
+				typeof(ItemNavegacionReferencesVentana),
+				typeof(TapizPrototoolHasEstadoFin),
+				typeof(ItemNavegacionReferencesEstadoFin),
 				typeof(MPJAAMPrototoolDiagram),
-				typeof(VP_VSMetafora),
-				typeof(VS_VSMetafora),
 				typeof(Ventana_MenuMetafora),
 				typeof(Menu_ItemMenuMetafora),
 				typeof(Ventana_BotonMetafora),
+				typeof(ItemNavegacion_Ventana),
+				typeof(ItemNavegacion_EstadoFinMetafora),
 				typeof(VPrincipalMetafora),
 				typeof(VSecundariaMetafora),
 				typeof(MenuMetafora),
 				typeof(ItemMenuMetafora),
 				typeof(BotonMetafora),
+				typeof(EstadoFinMetafora),
 				typeof(global::UPM_IPS.MPJAAMPrototool.FixUpDiagram),
 				typeof(global::UPM_IPS.MPJAAMPrototool.ConnectorRolePlayerChanged),
 			};
@@ -123,10 +126,6 @@ namespace UPM_IPS.MPJAAMPrototool
 		{
 			return new DomainRolePlayerInfo[]
 			{
-				new DomainRolePlayerInfo(typeof(VPrincipalReferencesVSecundaria), "VentanaPrincipal", VPrincipalReferencesVSecundaria.VentanaPrincipalDomainRoleId),
-				new DomainRolePlayerInfo(typeof(VPrincipalReferencesVSecundaria), "VentanaSecundaria", VPrincipalReferencesVSecundaria.VentanaSecundariaDomainRoleId),
-				new DomainRolePlayerInfo(typeof(VSecundariaReferencesVSecundaria), "SourceVentanaSecundaria", VSecundariaReferencesVSecundaria.SourceVentanaSecundariaDomainRoleId),
-				new DomainRolePlayerInfo(typeof(VSecundariaReferencesVSecundaria), "TargetVentanaSecundaria", VSecundariaReferencesVSecundaria.TargetVentanaSecundariaDomainRoleId),
 				new DomainRolePlayerInfo(typeof(TapizPrototoolHasVentanaPrincipal), "TapizPrototool", TapizPrototoolHasVentanaPrincipal.TapizPrototoolDomainRoleId),
 				new DomainRolePlayerInfo(typeof(TapizPrototoolHasVentanaPrincipal), "VentanaPrincipal", TapizPrototoolHasVentanaPrincipal.VentanaPrincipalDomainRoleId),
 				new DomainRolePlayerInfo(typeof(TapizPrototoolHasVentanaSecundarium), "TapizPrototool", TapizPrototoolHasVentanaSecundarium.TapizPrototoolDomainRoleId),
@@ -137,6 +136,12 @@ namespace UPM_IPS.MPJAAMPrototool
 				new DomainRolePlayerInfo(typeof(MenuHasItemMenus), "ItemMenu", MenuHasItemMenus.ItemMenuDomainRoleId),
 				new DomainRolePlayerInfo(typeof(VentanaHasBotons), "Ventana", VentanaHasBotons.VentanaDomainRoleId),
 				new DomainRolePlayerInfo(typeof(VentanaHasBotons), "Boton", VentanaHasBotons.BotonDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ItemNavegacionReferencesVentana), "ItemNavegacion", ItemNavegacionReferencesVentana.ItemNavegacionDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ItemNavegacionReferencesVentana), "Ventana", ItemNavegacionReferencesVentana.VentanaDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizPrototoolHasEstadoFin), "TapizPrototool", TapizPrototoolHasEstadoFin.TapizPrototoolDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizPrototoolHasEstadoFin), "EstadoFin", TapizPrototoolHasEstadoFin.EstadoFinDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ItemNavegacionReferencesEstadoFin), "ItemNavegacion", ItemNavegacionReferencesEstadoFin.ItemNavegacionDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ItemNavegacionReferencesEstadoFin), "EstadoFin", ItemNavegacionReferencesEstadoFin.EstadoFinDomainRoleId),
 			};
 		}
 		#endregion
@@ -158,24 +163,26 @@ namespace UPM_IPS.MPJAAMPrototool
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(19);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(21);
 				createElementMap.Add(typeof(TapizPrototool), 0);
 				createElementMap.Add(typeof(VentanaPrincipal), 1);
 				createElementMap.Add(typeof(VentanaSecundaria), 2);
 				createElementMap.Add(typeof(Menu), 3);
 				createElementMap.Add(typeof(ItemMenu), 4);
 				createElementMap.Add(typeof(Boton), 5);
-				createElementMap.Add(typeof(MPJAAMPrototoolDiagram), 6);
-				createElementMap.Add(typeof(VP_VSMetafora), 7);
-				createElementMap.Add(typeof(VS_VSMetafora), 8);
-				createElementMap.Add(typeof(Ventana_MenuMetafora), 9);
-				createElementMap.Add(typeof(Menu_ItemMenuMetafora), 10);
-				createElementMap.Add(typeof(Ventana_BotonMetafora), 11);
-				createElementMap.Add(typeof(VPrincipalMetafora), 12);
-				createElementMap.Add(typeof(VSecundariaMetafora), 13);
-				createElementMap.Add(typeof(MenuMetafora), 14);
-				createElementMap.Add(typeof(ItemMenuMetafora), 15);
-				createElementMap.Add(typeof(BotonMetafora), 16);
+				createElementMap.Add(typeof(EstadoFin), 6);
+				createElementMap.Add(typeof(MPJAAMPrototoolDiagram), 7);
+				createElementMap.Add(typeof(Ventana_MenuMetafora), 8);
+				createElementMap.Add(typeof(Menu_ItemMenuMetafora), 9);
+				createElementMap.Add(typeof(Ventana_BotonMetafora), 10);
+				createElementMap.Add(typeof(ItemNavegacion_Ventana), 11);
+				createElementMap.Add(typeof(ItemNavegacion_EstadoFinMetafora), 12);
+				createElementMap.Add(typeof(VPrincipalMetafora), 13);
+				createElementMap.Add(typeof(VSecundariaMetafora), 14);
+				createElementMap.Add(typeof(MenuMetafora), 15);
+				createElementMap.Add(typeof(ItemMenuMetafora), 16);
+				createElementMap.Add(typeof(BotonMetafora), 17);
+				createElementMap.Add(typeof(EstadoFinMetafora), 18);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -195,17 +202,19 @@ namespace UPM_IPS.MPJAAMPrototool
 				case 3: return new Menu(partition, propertyAssignments);
 				case 4: return new ItemMenu(partition, propertyAssignments);
 				case 5: return new Boton(partition, propertyAssignments);
-				case 6: return new MPJAAMPrototoolDiagram(partition, propertyAssignments);
-				case 7: return new VP_VSMetafora(partition, propertyAssignments);
-				case 8: return new VS_VSMetafora(partition, propertyAssignments);
-				case 9: return new Ventana_MenuMetafora(partition, propertyAssignments);
-				case 10: return new Menu_ItemMenuMetafora(partition, propertyAssignments);
-				case 11: return new Ventana_BotonMetafora(partition, propertyAssignments);
-				case 12: return new VPrincipalMetafora(partition, propertyAssignments);
-				case 13: return new VSecundariaMetafora(partition, propertyAssignments);
-				case 14: return new MenuMetafora(partition, propertyAssignments);
-				case 15: return new ItemMenuMetafora(partition, propertyAssignments);
-				case 16: return new BotonMetafora(partition, propertyAssignments);
+				case 6: return new EstadoFin(partition, propertyAssignments);
+				case 7: return new MPJAAMPrototoolDiagram(partition, propertyAssignments);
+				case 8: return new Ventana_MenuMetafora(partition, propertyAssignments);
+				case 9: return new Menu_ItemMenuMetafora(partition, propertyAssignments);
+				case 10: return new Ventana_BotonMetafora(partition, propertyAssignments);
+				case 11: return new ItemNavegacion_Ventana(partition, propertyAssignments);
+				case 12: return new ItemNavegacion_EstadoFinMetafora(partition, propertyAssignments);
+				case 13: return new VPrincipalMetafora(partition, propertyAssignments);
+				case 14: return new VSecundariaMetafora(partition, propertyAssignments);
+				case 15: return new MenuMetafora(partition, propertyAssignments);
+				case 16: return new ItemMenuMetafora(partition, propertyAssignments);
+				case 17: return new BotonMetafora(partition, propertyAssignments);
+				case 18: return new EstadoFinMetafora(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -228,14 +237,15 @@ namespace UPM_IPS.MPJAAMPrototool
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(7);
-				createElementLinkMap.Add(typeof(VPrincipalReferencesVSecundaria), 0);
-				createElementLinkMap.Add(typeof(VSecundariaReferencesVSecundaria), 1);
-				createElementLinkMap.Add(typeof(TapizPrototoolHasVentanaPrincipal), 2);
-				createElementLinkMap.Add(typeof(TapizPrototoolHasVentanaSecundarium), 3);
-				createElementLinkMap.Add(typeof(VentanaHasMenus), 4);
-				createElementLinkMap.Add(typeof(MenuHasItemMenus), 5);
-				createElementLinkMap.Add(typeof(VentanaHasBotons), 6);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(8);
+				createElementLinkMap.Add(typeof(TapizPrototoolHasVentanaPrincipal), 0);
+				createElementLinkMap.Add(typeof(TapizPrototoolHasVentanaSecundarium), 1);
+				createElementLinkMap.Add(typeof(VentanaHasMenus), 2);
+				createElementLinkMap.Add(typeof(MenuHasItemMenus), 3);
+				createElementLinkMap.Add(typeof(VentanaHasBotons), 4);
+				createElementLinkMap.Add(typeof(ItemNavegacionReferencesVentana), 5);
+				createElementLinkMap.Add(typeof(TapizPrototoolHasEstadoFin), 6);
+				createElementLinkMap.Add(typeof(ItemNavegacionReferencesEstadoFin), 7);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -250,13 +260,14 @@ namespace UPM_IPS.MPJAAMPrototool
 			}
 			switch (index)
 			{
-				case 0: return new VPrincipalReferencesVSecundaria(partition, roleAssignments, propertyAssignments);
-				case 1: return new VSecundariaReferencesVSecundaria(partition, roleAssignments, propertyAssignments);
-				case 2: return new TapizPrototoolHasVentanaPrincipal(partition, roleAssignments, propertyAssignments);
-				case 3: return new TapizPrototoolHasVentanaSecundarium(partition, roleAssignments, propertyAssignments);
-				case 4: return new VentanaHasMenus(partition, roleAssignments, propertyAssignments);
-				case 5: return new MenuHasItemMenus(partition, roleAssignments, propertyAssignments);
-				case 6: return new VentanaHasBotons(partition, roleAssignments, propertyAssignments);
+				case 0: return new TapizPrototoolHasVentanaPrincipal(partition, roleAssignments, propertyAssignments);
+				case 1: return new TapizPrototoolHasVentanaSecundarium(partition, roleAssignments, propertyAssignments);
+				case 2: return new VentanaHasMenus(partition, roleAssignments, propertyAssignments);
+				case 3: return new MenuHasItemMenus(partition, roleAssignments, propertyAssignments);
+				case 4: return new VentanaHasBotons(partition, roleAssignments, propertyAssignments);
+				case 5: return new ItemNavegacionReferencesVentana(partition, roleAssignments, propertyAssignments);
+				case 6: return new TapizPrototoolHasEstadoFin(partition, roleAssignments, propertyAssignments);
+				case 7: return new ItemNavegacionReferencesEstadoFin(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -430,6 +441,7 @@ namespace UPM_IPS.MPJAAMPrototool
 			DomainRoles.Add(global::UPM_IPS.MPJAAMPrototool.VentanaHasMenus.MenuDomainRoleId, true);
 			DomainRoles.Add(global::UPM_IPS.MPJAAMPrototool.MenuHasItemMenus.ItemMenuDomainRoleId, true);
 			DomainRoles.Add(global::UPM_IPS.MPJAAMPrototool.VentanaHasBotons.BotonDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.MPJAAMPrototool.TapizPrototoolHasEstadoFin.EstadoFinDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>
