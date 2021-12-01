@@ -37,12 +37,12 @@
         </DomainProperty>
         <DomainProperty Id="cb743062-552e-4275-b201-a1b8e67d23cf" Description="Description for UPM_IPS.MPJAAMPrototool.Ventana.Ancho" Name="ancho" DisplayName="Ancho">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <ExternalTypeMoniker Name="/System/Int16" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="a60bc0ed-9f48-444b-ba80-7fdb9022be09" Description="Description for UPM_IPS.MPJAAMPrototool.Ventana.Altura" Name="altura" DisplayName="Altura">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <ExternalTypeMoniker Name="/System/Int16" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -52,7 +52,15 @@
             <DomainClassMoniker Name="Menu" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>VentanaHasMenu.Menu</DomainPath>
+            <DomainPath>VentanaHasMenus.Menus</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="Boton" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>VentanaHasBotons.Botons</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
@@ -74,14 +82,43 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="d2960eac-6a31-4129-b123-a712ed039d1d" Description="Description for UPM_IPS.MPJAAMPrototool.Menu" Name="Menu" DisplayName="Menu" Namespace="UPM_IPS.MPJAAMPrototool">
+    <DomainClass Id="1b2f3583-8181-485c-80d0-e2a3621f022f" Description="Description for UPM_IPS.MPJAAMPrototool.Menu" Name="Menu" DisplayName="Menu" Namespace="UPM_IPS.MPJAAMPrototool">
       <Properties>
-        <DomainProperty Id="815f45a4-3eac-41a4-866d-a4f34ca31eae" Description="Description for UPM_IPS.MPJAAMPrototool.Menu.Titulo" Name="titulo" DisplayName="Titulo">
+        <DomainProperty Id="2bbc406f-8b3c-4489-8364-fa388942888a" Description="Description for UPM_IPS.MPJAAMPrototool.Menu.Titulo" Name="Titulo" DisplayName="Titulo">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
       </Properties>
+      <ElementMergeDirectives>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="ItemMenu" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>MenuHasItemMenus.ItemMenus</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+      </ElementMergeDirectives>
+    </DomainClass>
+    <DomainClass Id="8da0fe0e-bbf8-481b-828d-73413e37bf32" Description="Description for UPM_IPS.MPJAAMPrototool.ItemNavegacion" Name="ItemNavegacion" DisplayName="Item Navegacion" InheritanceModifier="Abstract" Namespace="UPM_IPS.MPJAAMPrototool">
+      <Properties>
+        <DomainProperty Id="3f0a80c0-3ef6-4da2-a7a6-5bb117640266" Description="Description for UPM_IPS.MPJAAMPrototool.ItemNavegacion.Titulo" Name="titulo" DisplayName="Titulo">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="360082db-252f-4bf1-82f0-b4b4193b5721" Description="Description for UPM_IPS.MPJAAMPrototool.ItemMenu" Name="ItemMenu" DisplayName="Item Menu" Namespace="UPM_IPS.MPJAAMPrototool">
+      <BaseClass>
+        <DomainClassMoniker Name="ItemNavegacion" />
+      </BaseClass>
+    </DomainClass>
+    <DomainClass Id="408ecdb3-c92b-4acb-a2f6-13c8b98e17d7" Description="Description for UPM_IPS.MPJAAMPrototool.Boton" Name="Boton" DisplayName="Boton" Namespace="UPM_IPS.MPJAAMPrototool">
+      <BaseClass>
+        <DomainClassMoniker Name="ItemNavegacion" />
+      </BaseClass>
     </DomainClass>
   </Classes>
   <Relationships>
@@ -149,18 +186,50 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="7b4c7b91-0c91-4795-b7d1-842f2ff92cfa" Description="Description for UPM_IPS.MPJAAMPrototool.VentanaHasMenu" Name="VentanaHasMenu" DisplayName="Ventana Has Menu" Namespace="UPM_IPS.MPJAAMPrototool" IsEmbedding="true">
+    <DomainRelationship Id="6f24ba14-83df-4673-8d8b-dc3f94fd34c5" Description="Description for UPM_IPS.MPJAAMPrototool.VentanaHasMenus" Name="VentanaHasMenus" DisplayName="Ventana Has Menus" Namespace="UPM_IPS.MPJAAMPrototool" IsEmbedding="true">
       <Source>
-        <DomainRole Id="fb27c7e3-2f51-4751-bc69-8178b9565906" Description="Description for UPM_IPS.MPJAAMPrototool.VentanaHasMenu.Ventana" Name="Ventana" DisplayName="Ventana" PropertyName="Menu" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Menu">
+        <DomainRole Id="98c1b9d7-41ab-4ab6-9c3b-446c8af5a03a" Description="Description for UPM_IPS.MPJAAMPrototool.VentanaHasMenus.Ventana" Name="Ventana" DisplayName="Ventana" PropertyName="Menus" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Menus">
           <RolePlayer>
             <DomainClassMoniker Name="Ventana" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="81c5c7a0-cdd6-459b-a50d-d37ce561024c" Description="Description for UPM_IPS.MPJAAMPrototool.VentanaHasMenu.Menu" Name="Menu" DisplayName="Menu" PropertyName="Ventana" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Ventana">
+        <DomainRole Id="05d3a0e7-475e-4a96-8f40-ce75dedaa9ce" Description="Description for UPM_IPS.MPJAAMPrototool.VentanaHasMenus.Menu" Name="Menu" DisplayName="Menu" PropertyName="Ventana" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Ventana">
           <RolePlayer>
             <DomainClassMoniker Name="Menu" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="d5ee51ae-785d-4b0f-a772-f2b360d2afd5" Description="Description for UPM_IPS.MPJAAMPrototool.MenuHasItemMenus" Name="MenuHasItemMenus" DisplayName="Menu Has Item Menus" Namespace="UPM_IPS.MPJAAMPrototool" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="50a0de01-3aa9-48c0-8a04-a4e3be500d69" Description="Description for UPM_IPS.MPJAAMPrototool.MenuHasItemMenus.Menu" Name="Menu" DisplayName="Menu" PropertyName="ItemMenus" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Item Menus">
+          <RolePlayer>
+            <DomainClassMoniker Name="Menu" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="7bb3094a-de3a-46f8-96c1-155d1a05b106" Description="Description for UPM_IPS.MPJAAMPrototool.MenuHasItemMenus.ItemMenu" Name="ItemMenu" DisplayName="Item Menu" PropertyName="Menu" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Menu">
+          <RolePlayer>
+            <DomainClassMoniker Name="ItemMenu" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="476b31df-9132-47e9-8534-b405a98551fa" Description="Description for UPM_IPS.MPJAAMPrototool.VentanaHasBotons" Name="VentanaHasBotons" DisplayName="Ventana Has Botons" Namespace="UPM_IPS.MPJAAMPrototool" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="458da1d2-bee0-432f-8e6d-e32cf0f5ab8f" Description="Description for UPM_IPS.MPJAAMPrototool.VentanaHasBotons.Ventana" Name="Ventana" DisplayName="Ventana" PropertyName="Botons" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Botons">
+          <RolePlayer>
+            <DomainClassMoniker Name="Ventana" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="3c8bcb9c-66b8-4844-8364-46f462d6804e" Description="Description for UPM_IPS.MPJAAMPrototool.VentanaHasBotons.Boton" Name="Boton" DisplayName="Boton" PropertyName="Ventana" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Ventana">
+          <RolePlayer>
+            <DomainClassMoniker Name="Boton" />
           </RolePlayer>
         </DomainRole>
       </Target>
@@ -186,16 +255,16 @@
   <Shapes>
     <GeometryShape Id="c7127e7b-b27c-4549-af5c-ce04ae45a14c" Description="Description for UPM_IPS.MPJAAMPrototool.VPrincipalMetafora" Name="VPrincipalMetafora" DisplayName="VPrincipal Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VPrincipal Metafora" InitialHeight="1" Geometry="Rectangle" />
     <GeometryShape Id="fee9cf50-5a97-4e31-b7c5-e45a1b98feb2" Description="Description for UPM_IPS.MPJAAMPrototool.VSecundariaMetafora" Name="VSecundariaMetafora" DisplayName="VSecundaria Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VSecundaria Metafora" InitialHeight="1" Geometry="Rectangle" />
-    <GeometryShape Id="a51afa20-ae51-470c-835e-abb8fcfdc75b" Description="Description for UPM_IPS.MPJAAMPrototool.MenuMetafora" Name="MenuMetafora" DisplayName="Menu Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Menu Metafora" InitialHeight="1" Geometry="Rectangle">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="titulo" DisplayName="Titulo" DefaultText="titulo" />
-      </ShapeHasDecorators>
-    </GeometryShape>
+    <GeometryShape Id="b24d4e6f-0bf9-4c9e-8a2f-98f9901d4de8" Description="Description for UPM_IPS.MPJAAMPrototool.MenuMetafora" Name="MenuMetafora" DisplayName="Menu Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Menu Metafora" InitialHeight="1" Geometry="Rectangle" />
+    <GeometryShape Id="e8bb4e90-98e1-4557-9aa6-f06061a6b44e" Description="Description for UPM_IPS.MPJAAMPrototool.ItemMenuMetafora" Name="ItemMenuMetafora" DisplayName="Item Menu Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Item Menu Metafora" InitialHeight="1" Geometry="Rectangle" />
+    <GeometryShape Id="fc60b7e7-f543-4cf1-95a2-028b8e83140e" Description="Description for UPM_IPS.MPJAAMPrototool.BotonMetafora" Name="BotonMetafora" DisplayName="Boton Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Boton Metafora" InitialHeight="1" Geometry="Rectangle" />
   </Shapes>
   <Connectors>
     <Connector Id="b1c7ce97-7361-4e4c-ae1d-1d7cf2fbb553" Description="Description for UPM_IPS.MPJAAMPrototool.VP_VSMetafora" Name="VP_VSMetafora" DisplayName="VP_ VSMetafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VP_ VSMetafora" />
     <Connector Id="1255b363-a6c2-4cd0-963f-5196b76addac" Description="Description for UPM_IPS.MPJAAMPrototool.VS_VSMetafora" Name="VS_VSMetafora" DisplayName="VS_ VSMetafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VS_ VSMetafora" />
-    <Connector Id="c3c4464d-b95c-41fc-b1f6-d3a64923df88" Description="Description for UPM_IPS.MPJAAMPrototool.VentanaMenuMetafora" Name="VentanaMenuMetafora" DisplayName="Ventana Menu Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Ventana Menu Metafora" />
+    <Connector Id="7ce11ce2-bfae-47e4-a000-9e2222570f8e" Description="Description for UPM_IPS.MPJAAMPrototool.Ventana_MenuMetafora" Name="Ventana_MenuMetafora" DisplayName="Ventana_ Menu Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Ventana_ Menu Metafora" />
+    <Connector Id="419f5bd0-b769-49ef-9494-be35525b38ce" Description="Description for UPM_IPS.MPJAAMPrototool.Menu_ItemMenuMetafora" Name="Menu_ItemMenuMetafora" DisplayName="Menu_ Item Menu Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Menu_ Item Menu Metafora" />
+    <Connector Id="f66cb58a-e21c-4706-bc34-6ea6b23bc064" Description="Description for UPM_IPS.MPJAAMPrototool.Ventana_BotonMetafora" Name="Ventana_BotonMetafora" DisplayName="Ventana_ Boton Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Ventana_ Boton Metafora" />
   </Connectors>
   <XmlSerializationBehavior Name="MPJAAMPrototoolSerializationBehavior" Namespace="UPM_IPS.MPJAAMPrototool">
     <ClassData>
@@ -228,8 +297,11 @@
           <XmlPropertyData XmlName="altura">
             <DomainPropertyMoniker Name="Ventana/altura" />
           </XmlPropertyData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="menu">
-            <DomainRelationshipMoniker Name="VentanaHasMenu" />
+          <XmlRelationshipData UseFullForm="true" RoleElementName="menus">
+            <DomainRelationshipMoniker Name="VentanaHasMenus" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="botons">
+            <DomainRelationshipMoniker Name="VentanaHasBotons" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -280,18 +352,53 @@
         <DomainClassMoniker Name="Menu" />
         <ElementData>
           <XmlPropertyData XmlName="titulo">
-            <DomainPropertyMoniker Name="Menu/titulo" />
+            <DomainPropertyMoniker Name="Menu/Titulo" />
           </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="itemMenus">
+            <DomainRelationshipMoniker Name="MenuHasItemMenus" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="VentanaHasMenu" MonikerAttributeName="" SerializeId="true" MonikerElementName="ventanaHasMenuMoniker" ElementName="ventanaHasMenu" MonikerTypeName="VentanaHasMenuMoniker">
-        <DomainRelationshipMoniker Name="VentanaHasMenu" />
+      <XmlClassData TypeName="VentanaHasMenus" MonikerAttributeName="" SerializeId="true" MonikerElementName="ventanaHasMenusMoniker" ElementName="ventanaHasMenus" MonikerTypeName="VentanaHasMenusMoniker">
+        <DomainRelationshipMoniker Name="VentanaHasMenus" />
       </XmlClassData>
       <XmlClassData TypeName="MenuMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="menuMetaforaMoniker" ElementName="menuMetafora" MonikerTypeName="MenuMetaforaMoniker">
         <GeometryShapeMoniker Name="MenuMetafora" />
       </XmlClassData>
-      <XmlClassData TypeName="VentanaMenuMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="ventanaMenuMetaforaMoniker" ElementName="ventanaMenuMetafora" MonikerTypeName="VentanaMenuMetaforaMoniker">
-        <ConnectorMoniker Name="VentanaMenuMetafora" />
+      <XmlClassData TypeName="Ventana_MenuMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="ventana_MenuMetaforaMoniker" ElementName="ventana_MenuMetafora" MonikerTypeName="Ventana_MenuMetaforaMoniker">
+        <ConnectorMoniker Name="Ventana_MenuMetafora" />
+      </XmlClassData>
+      <XmlClassData TypeName="ItemNavegacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="itemNavegacionMoniker" ElementName="itemNavegacion" MonikerTypeName="ItemNavegacionMoniker">
+        <DomainClassMoniker Name="ItemNavegacion" />
+        <ElementData>
+          <XmlPropertyData XmlName="titulo">
+            <DomainPropertyMoniker Name="ItemNavegacion/titulo" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="ItemMenu" MonikerAttributeName="" SerializeId="true" MonikerElementName="itemMenuMoniker" ElementName="itemMenu" MonikerTypeName="ItemMenuMoniker">
+        <DomainClassMoniker Name="ItemMenu" />
+      </XmlClassData>
+      <XmlClassData TypeName="MenuHasItemMenus" MonikerAttributeName="" SerializeId="true" MonikerElementName="menuHasItemMenusMoniker" ElementName="menuHasItemMenus" MonikerTypeName="MenuHasItemMenusMoniker">
+        <DomainRelationshipMoniker Name="MenuHasItemMenus" />
+      </XmlClassData>
+      <XmlClassData TypeName="ItemMenuMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="itemMenuMetaforaMoniker" ElementName="itemMenuMetafora" MonikerTypeName="ItemMenuMetaforaMoniker">
+        <GeometryShapeMoniker Name="ItemMenuMetafora" />
+      </XmlClassData>
+      <XmlClassData TypeName="Menu_ItemMenuMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="menu_ItemMenuMetaforaMoniker" ElementName="menu_ItemMenuMetafora" MonikerTypeName="Menu_ItemMenuMetaforaMoniker">
+        <ConnectorMoniker Name="Menu_ItemMenuMetafora" />
+      </XmlClassData>
+      <XmlClassData TypeName="Boton" MonikerAttributeName="" SerializeId="true" MonikerElementName="botonMoniker" ElementName="boton" MonikerTypeName="BotonMoniker">
+        <DomainClassMoniker Name="Boton" />
+      </XmlClassData>
+      <XmlClassData TypeName="VentanaHasBotons" MonikerAttributeName="" SerializeId="true" MonikerElementName="ventanaHasBotonsMoniker" ElementName="ventanaHasBotons" MonikerTypeName="VentanaHasBotonsMoniker">
+        <DomainRelationshipMoniker Name="VentanaHasBotons" />
+      </XmlClassData>
+      <XmlClassData TypeName="BotonMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="botonMetaforaMoniker" ElementName="botonMetafora" MonikerTypeName="BotonMetaforaMoniker">
+        <GeometryShapeMoniker Name="BotonMetafora" />
+      </XmlClassData>
+      <XmlClassData TypeName="Ventana_BotonMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="ventana_BotonMetaforaMoniker" ElementName="ventana_BotonMetafora" MonikerTypeName="Ventana_BotonMetaforaMoniker">
+        <ConnectorMoniker Name="Ventana_BotonMetafora" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -355,17 +462,20 @@
         </ParentElementPath>
         <GeometryShapeMoniker Name="VSecundariaMetafora" />
       </ShapeMap>
-      <ShapeMap>
+      <ShapeMap HasCustomParentElement="true">
         <DomainClassMoniker Name="Menu" />
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MenuMetafora/titulo" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Menu/titulo" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
         <GeometryShapeMoniker Name="MenuMetafora" />
+      </ShapeMap>
+      <ShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="ItemMenu" />
+        <ParentElementPath>
+          <DomainPath />
+        </ParentElementPath>
+        <GeometryShapeMoniker Name="ItemMenuMetafora" />
+      </ShapeMap>
+      <ShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="Boton" />
+        <GeometryShapeMoniker Name="BotonMetafora" />
       </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
@@ -378,8 +488,16 @@
         <DomainRelationshipMoniker Name="VSecundariaReferencesVSecundaria" />
       </ConnectorMap>
       <ConnectorMap>
-        <ConnectorMoniker Name="VentanaMenuMetafora" />
-        <DomainRelationshipMoniker Name="VentanaHasMenu" />
+        <ConnectorMoniker Name="Ventana_MenuMetafora" />
+        <DomainRelationshipMoniker Name="VentanaHasMenus" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="Menu_ItemMenuMetafora" />
+        <DomainRelationshipMoniker Name="MenuHasItemMenus" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="Ventana_BotonMetafora" />
+        <DomainRelationshipMoniker Name="VentanaHasBotons" />
       </ConnectorMap>
     </ConnectorMaps>
   </Diagram>
@@ -394,7 +512,7 @@
       <ElementTool Name="VPrincipalTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Ventana Principal" Tooltip="VPrincipal Tool" HelpKeyword="VPrincipalTool">
         <DomainClassMoniker Name="VentanaPrincipal" />
       </ElementTool>
-      <ElementTool Name="VSecundariaTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="VSecundariaTool" Tooltip="VSecundaria Tool" HelpKeyword="VSecundariaTool">
+      <ElementTool Name="VSecundariaTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Ventana Secundaria" Tooltip="VSecundaria Tool" HelpKeyword="VSecundariaTool">
         <DomainClassMoniker Name="VentanaSecundaria" />
       </ElementTool>
     </ToolboxTab>
@@ -409,6 +527,12 @@
     <ToolboxTab TabText="Navegación">
       <ElementTool Name="MenuTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Menu" Tooltip="Menu Tool" HelpKeyword="MenuTool">
         <DomainClassMoniker Name="Menu" />
+      </ElementTool>
+      <ElementTool Name="ItemMenuTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Item de Menu" Tooltip="Item Menu Tool" HelpKeyword="ItemMenuTool">
+        <DomainClassMoniker Name="ItemMenu" />
+      </ElementTool>
+      <ElementTool Name="BotonTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Boton" Tooltip="Boton Tool" HelpKeyword="BotonTool">
+        <DomainClassMoniker Name="Boton" />
       </ElementTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
