@@ -87,12 +87,12 @@ namespace UPM_IPS.MPJAAMPrototool
 				typeof(MPJAAMPrototoolDiagram),
 				typeof(ItemNavegacion_Ventana),
 				typeof(ItemNavegacion_EstadoFinMetafora),
-				typeof(VPrincipalMetafora),
 				typeof(VSecundariaMetafora),
 				typeof(MenuMetafora),
-				typeof(ItemMenuMetafora),
 				typeof(BotonMetafora),
 				typeof(EstadoFinMetafora),
+				typeof(VPrincipalMetafora),
+				typeof(ItemMenuMetafora),
 				typeof(global::UPM_IPS.MPJAAMPrototool.FixUpDiagram),
 				typeof(global::UPM_IPS.MPJAAMPrototool.ConnectorRolePlayerChanged),
 			};
@@ -110,11 +110,10 @@ namespace UPM_IPS.MPJAAMPrototool
 				new DomainMemberInfo(typeof(Ventana), "nombre", Ventana.nombreDomainPropertyId, typeof(Ventana.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(Ventana), "ancho", Ventana.anchoDomainPropertyId, typeof(Ventana.anchoPropertyHandler)),
 				new DomainMemberInfo(typeof(Ventana), "altura", Ventana.alturaDomainPropertyId, typeof(Ventana.alturaPropertyHandler)),
+				new DomainMemberInfo(typeof(Ventana), "nombreCalculado", Ventana.nombreCalculadoDomainPropertyId, typeof(Ventana.nombreCalculadoPropertyHandler)),
 				new DomainMemberInfo(typeof(VentanaSecundaria), "modal", VentanaSecundaria.modalDomainPropertyId, typeof(VentanaSecundaria.modalPropertyHandler)),
 				new DomainMemberInfo(typeof(Menu), "TituloMenu", Menu.TituloMenuDomainPropertyId, typeof(Menu.TituloMenuPropertyHandler)),
 				new DomainMemberInfo(typeof(ItemNavegacion), "titulo", ItemNavegacion.tituloDomainPropertyId, typeof(ItemNavegacion.tituloPropertyHandler)),
-				new DomainMemberInfo(typeof(ItemMenu), "TituloItemMenu", ItemMenu.TituloItemMenuDomainPropertyId, typeof(ItemMenu.TituloItemMenuPropertyHandler)),
-				new DomainMemberInfo(typeof(Boton), "TituloBoton", Boton.TituloBotonDomainPropertyId, typeof(Boton.TituloBotonPropertyHandler)),
 			};
 		}
 		/// <summary>
@@ -173,12 +172,12 @@ namespace UPM_IPS.MPJAAMPrototool
 				createElementMap.Add(typeof(MPJAAMPrototoolDiagram), 7);
 				createElementMap.Add(typeof(ItemNavegacion_Ventana), 8);
 				createElementMap.Add(typeof(ItemNavegacion_EstadoFinMetafora), 9);
-				createElementMap.Add(typeof(VPrincipalMetafora), 10);
-				createElementMap.Add(typeof(VSecundariaMetafora), 11);
-				createElementMap.Add(typeof(MenuMetafora), 12);
-				createElementMap.Add(typeof(ItemMenuMetafora), 13);
-				createElementMap.Add(typeof(BotonMetafora), 14);
-				createElementMap.Add(typeof(EstadoFinMetafora), 15);
+				createElementMap.Add(typeof(VSecundariaMetafora), 10);
+				createElementMap.Add(typeof(MenuMetafora), 11);
+				createElementMap.Add(typeof(BotonMetafora), 12);
+				createElementMap.Add(typeof(EstadoFinMetafora), 13);
+				createElementMap.Add(typeof(VPrincipalMetafora), 14);
+				createElementMap.Add(typeof(ItemMenuMetafora), 15);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -202,12 +201,12 @@ namespace UPM_IPS.MPJAAMPrototool
 				case 7: return new MPJAAMPrototoolDiagram(partition, propertyAssignments);
 				case 8: return new ItemNavegacion_Ventana(partition, propertyAssignments);
 				case 9: return new ItemNavegacion_EstadoFinMetafora(partition, propertyAssignments);
-				case 10: return new VPrincipalMetafora(partition, propertyAssignments);
-				case 11: return new VSecundariaMetafora(partition, propertyAssignments);
-				case 12: return new MenuMetafora(partition, propertyAssignments);
-				case 13: return new ItemMenuMetafora(partition, propertyAssignments);
-				case 14: return new BotonMetafora(partition, propertyAssignments);
-				case 15: return new EstadoFinMetafora(partition, propertyAssignments);
+				case 10: return new VSecundariaMetafora(partition, propertyAssignments);
+				case 11: return new MenuMetafora(partition, propertyAssignments);
+				case 12: return new BotonMetafora(partition, propertyAssignments);
+				case 13: return new EstadoFinMetafora(partition, propertyAssignments);
+				case 14: return new VPrincipalMetafora(partition, propertyAssignments);
+				case 15: return new ItemMenuMetafora(partition, propertyAssignments);
 				default: return null;
 			}
 		}

@@ -646,6 +646,72 @@ namespace UPM_IPS.MPJAAMPrototool
 		}
 		
 		#endregion
+		#region nombreCalculado domain property code
+		
+		/// <summary>
+		/// nombreCalculado domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid nombreCalculadoDomainPropertyId = new global::System.Guid(0xe7ea94b0, 0x9ac8, 0x4c02, 0xbf, 0x60, 0xf1, 0x1c, 0x29, 0xb6, 0x89, 0x24);
+		
+		/// <summary>
+		/// Gets or sets the value of nombreCalculado domain property.
+		/// Description for UPM_IPS.MPJAAMPrototool.Ventana.Nombre Calculado
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.Ventana/nombreCalculado.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.Ventana/nombreCalculado.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("e7ea94b0-9ac8-4c02-bf60-f11c29b68924")]
+		public global::System.String nombreCalculado
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombreCalculadoPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Ventana.nombreCalculado domain property.
+		/// </summary>
+		internal sealed partial class nombreCalculadoPropertyHandler : DslModeling::CalculatedPropertyValueHandler<Ventana, global::System.String>
+		{
+			private nombreCalculadoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Ventana.nombreCalculado domain property value handler.
+			/// </summary>
+			public static readonly nombreCalculadoPropertyHandler Instance = new nombreCalculadoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Ventana.nombreCalculado domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return nombreCalculadoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Ventana element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for nombreCalculado because its Kind is
+				// set to Calculated. Please provide the GetnombreCalculadoValue()
+				// method on the domain class.
+				return element.GetnombreCalculadoValue();
+			}
+		
+		}
+		
+		#endregion
 		#region Menus opposite domain role accessor
 		
 		/// <summary>
@@ -1483,93 +1549,6 @@ namespace UPM_IPS.MPJAAMPrototool
 		{
 		}
 		#endregion
-		#region TituloItemMenu domain property code
-		
-		/// <summary>
-		/// TituloItemMenu domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid TituloItemMenuDomainPropertyId = new global::System.Guid(0x10085158, 0xbce9, 0x4c8b, 0xa3, 0x16, 0xba, 0xc2, 0x57, 0xf5, 0x19, 0xa5);
-		
-		/// <summary>
-		/// Storage for TituloItemMenu
-		/// </summary>
-		private global::System.String tituloItemMenuPropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of TituloItemMenu domain property.
-		/// Description for UPM_IPS.MPJAAMPrototool.ItemMenu.Titulo Item Menu
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.ItemMenu/TituloItemMenu.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.ItemMenu/TituloItemMenu.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("10085158-bce9-4c8b-a316-bac257f519a5")]
-		public global::System.String TituloItemMenu
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return tituloItemMenuPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				TituloItemMenuPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the ItemMenu.TituloItemMenu domain property.
-		/// </summary>
-		internal sealed partial class TituloItemMenuPropertyHandler : DslModeling::DomainPropertyValueHandler<ItemMenu, global::System.String>
-		{
-			private TituloItemMenuPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the ItemMenu.TituloItemMenu domain property value handler.
-			/// </summary>
-			public static readonly TituloItemMenuPropertyHandler Instance = new TituloItemMenuPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the ItemMenu.TituloItemMenu domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return TituloItemMenuDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(ItemMenu element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.tituloItemMenuPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ItemMenu element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.tituloItemMenuPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
 		#region Menu opposite domain role accessor
 		/// <summary>
 		/// Gets or sets Menu.
@@ -1629,93 +1608,6 @@ namespace UPM_IPS.MPJAAMPrototool
 			: base(partition, propertyAssignments)
 		{
 		}
-		#endregion
-		#region TituloBoton domain property code
-		
-		/// <summary>
-		/// TituloBoton domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid TituloBotonDomainPropertyId = new global::System.Guid(0x8fd14391, 0x1140, 0x464e, 0xba, 0x52, 0x47, 0xb3, 0x8b, 0xe2, 0xa6, 0xe2);
-		
-		/// <summary>
-		/// Storage for TituloBoton
-		/// </summary>
-		private global::System.String tituloBotonPropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of TituloBoton domain property.
-		/// Description for UPM_IPS.MPJAAMPrototool.Boton.Titulo Boton
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.Boton/TituloBoton.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.Boton/TituloBoton.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("8fd14391-1140-464e-ba52-47b38be2a6e2")]
-		public global::System.String TituloBoton
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return tituloBotonPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				TituloBotonPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the Boton.TituloBoton domain property.
-		/// </summary>
-		internal sealed partial class TituloBotonPropertyHandler : DslModeling::DomainPropertyValueHandler<Boton, global::System.String>
-		{
-			private TituloBotonPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the Boton.TituloBoton domain property value handler.
-			/// </summary>
-			public static readonly TituloBotonPropertyHandler Instance = new TituloBotonPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the Boton.TituloBoton domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return TituloBotonDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Boton element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.tituloBotonPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Boton element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.tituloBotonPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
 		#endregion
 		#region VentanaBoton opposite domain role accessor
 		/// <summary>

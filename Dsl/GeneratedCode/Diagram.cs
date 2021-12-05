@@ -207,27 +207,27 @@ namespace UPM_IPS.MPJAAMPrototool
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
 		{
-			if(element is global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal)
-			{
-				global::UPM_IPS.MPJAAMPrototool.VPrincipalMetafora newShape = new global::UPM_IPS.MPJAAMPrototool.VPrincipalMetafora(this.Partition);
-				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
-				return newShape;
-			}
 			if(element is global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria)
 			{
 				global::UPM_IPS.MPJAAMPrototool.VSecundariaMetafora newShape = new global::UPM_IPS.MPJAAMPrototool.VSecundariaMetafora(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::UPM_IPS.MPJAAMPrototool.ItemMenu)
-			{
-				global::UPM_IPS.MPJAAMPrototool.ItemMenuMetafora newShape = new global::UPM_IPS.MPJAAMPrototool.ItemMenuMetafora(this.Partition);
-				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
-				return newShape;
-			}
 			if(element is global::UPM_IPS.MPJAAMPrototool.Boton)
 			{
 				global::UPM_IPS.MPJAAMPrototool.BotonMetafora newShape = new global::UPM_IPS.MPJAAMPrototool.BotonMetafora(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal)
+			{
+				global::UPM_IPS.MPJAAMPrototool.VPrincipalMetafora newShape = new global::UPM_IPS.MPJAAMPrototool.VPrincipalMetafora(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.MPJAAMPrototool.ItemMenu)
+			{
+				global::UPM_IPS.MPJAAMPrototool.ItemMenuMetafora newShape = new global::UPM_IPS.MPJAAMPrototool.ItemMenuMetafora(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
@@ -264,6 +264,63 @@ namespace UPM_IPS.MPJAAMPrototool
 		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
 		{
 			base.InitializeShapeFields(shapeFields);
+			global::UPM_IPS.MPJAAMPrototool.VPrincipalMetafora.DecoratorsInitialized += VPrincipalMetaforaDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.MPJAAMPrototool.MenuMetafora.DecoratorsInitialized += MenuMetaforaDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.MPJAAMPrototool.ItemMenuMetafora.DecoratorsInitialized += ItemMenuMetaforaDecoratorMap.OnDecoratorsInitialized;
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for VPrincipalMetafora.
+		/// </summary>
+		internal static partial class VPrincipalMetaforaDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for VPrincipalMetafora.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.MPJAAMPrototool.Ventana.nombreCalculadoDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for MenuMetafora.
+		/// </summary>
+		internal static partial class MenuMetaforaDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for MenuMetafora.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.MPJAAMPrototool.Menu.TituloMenuDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "MenuDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for ItemMenuMetafora.
+		/// </summary>
+		internal static partial class ItemMenuMetaforaDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for ItemMenuMetafora.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.MPJAAMPrototool.ItemNavegacion.tituloDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TituloDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
 		}
 		
 		#endregion
@@ -432,10 +489,10 @@ namespace UPM_IPS.MPJAAMPrototool
 		/// <summary>
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.ItemMenu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.Boton), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.ItemMenu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.Menu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.EstadoFin), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
@@ -455,24 +512,9 @@ namespace UPM_IPS.MPJAAMPrototool
 				{
 					parentElement = GetParentForRelationship((DslModeling::ElementLink)childElement);
 				} else
-				if(childElement is global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal)
-				{
-					parentElement = GetParentForVentanaPrincipal((global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal)childElement);
-				} else
 				if(childElement is global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria)
 				{
 					parentElement = GetParentForVentanaSecundaria((global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria)childElement);
-				} else
-				if(childElement is global::UPM_IPS.MPJAAMPrototool.ItemMenu)
-				{
-					// Method:
-					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForItemMenu(ItemMenu childElement)
-					// {
-					// }
-					// must be implemented in a partial class of UPM_IPS.MPJAAMPrototool.FixUpDiagram.  Given a child element,
-					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
-					// of the shape created for this child.  If no shape should be created, the method should return null.
-					parentElement = GetParentForItemMenu((global::UPM_IPS.MPJAAMPrototool.ItemMenu)childElement);
 				} else
 				if(childElement is global::UPM_IPS.MPJAAMPrototool.Boton)
 				{
@@ -484,6 +526,21 @@ namespace UPM_IPS.MPJAAMPrototool
 					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
 					// of the shape created for this child.  If no shape should be created, the method should return null.
 					parentElement = GetParentForBoton((global::UPM_IPS.MPJAAMPrototool.Boton)childElement);
+				} else
+				if(childElement is global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal)
+				{
+					parentElement = GetParentForVentanaPrincipal((global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal)childElement);
+				} else
+				if(childElement is global::UPM_IPS.MPJAAMPrototool.ItemMenu)
+				{
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForItemMenu(ItemMenu childElement)
+					// {
+					// }
+					// must be implemented in a partial class of UPM_IPS.MPJAAMPrototool.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForItemMenu((global::UPM_IPS.MPJAAMPrototool.ItemMenu)childElement);
 				} else
 				if(childElement is global::UPM_IPS.MPJAAMPrototool.Menu)
 				{
@@ -516,14 +573,14 @@ namespace UPM_IPS.MPJAAMPrototool
 					DslDiagrams::Diagram.FixUpDiagram(parentElement, childElement);
 				}
 			}
-			public static global::UPM_IPS.MPJAAMPrototool.TapizPrototool GetParentForVentanaPrincipal( global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal root )
+			public static global::UPM_IPS.MPJAAMPrototool.TapizPrototool GetParentForVentanaSecundaria( global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria root )
 			{
 				// Segments 0 and 1
 				global::UPM_IPS.MPJAAMPrototool.TapizPrototool result = root.TapizPrototool;
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::UPM_IPS.MPJAAMPrototool.TapizPrototool GetParentForVentanaSecundaria( global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria root )
+			public static global::UPM_IPS.MPJAAMPrototool.TapizPrototool GetParentForVentanaPrincipal( global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal root )
 			{
 				// Segments 0 and 1
 				global::UPM_IPS.MPJAAMPrototool.TapizPrototool result = root.TapizPrototool;

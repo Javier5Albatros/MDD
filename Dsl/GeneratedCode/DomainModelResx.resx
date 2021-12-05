@@ -173,6 +173,14 @@
     <value>Altura</value>
     <comment>DisplayName for DomainProperty &apos;altura&apos; on DomainClass &apos;Ventana&apos;</comment>
   </data>
+  <data name="UPM_IPS.MPJAAMPrototool.Ventana/nombreCalculado.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.Ventana.Nombre Calculado</value>
+    <comment>Description for DomainProperty &apos;nombreCalculado&apos; on DomainClass &apos;Ventana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.Ventana/nombreCalculado.DisplayName" xml:space="preserve">
+    <value>Nombre Calculado</value>
+    <comment>DisplayName for DomainProperty &apos;nombreCalculado&apos; on DomainClass &apos;Ventana&apos;</comment>
+  </data>
   <data name="UPM_IPS.MPJAAMPrototool.VentanaPrincipal.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MPJAAMPrototool.VentanaPrincipal</value>
     <comment>Description for DomainClass &apos;VentanaPrincipal&apos;</comment>
@@ -237,14 +245,6 @@
     <value>Item Menu</value>
     <comment>DisplayName for DomainClass &apos;ItemMenu&apos;</comment>
   </data>
-  <data name="UPM_IPS.MPJAAMPrototool.ItemMenu/TituloItemMenu.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MPJAAMPrototool.ItemMenu.Titulo Item Menu</value>
-    <comment>Description for DomainProperty &apos;TituloItemMenu&apos; on DomainClass &apos;ItemMenu&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.ItemMenu/TituloItemMenu.DisplayName" xml:space="preserve">
-    <value>Titulo Item Menu</value>
-    <comment>DisplayName for DomainProperty &apos;TituloItemMenu&apos; on DomainClass &apos;ItemMenu&apos;</comment>
-  </data>
   <data name="UPM_IPS.MPJAAMPrototool.Boton.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MPJAAMPrototool.Boton</value>
     <comment>Description for DomainClass &apos;Boton&apos;</comment>
@@ -252,14 +252,6 @@
   <data name="UPM_IPS.MPJAAMPrototool.Boton.DisplayName" xml:space="preserve">
     <value>Boton</value>
     <comment>DisplayName for DomainClass &apos;Boton&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.Boton/TituloBoton.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MPJAAMPrototool.Boton.Titulo Boton</value>
-    <comment>Description for DomainProperty &apos;TituloBoton&apos; on DomainClass &apos;Boton&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.Boton/TituloBoton.DisplayName" xml:space="preserve">
-    <value>Titulo Boton</value>
-    <comment>DisplayName for DomainProperty &apos;TituloBoton&apos; on DomainClass &apos;Boton&apos;</comment>
   </data>
   <data name="UPM_IPS.MPJAAMPrototool.EstadoFin.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MPJAAMPrototool.EstadoFin</value>
@@ -525,14 +517,6 @@
     <value>Item Navegacioned</value>
     <comment>PropertyDisplayName for DomainRole &apos;EstadoFin&apos; on DomainRelationship &apos;ItemNavegacionReferencesEstadoFin&apos;</comment>
   </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VPrincipalMetafora.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MPJAAMPrototool.VPrincipalMetafora</value>
-    <comment>Description for DomainClass &apos;VPrincipalMetafora&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.VPrincipalMetafora.DisplayName" xml:space="preserve">
-    <value>VPrincipal Metafora</value>
-    <comment>DisplayName for DomainClass &apos;VPrincipalMetafora&apos;</comment>
-  </data>
   <data name="UPM_IPS.MPJAAMPrototool.VSecundariaMetafora.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MPJAAMPrototool.VSecundariaMetafora</value>
     <comment>Description for DomainClass &apos;VSecundariaMetafora&apos;</comment>
@@ -540,6 +524,10 @@
   <data name="UPM_IPS.MPJAAMPrototool.VSecundariaMetafora.DisplayName" xml:space="preserve">
     <value>VSecundaria Metafora</value>
     <comment>DisplayName for DomainClass &apos;VSecundariaMetafora&apos;</comment>
+  </data>
+  <data name="VSecundariaMetaforaNombreDecDefaultText" xml:space="preserve">
+    <value>NombreDec</value>
+    <comment>Text decorator default text</comment>
   </data>
   <data name="UPM_IPS.MPJAAMPrototool.MenuMetafora.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MPJAAMPrototool.MenuMetafora</value>
@@ -549,13 +537,9 @@
     <value>Menu Metafora</value>
     <comment>DisplayName for DomainClass &apos;MenuMetafora&apos;</comment>
   </data>
-  <data name="UPM_IPS.MPJAAMPrototool.ItemMenuMetafora.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MPJAAMPrototool.ItemMenuMetafora</value>
-    <comment>Description for DomainClass &apos;ItemMenuMetafora&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.ItemMenuMetafora.DisplayName" xml:space="preserve">
-    <value>Item Menu Metafora</value>
-    <comment>DisplayName for DomainClass &apos;ItemMenuMetafora&apos;</comment>
+  <data name="MenuMetaforaMenuDecDefaultText" xml:space="preserve">
+    <value>MenuDec</value>
+    <comment>Text decorator default text</comment>
   </data>
   <data name="UPM_IPS.MPJAAMPrototool.BotonMetafora.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MPJAAMPrototool.BotonMetafora</value>
@@ -572,6 +556,30 @@
   <data name="UPM_IPS.MPJAAMPrototool.EstadoFinMetafora.DisplayName" xml:space="preserve">
     <value>Estado Fin Metafora</value>
     <comment>DisplayName for DomainClass &apos;EstadoFinMetafora&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.VPrincipalMetafora.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.VPrincipalMetafora</value>
+    <comment>Description for DomainClass &apos;VPrincipalMetafora&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.VPrincipalMetafora.DisplayName" xml:space="preserve">
+    <value>VPrincipal Metafora</value>
+    <comment>DisplayName for DomainClass &apos;VPrincipalMetafora&apos;</comment>
+  </data>
+  <data name="VPrincipalMetaforaNombreDecDefaultText" xml:space="preserve">
+    <value>NombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemMenuMetafora.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.ItemMenuMetafora</value>
+    <comment>Description for DomainClass &apos;ItemMenuMetafora&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemMenuMetafora.DisplayName" xml:space="preserve">
+    <value>Item Menu Metafora</value>
+    <comment>DisplayName for DomainClass &apos;ItemMenuMetafora&apos;</comment>
+  </data>
+  <data name="ItemMenuMetaforaTituloDecDefaultText" xml:space="preserve">
+    <value>TituloDec</value>
+    <comment>Text decorator default text</comment>
   </data>
   <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacion_Ventana.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MPJAAMPrototool.ItemNavegacion_Ventana</value>
@@ -802,6 +810,18 @@ A DomainClass can be serialized as a moniker only if
     <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MenuMetaforaMenuIconDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Menu.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="VPrincipalMetaforaHomeDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Home.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="ItemMenuMetaforaPointIconDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Punto.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
   <data name="VPrincipalToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>

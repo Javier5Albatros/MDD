@@ -161,6 +161,7 @@
       <LastGenOutput>SerializationHelper.cs</LastGenOutput>
     </None>
     <Compile Include="CodigoAdicional\FixUpDiagram.cs" />
+    <Compile Include="DesignerCustomization\Ventana.cs" />
     <Compile Include="GeneratedCode\ConnectionBuilders.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -239,6 +240,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Home.bmp" />
+    <Content Include="Resources\Menu.bmp" />
+    <Content Include="Resources\Punto.bmp" />
     <None Include="DslDefinition.dsl.diagram">
       <DependentUpon>DslDefinition.dsl</DependentUpon>
     </None>
