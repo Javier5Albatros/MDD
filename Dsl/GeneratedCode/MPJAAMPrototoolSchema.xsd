@@ -245,8 +245,8 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <!-- Property: Titulo -->
-        <xsd:attribute name="titulo" type="xsd:string" />
+        <!-- Property: TituloMenu -->
+        <xsd:attribute name="tituloMenu" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -345,6 +345,8 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <!-- Property: TituloItemMenu -->
+        <xsd:attribute name="tituloItemMenu" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -372,6 +374,8 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <!-- Property: TituloBoton -->
+        <xsd:attribute name="tituloBoton" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

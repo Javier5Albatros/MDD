@@ -105,7 +105,7 @@ namespace UPM_IPS.MPJAAMPrototool
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(1.5, 1);
+				return new DslDiagrams::SizeD(2.5, 4);
 			}
 		}
 		#endregion
@@ -129,6 +129,16 @@ namespace UPM_IPS.MPJAAMPrototool
 			get
 			{
 				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+			}
+		}
+		/// <summary>
+		/// Specifies the geometry used by this shape
+		/// </summary>
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		{
+			get
+			{
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
 			}
 		}
 		#endregion
@@ -254,7 +264,7 @@ namespace UPM_IPS.MPJAAMPrototool
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(1.5, 1);
+				return new DslDiagrams::SizeD(2.5, 4);
 			}
 		}
 		#endregion
@@ -278,6 +288,16 @@ namespace UPM_IPS.MPJAAMPrototool
 			get
 			{
 				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+			}
+		}
+		/// <summary>
+		/// Specifies the geometry used by this shape
+		/// </summary>
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		{
+			get
+			{
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
 			}
 		}
 		#endregion
@@ -403,7 +423,7 @@ namespace UPM_IPS.MPJAAMPrototool
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(1.5, 1);
+				return new DslDiagrams::SizeD(1, 3);
 			}
 		}
 		#endregion
@@ -427,6 +447,16 @@ namespace UPM_IPS.MPJAAMPrototool
 			get
 			{
 				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+			}
+		}
+		/// <summary>
+		/// Specifies the geometry used by this shape
+		/// </summary>
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
+		{
+			get
+			{
+				return DslDiagrams::ShapeGeometries.RoundedRectangle;
 			}
 		}
 		#endregion
@@ -552,7 +582,7 @@ namespace UPM_IPS.MPJAAMPrototool
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(1.5, 1);
+				return new DslDiagrams::SizeD(0.5, 1.5);
 			}
 		}
 		#endregion
@@ -701,30 +731,19 @@ namespace UPM_IPS.MPJAAMPrototool
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(1.5, 1);
+				return new DslDiagrams::SizeD(0.5, 0.5);
 			}
 		}
 		#endregion
 		#region Shape styles
 		/// <summary>
-		/// Indicates whether this shape displays a background gradient.
+		/// Specifies the geometry used by this shape
 		/// </summary>
-		public override bool HasBackgroundGradient
+		public override DslDiagrams::ShapeGeometry ShapeGeometry
 		{
 			get
 			{
-				return true;
-			}
-		}
-		
-		/// <summary>
-		/// Indicates the direction of the gradient.
-		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
-		{
-			get
-			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return DslDiagrams::ShapeGeometries.Circle;
 			}
 		}
 		#endregion

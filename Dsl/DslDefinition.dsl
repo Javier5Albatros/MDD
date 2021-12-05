@@ -92,7 +92,7 @@
     </DomainClass>
     <DomainClass Id="1b2f3583-8181-485c-80d0-e2a3621f022f" Description="Description for UPM_IPS.MPJAAMPrototool.Menu" Name="Menu" DisplayName="Menu" Namespace="UPM_IPS.MPJAAMPrototool">
       <Properties>
-        <DomainProperty Id="2bbc406f-8b3c-4489-8364-fa388942888a" Description="Description for UPM_IPS.MPJAAMPrototool.Menu.Titulo" Name="Titulo" DisplayName="Titulo">
+        <DomainProperty Id="2bbc406f-8b3c-4489-8364-fa388942888a" Description="Description for UPM_IPS.MPJAAMPrototool.Menu.Titulo Menu" Name="TituloMenu" DisplayName="Titulo Menu">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -122,11 +122,25 @@
       <BaseClass>
         <DomainClassMoniker Name="ItemNavegacion" />
       </BaseClass>
+      <Properties>
+        <DomainProperty Id="10085158-bce9-4c8b-a316-bac257f519a5" Description="Description for UPM_IPS.MPJAAMPrototool.ItemMenu.Titulo Item Menu" Name="TituloItemMenu" DisplayName="Titulo Item Menu">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
     </DomainClass>
     <DomainClass Id="408ecdb3-c92b-4acb-a2f6-13c8b98e17d7" Description="Description for UPM_IPS.MPJAAMPrototool.Boton" Name="Boton" DisplayName="Boton" Namespace="UPM_IPS.MPJAAMPrototool">
       <BaseClass>
         <DomainClassMoniker Name="ItemNavegacion" />
       </BaseClass>
+      <Properties>
+        <DomainProperty Id="8fd14391-1140-464e-ba52-47b38be2a6e2" Description="Description for UPM_IPS.MPJAAMPrototool.Boton.Titulo Boton" Name="TituloBoton" DisplayName="Titulo Boton">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
     </DomainClass>
     <DomainClass Id="77dfd0bb-b447-4434-a513-3975dbc65cd4" Description="Description for UPM_IPS.MPJAAMPrototool.EstadoFin" Name="EstadoFin" DisplayName="Estado Fin" Namespace="UPM_IPS.MPJAAMPrototool" />
   </Classes>
@@ -278,17 +292,14 @@
     <ExternalType Name="Char" Namespace="System" />
   </Types>
   <Shapes>
-    <GeometryShape Id="c7127e7b-b27c-4549-af5c-ce04ae45a14c" Description="Description for UPM_IPS.MPJAAMPrototool.VPrincipalMetafora" Name="VPrincipalMetafora" DisplayName="VPrincipal Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VPrincipal Metafora" InitialHeight="1" Geometry="Rectangle" />
-    <GeometryShape Id="fee9cf50-5a97-4e31-b7c5-e45a1b98feb2" Description="Description for UPM_IPS.MPJAAMPrototool.VSecundariaMetafora" Name="VSecundariaMetafora" DisplayName="VSecundaria Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VSecundaria Metafora" InitialHeight="1" Geometry="Rectangle" />
-    <GeometryShape Id="b24d4e6f-0bf9-4c9e-8a2f-98f9901d4de8" Description="Description for UPM_IPS.MPJAAMPrototool.MenuMetafora" Name="MenuMetafora" DisplayName="Menu Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Menu Metafora" InitialHeight="1" Geometry="Rectangle" />
-    <GeometryShape Id="e8bb4e90-98e1-4557-9aa6-f06061a6b44e" Description="Description for UPM_IPS.MPJAAMPrototool.ItemMenuMetafora" Name="ItemMenuMetafora" DisplayName="Item Menu Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Item Menu Metafora" InitialHeight="1" Geometry="Rectangle" />
-    <GeometryShape Id="fc60b7e7-f543-4cf1-95a2-028b8e83140e" Description="Description for UPM_IPS.MPJAAMPrototool.BotonMetafora" Name="BotonMetafora" DisplayName="Boton Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Boton Metafora" InitialHeight="1" Geometry="Rectangle" />
+    <GeometryShape Id="c7127e7b-b27c-4549-af5c-ce04ae45a14c" Description="Description for UPM_IPS.MPJAAMPrototool.VPrincipalMetafora" Name="VPrincipalMetafora" DisplayName="VPrincipal Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VPrincipal Metafora" InitialWidth="2.5" InitialHeight="4" Geometry="RoundedRectangle" />
+    <GeometryShape Id="fee9cf50-5a97-4e31-b7c5-e45a1b98feb2" Description="Description for UPM_IPS.MPJAAMPrototool.VSecundariaMetafora" Name="VSecundariaMetafora" DisplayName="VSecundaria Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VSecundaria Metafora" InitialWidth="2.5" InitialHeight="4" Geometry="RoundedRectangle" />
+    <GeometryShape Id="b24d4e6f-0bf9-4c9e-8a2f-98f9901d4de8" Description="Description for UPM_IPS.MPJAAMPrototool.MenuMetafora" Name="MenuMetafora" DisplayName="Menu Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Menu Metafora" InitialWidth="1" InitialHeight="3" Geometry="RoundedRectangle" />
+    <GeometryShape Id="e8bb4e90-98e1-4557-9aa6-f06061a6b44e" Description="Description for UPM_IPS.MPJAAMPrototool.ItemMenuMetafora" Name="ItemMenuMetafora" DisplayName="Item Menu Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Item Menu Metafora" InitialWidth="0.5" InitialHeight="1.5" Geometry="Rectangle" />
+    <GeometryShape Id="fc60b7e7-f543-4cf1-95a2-028b8e83140e" Description="Description for UPM_IPS.MPJAAMPrototool.BotonMetafora" Name="BotonMetafora" DisplayName="Boton Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Boton Metafora" InitialWidth="0.5" InitialHeight="0.5" Geometry="Circle" />
     <GeometryShape Id="84a36636-25aa-4378-b822-7077eaa66e78" Description="Description for UPM_IPS.MPJAAMPrototool.EstadoFinMetafora" Name="EstadoFinMetafora" DisplayName="Estado Fin Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Estado Fin Metafora" InitialHeight="1" Geometry="Rectangle" />
   </Shapes>
   <Connectors>
-    <Connector Id="7ce11ce2-bfae-47e4-a000-9e2222570f8e" Description="Description for UPM_IPS.MPJAAMPrototool.Ventana_MenuMetafora" Name="Ventana_MenuMetafora" DisplayName="Ventana_ Menu Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Ventana_ Menu Metafora" />
-    <Connector Id="419f5bd0-b769-49ef-9494-be35525b38ce" Description="Description for UPM_IPS.MPJAAMPrototool.Menu_ItemMenuMetafora" Name="Menu_ItemMenuMetafora" DisplayName="Menu_ Item Menu Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Menu_ Item Menu Metafora" />
-    <Connector Id="f66cb58a-e21c-4706-bc34-6ea6b23bc064" Description="Description for UPM_IPS.MPJAAMPrototool.Ventana_BotonMetafora" Name="Ventana_BotonMetafora" DisplayName="Ventana_ Boton Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Ventana_ Boton Metafora" />
     <Connector Id="753407dd-edb2-4483-912b-db98fabf920e" Description="Description for UPM_IPS.MPJAAMPrototool.ItemNavegacion_Ventana" Name="ItemNavegacion_Ventana" DisplayName="Item Navegacion_ Ventana" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Item Navegacion_ Ventana" />
     <Connector Id="32dcfaab-8fe4-4e11-95ec-2692e0d7bfe5" Description="Description for UPM_IPS.MPJAAMPrototool.ItemNavegacion_EstadoFinMetafora" Name="ItemNavegacion_EstadoFinMetafora" DisplayName="Item Navegacion_ Estado Fin Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Item Navegacion_ Estado Fin Metafora" />
   </Connectors>
@@ -360,8 +371,8 @@
       <XmlClassData TypeName="Menu" MonikerAttributeName="" SerializeId="true" MonikerElementName="menuMoniker" ElementName="menu" MonikerTypeName="MenuMoniker">
         <DomainClassMoniker Name="Menu" />
         <ElementData>
-          <XmlPropertyData XmlName="titulo">
-            <DomainPropertyMoniker Name="Menu/Titulo" />
+          <XmlPropertyData XmlName="tituloMenu">
+            <DomainPropertyMoniker Name="Menu/TituloMenu" />
           </XmlPropertyData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="itemMenus">
             <DomainRelationshipMoniker Name="MenuHasItemMenus" />
@@ -373,9 +384,6 @@
       </XmlClassData>
       <XmlClassData TypeName="MenuMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="menuMetaforaMoniker" ElementName="menuMetafora" MonikerTypeName="MenuMetaforaMoniker">
         <GeometryShapeMoniker Name="MenuMetafora" />
-      </XmlClassData>
-      <XmlClassData TypeName="Ventana_MenuMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="ventana_MenuMetaforaMoniker" ElementName="ventana_MenuMetafora" MonikerTypeName="Ventana_MenuMetaforaMoniker">
-        <ConnectorMoniker Name="Ventana_MenuMetafora" />
       </XmlClassData>
       <XmlClassData TypeName="ItemNavegacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="itemNavegacionMoniker" ElementName="itemNavegacion" MonikerTypeName="ItemNavegacionMoniker">
         <DomainClassMoniker Name="ItemNavegacion" />
@@ -393,6 +401,11 @@
       </XmlClassData>
       <XmlClassData TypeName="ItemMenu" MonikerAttributeName="" SerializeId="true" MonikerElementName="itemMenuMoniker" ElementName="itemMenu" MonikerTypeName="ItemMenuMoniker">
         <DomainClassMoniker Name="ItemMenu" />
+        <ElementData>
+          <XmlPropertyData XmlName="tituloItemMenu">
+            <DomainPropertyMoniker Name="ItemMenu/TituloItemMenu" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="MenuHasItemMenus" MonikerAttributeName="" SerializeId="true" MonikerElementName="menuHasItemMenusMoniker" ElementName="menuHasItemMenus" MonikerTypeName="MenuHasItemMenusMoniker">
         <DomainRelationshipMoniker Name="MenuHasItemMenus" />
@@ -400,20 +413,19 @@
       <XmlClassData TypeName="ItemMenuMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="itemMenuMetaforaMoniker" ElementName="itemMenuMetafora" MonikerTypeName="ItemMenuMetaforaMoniker">
         <GeometryShapeMoniker Name="ItemMenuMetafora" />
       </XmlClassData>
-      <XmlClassData TypeName="Menu_ItemMenuMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="menu_ItemMenuMetaforaMoniker" ElementName="menu_ItemMenuMetafora" MonikerTypeName="Menu_ItemMenuMetaforaMoniker">
-        <ConnectorMoniker Name="Menu_ItemMenuMetafora" />
-      </XmlClassData>
       <XmlClassData TypeName="Boton" MonikerAttributeName="" SerializeId="true" MonikerElementName="botonMoniker" ElementName="boton" MonikerTypeName="BotonMoniker">
         <DomainClassMoniker Name="Boton" />
+        <ElementData>
+          <XmlPropertyData XmlName="tituloBoton">
+            <DomainPropertyMoniker Name="Boton/TituloBoton" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="VentanaHasBotons" MonikerAttributeName="" SerializeId="true" MonikerElementName="ventanaHasBotonsMoniker" ElementName="ventanaHasBotons" MonikerTypeName="VentanaHasBotonsMoniker">
         <DomainRelationshipMoniker Name="VentanaHasBotons" />
       </XmlClassData>
       <XmlClassData TypeName="BotonMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="botonMetaforaMoniker" ElementName="botonMetafora" MonikerTypeName="BotonMetaforaMoniker">
         <GeometryShapeMoniker Name="BotonMetafora" />
-      </XmlClassData>
-      <XmlClassData TypeName="Ventana_BotonMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="ventana_BotonMetaforaMoniker" ElementName="ventana_BotonMetafora" MonikerTypeName="Ventana_BotonMetaforaMoniker">
-        <ConnectorMoniker Name="Ventana_BotonMetafora" />
       </XmlClassData>
       <XmlClassData TypeName="EstadoFin" MonikerAttributeName="" SerializeId="true" MonikerElementName="estadoFinMoniker" ElementName="estadoFin" MonikerTypeName="EstadoFinMoniker">
         <DomainClassMoniker Name="EstadoFin" />
@@ -522,18 +534,6 @@
       </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
-      <ConnectorMap>
-        <ConnectorMoniker Name="Ventana_MenuMetafora" />
-        <DomainRelationshipMoniker Name="VentanaHasMenus" />
-      </ConnectorMap>
-      <ConnectorMap>
-        <ConnectorMoniker Name="Menu_ItemMenuMetafora" />
-        <DomainRelationshipMoniker Name="MenuHasItemMenus" />
-      </ConnectorMap>
-      <ConnectorMap>
-        <ConnectorMoniker Name="Ventana_BotonMetafora" />
-        <DomainRelationshipMoniker Name="VentanaHasBotons" />
-      </ConnectorMap>
       <ConnectorMap>
         <ConnectorMoniker Name="ItemNavegacion_Ventana" />
         <DomainRelationshipMoniker Name="ItemNavegacionReferencesVentana" />

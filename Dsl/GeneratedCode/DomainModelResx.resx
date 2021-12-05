@@ -205,13 +205,13 @@
     <value>Menu</value>
     <comment>DisplayName for DomainClass &apos;Menu&apos;</comment>
   </data>
-  <data name="UPM_IPS.MPJAAMPrototool.Menu/Titulo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MPJAAMPrototool.Menu.Titulo</value>
-    <comment>Description for DomainProperty &apos;Titulo&apos; on DomainClass &apos;Menu&apos;</comment>
+  <data name="UPM_IPS.MPJAAMPrototool.Menu/TituloMenu.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.Menu.Titulo Menu</value>
+    <comment>Description for DomainProperty &apos;TituloMenu&apos; on DomainClass &apos;Menu&apos;</comment>
   </data>
-  <data name="UPM_IPS.MPJAAMPrototool.Menu/Titulo.DisplayName" xml:space="preserve">
-    <value>Titulo</value>
-    <comment>DisplayName for DomainProperty &apos;Titulo&apos; on DomainClass &apos;Menu&apos;</comment>
+  <data name="UPM_IPS.MPJAAMPrototool.Menu/TituloMenu.DisplayName" xml:space="preserve">
+    <value>Titulo Menu</value>
+    <comment>DisplayName for DomainProperty &apos;TituloMenu&apos; on DomainClass &apos;Menu&apos;</comment>
   </data>
   <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacion.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MPJAAMPrototool.ItemNavegacion</value>
@@ -237,6 +237,14 @@
     <value>Item Menu</value>
     <comment>DisplayName for DomainClass &apos;ItemMenu&apos;</comment>
   </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemMenu/TituloItemMenu.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.ItemMenu.Titulo Item Menu</value>
+    <comment>Description for DomainProperty &apos;TituloItemMenu&apos; on DomainClass &apos;ItemMenu&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.ItemMenu/TituloItemMenu.DisplayName" xml:space="preserve">
+    <value>Titulo Item Menu</value>
+    <comment>DisplayName for DomainProperty &apos;TituloItemMenu&apos; on DomainClass &apos;ItemMenu&apos;</comment>
+  </data>
   <data name="UPM_IPS.MPJAAMPrototool.Boton.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MPJAAMPrototool.Boton</value>
     <comment>Description for DomainClass &apos;Boton&apos;</comment>
@@ -244,6 +252,14 @@
   <data name="UPM_IPS.MPJAAMPrototool.Boton.DisplayName" xml:space="preserve">
     <value>Boton</value>
     <comment>DisplayName for DomainClass &apos;Boton&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.Boton/TituloBoton.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.Boton.Titulo Boton</value>
+    <comment>Description for DomainProperty &apos;TituloBoton&apos; on DomainClass &apos;Boton&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.Boton/TituloBoton.DisplayName" xml:space="preserve">
+    <value>Titulo Boton</value>
+    <comment>DisplayName for DomainProperty &apos;TituloBoton&apos; on DomainClass &apos;Boton&apos;</comment>
   </data>
   <data name="UPM_IPS.MPJAAMPrototool.EstadoFin.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MPJAAMPrototool.EstadoFin</value>
@@ -556,30 +572,6 @@
   <data name="UPM_IPS.MPJAAMPrototool.EstadoFinMetafora.DisplayName" xml:space="preserve">
     <value>Estado Fin Metafora</value>
     <comment>DisplayName for DomainClass &apos;EstadoFinMetafora&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.Ventana_MenuMetafora.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MPJAAMPrototool.Ventana_MenuMetafora</value>
-    <comment>Description for DomainClass &apos;Ventana_MenuMetafora&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.Ventana_MenuMetafora.DisplayName" xml:space="preserve">
-    <value>Ventana_ Menu Metafora</value>
-    <comment>DisplayName for DomainClass &apos;Ventana_MenuMetafora&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.Menu_ItemMenuMetafora.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MPJAAMPrototool.Menu_ItemMenuMetafora</value>
-    <comment>Description for DomainClass &apos;Menu_ItemMenuMetafora&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.Menu_ItemMenuMetafora.DisplayName" xml:space="preserve">
-    <value>Menu_ Item Menu Metafora</value>
-    <comment>DisplayName for DomainClass &apos;Menu_ItemMenuMetafora&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.Ventana_BotonMetafora.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MPJAAMPrototool.Ventana_BotonMetafora</value>
-    <comment>Description for DomainClass &apos;Ventana_BotonMetafora&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.Ventana_BotonMetafora.DisplayName" xml:space="preserve">
-    <value>Ventana_ Boton Metafora</value>
-    <comment>DisplayName for DomainClass &apos;Ventana_BotonMetafora&apos;</comment>
   </data>
   <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacion_Ventana.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MPJAAMPrototool.ItemNavegacion_Ventana</value>

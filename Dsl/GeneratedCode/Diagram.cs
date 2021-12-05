@@ -243,21 +243,6 @@ namespace UPM_IPS.MPJAAMPrototool
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::UPM_IPS.MPJAAMPrototool.VentanaHasMenus)
-			{
-				global::UPM_IPS.MPJAAMPrototool.Ventana_MenuMetafora newShape = new global::UPM_IPS.MPJAAMPrototool.Ventana_MenuMetafora(this.Partition);
-				return newShape;
-			}
-			if(element is global::UPM_IPS.MPJAAMPrototool.MenuHasItemMenus)
-			{
-				global::UPM_IPS.MPJAAMPrototool.Menu_ItemMenuMetafora newShape = new global::UPM_IPS.MPJAAMPrototool.Menu_ItemMenuMetafora(this.Partition);
-				return newShape;
-			}
-			if(element is global::UPM_IPS.MPJAAMPrototool.VentanaHasBotons)
-			{
-				global::UPM_IPS.MPJAAMPrototool.Ventana_BotonMetafora newShape = new global::UPM_IPS.MPJAAMPrototool.Ventana_BotonMetafora(this.Partition);
-				return newShape;
-			}
 			if(element is global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana)
 			{
 				global::UPM_IPS.MPJAAMPrototool.ItemNavegacion_Ventana newShape = new global::UPM_IPS.MPJAAMPrototool.ItemNavegacion_Ventana(this.Partition);
@@ -453,9 +438,6 @@ namespace UPM_IPS.MPJAAMPrototool
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.Boton), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.Menu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.EstadoFin), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.VentanaHasMenus), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.MenuHasItemMenus), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.VentanaHasBotons), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
@@ -637,9 +619,6 @@ namespace UPM_IPS.MPJAAMPrototool
 		/// <summary>
 		/// Reroute a connector when the role players of its underlying relationship change
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.VentanaHasMenus), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.MenuHasItemMenus), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.VentanaHasBotons), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesVentana), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MPJAAMPrototool.ItemNavegacionReferencesEstadoFin), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
