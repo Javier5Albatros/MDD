@@ -240,9 +240,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\boton.bmp" />
+    <Content Include="Resources\descarga.png" />
+    <Content Include="Resources\enlace.bmp" />
     <Content Include="Resources\Home.bmp" />
+    <Content Include="Resources\item_menu.bmp" />
     <Content Include="Resources\Menu.bmp" />
+    <Content Include="Resources\menu_icono.bmp" />
+    <Content Include="Resources\modal.bmp" />
     <Content Include="Resources\Punto.bmp" />
+    <Content Include="Resources\stop %281%29.bmp" />
+    <Content Include="Resources\stop %282%29.bmp" />
+    <Content Include="Resources\stop.bmp" />
+    <Content Include="Resources\Ventana.bmp" />
+    <Content Include="Resources\VentanaS.bmp" />
     <None Include="DslDefinition.dsl.diagram">
       <DependentUpon>DslDefinition.dsl</DependentUpon>
     </None>

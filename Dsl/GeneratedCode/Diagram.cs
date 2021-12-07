@@ -265,6 +265,7 @@ namespace UPM_IPS.MPJAAMPrototool
 		{
 			base.InitializeShapeFields(shapeFields);
 			global::UPM_IPS.MPJAAMPrototool.VPrincipalMetafora.DecoratorsInitialized += VPrincipalMetaforaDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.MPJAAMPrototool.VSecundariaMetafora.DecoratorsInitialized += VSecundariaMetaforaDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.MPJAAMPrototool.MenuMetafora.DecoratorsInitialized += MenuMetaforaDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.MPJAAMPrototool.ItemMenuMetafora.DecoratorsInitialized += ItemMenuMetaforaDecoratorMap.OnDecoratorsInitialized;
 		}
@@ -284,6 +285,37 @@ namespace UPM_IPS.MPJAAMPrototool
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.MPJAAMPrototool.Ventana.nombreCalculadoDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreDec").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.MPJAAMPrototool.Ventana.dimensionesCalculadoDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "DimensionesDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for VSecundariaMetafora.
+		/// </summary>
+		internal static partial class VSecundariaMetaforaDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for VSecundariaMetafora.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.MPJAAMPrototool.Ventana.nombreCalculadoDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreDec").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.MPJAAMPrototool.Ventana.nombreCalculadoDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NombreDec").AssociateValueWith(shape.Store, propertyInfo);
+		
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.MPJAAMPrototool.VentanaSecundaria.modalDomainPropertyId);
+				propertyInfo.FilteringValues.Add("True");
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "ModalDec").AssociateVisibilityWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.MPJAAMPrototool.Ventana.dimensionesCalculadoDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "DimensionesDec").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -327,7 +359,7 @@ namespace UPM_IPS.MPJAAMPrototool
 		
 		#region Connect actions
 		private bool changingMouseAction;
-		private global::UPM_IPS.MPJAAMPrototool.ItemNavegacion_VentanaToolConnectAction itemNavegacion_VentanaToolConnectAction;
+		private global::UPM_IPS.MPJAAMPrototool.ItemNavegacion_VentanaTool1ConnectAction itemNavegacion_VentanaTool1ConnectAction;
 		private global::UPM_IPS.MPJAAMPrototool.ItemNavegacion_EstadoFinToolConnectAction itemNavegacion_EstadoFinToolConnectAction;
 		/// <summary>
 		/// Virtual method to provide a filter when to select the mouse action
@@ -351,14 +383,14 @@ namespace UPM_IPS.MPJAAMPrototool
 			if(activeView != null)
 			{
 				DslDiagrams::MouseAction action = null;
-				if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolToolboxHelper.ItemNavegacion_VentanaToolFilterString))
+				if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolToolboxHelper.ItemNavegacion_VentanaTool1FilterString))
 				{
-					if (this.itemNavegacion_VentanaToolConnectAction == null)
+					if (this.itemNavegacion_VentanaTool1ConnectAction == null)
 					{
-						this.itemNavegacion_VentanaToolConnectAction = new global::UPM_IPS.MPJAAMPrototool.ItemNavegacion_VentanaToolConnectAction(this);
-						this.itemNavegacion_VentanaToolConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+						this.itemNavegacion_VentanaTool1ConnectAction = new global::UPM_IPS.MPJAAMPrototool.ItemNavegacion_VentanaTool1ConnectAction(this);
+						this.itemNavegacion_VentanaTool1ConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
-					action = this.itemNavegacion_VentanaToolConnectAction;
+					action = this.itemNavegacion_VentanaTool1ConnectAction;
 				} 
 				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolToolboxHelper.ItemNavegacion_EstadoFinToolFilterString))
 				{
@@ -426,10 +458,10 @@ namespace UPM_IPS.MPJAAMPrototool
 			{
 				if(disposing)
 				{
-					if(this.itemNavegacion_VentanaToolConnectAction != null)
+					if(this.itemNavegacion_VentanaTool1ConnectAction != null)
 					{
-						this.itemNavegacion_VentanaToolConnectAction.Dispose();
-						this.itemNavegacion_VentanaToolConnectAction = null;
+						this.itemNavegacion_VentanaTool1ConnectAction.Dispose();
+						this.itemNavegacion_VentanaTool1ConnectAction = null;
 					}
 					if(this.itemNavegacion_EstadoFinToolConnectAction != null)
 					{
@@ -555,13 +587,6 @@ namespace UPM_IPS.MPJAAMPrototool
 				} else
 				if(childElement is global::UPM_IPS.MPJAAMPrototool.EstadoFin)
 				{
-					// Method:
-					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForEstadoFin(EstadoFin childElement)
-					// {
-					// }
-					// must be implemented in a partial class of UPM_IPS.MPJAAMPrototool.FixUpDiagram.  Given a child element,
-					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
-					// of the shape created for this child.  If no shape should be created, the method should return null.
 					parentElement = GetParentForEstadoFin((global::UPM_IPS.MPJAAMPrototool.EstadoFin)childElement);
 				} else
 				{
@@ -581,6 +606,13 @@ namespace UPM_IPS.MPJAAMPrototool
 				return result;
 			}
 			public static global::UPM_IPS.MPJAAMPrototool.TapizPrototool GetParentForVentanaPrincipal( global::UPM_IPS.MPJAAMPrototool.VentanaPrincipal root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.MPJAAMPrototool.TapizPrototool result = root.TapizPrototool;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.MPJAAMPrototool.TapizPrototool GetParentForEstadoFin( global::UPM_IPS.MPJAAMPrototool.EstadoFin root )
 			{
 				// Segments 0 and 1
 				global::UPM_IPS.MPJAAMPrototool.TapizPrototool result = root.TapizPrototool;

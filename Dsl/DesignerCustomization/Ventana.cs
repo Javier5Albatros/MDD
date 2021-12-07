@@ -15,5 +15,12 @@ namespace UPM_IPS.MPJAAMPrototool
         public void SetnombreCalculadoValue(String newValue)
         {
         }
+
+        public string GetdimensionesCalculadoValue()
+        {
+            return string.Format("Altura: {0} \nAncho: {1}", this.altura, this.ancho);
+        }
+
+        public void SetdimensionesCalculadoValue(String newValue) { }
     }
 }

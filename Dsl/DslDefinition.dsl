@@ -58,6 +58,11 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="b39ddbcd-64b3-4542-9a6a-e6c61258a2e0" Description="Description for UPM_IPS.MPJAAMPrototool.Ventana.Dimensiones Calculado" Name="dimensionesCalculado" DisplayName="Dimensiones Calculado" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
       </Properties>
       <ElementMergeDirectives>
         <ElementMergeDirective>
@@ -283,9 +288,15 @@
     <ExternalType Name="Char" Namespace="System" />
   </Types>
   <Shapes>
-    <GeometryShape Id="fee9cf50-5a97-4e31-b7c5-e45a1b98feb2" Description="Description for UPM_IPS.MPJAAMPrototool.VSecundariaMetafora" Name="VSecundariaMetafora" DisplayName="VSecundaria Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VSecundaria Metafora" InitialWidth="2.5" InitialHeight="4" Geometry="RoundedRectangle">
-      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
+    <GeometryShape Id="fee9cf50-5a97-4e31-b7c5-e45a1b98feb2" Description="Description for UPM_IPS.MPJAAMPrototool.VSecundariaMetafora" Name="VSecundariaMetafora" DisplayName="VSecundaria Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VSecundaria Metafora" FillColor="PaleTurquoise" InitialWidth="2.5" InitialHeight="4" FillGradientMode="Vertical" Geometry="RoundedRectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NombreDec" DisplayName="Nombre Dec" DefaultText="NombreDec" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerBottomRight" HorizontalOffset="0" VerticalOffset="0">
+        <IconDecorator Name="ModalDec" DisplayName="Modal Dec" DefaultIcon="Resources\modal.bmp" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopRight" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="DimensionesDec" DisplayName="Dimensiones Dec" DefaultText="DimensionesDec" />
       </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="b24d4e6f-0bf9-4c9e-8a2f-98f9901d4de8" Description="Description for UPM_IPS.MPJAAMPrototool.MenuMetafora" Name="MenuMetafora" DisplayName="Menu Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Menu Metafora" FillColor="LightCyan" InitialHeight="2.5" OutlineThickness="0" FillGradientMode="None" Geometry="RoundedRectangle">
@@ -297,7 +308,6 @@
       </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="fc60b7e7-f543-4cf1-95a2-028b8e83140e" Description="Description for UPM_IPS.MPJAAMPrototool.BotonMetafora" Name="BotonMetafora" DisplayName="Boton Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Boton Metafora" InitialWidth="0.5" InitialHeight="0.5" Geometry="Circle" />
-    <GeometryShape Id="84a36636-25aa-4378-b822-7077eaa66e78" Description="Description for UPM_IPS.MPJAAMPrototool.EstadoFinMetafora" Name="EstadoFinMetafora" DisplayName="Estado Fin Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Estado Fin Metafora" InitialHeight="1" Geometry="Rectangle" />
     <GeometryShape Id="64a361d3-8126-4126-adac-0108982bc02f" Description="Description for UPM_IPS.MPJAAMPrototool.VPrincipalMetafora" Name="VPrincipalMetafora" DisplayName="VPrincipal Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="VPrincipal Metafora" FillColor="SteelBlue" InitialWidth="3" InitialHeight="4.5" OutlineThickness="0" FillGradientMode="Vertical" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NombreDec" DisplayName="Nombre Dec" DefaultText="NombreDec" />
@@ -305,8 +315,11 @@
       <ShapeHasDecorators Position="InnerBottomRight" HorizontalOffset="0" VerticalOffset="0">
         <IconDecorator Name="Home" DisplayName="Home" DefaultIcon="Resources\Home.bmp" />
       </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopRight" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="DimensionesDec" DisplayName="Dimensiones Dec" DefaultText="DimensionesDec" />
+      </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="268644f8-9857-4065-b5f6-9b3bb33183c4" Description="Description for UPM_IPS.MPJAAMPrototool.ItemMenuMetafora" Name="ItemMenuMetafora" DisplayName="Item Menu Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Item Menu Metafora" FillColor="LightSeaGreen" InitialHeight="2.5" OutlineThickness="0" Geometry="RoundedRectangle">
+    <GeometryShape Id="268644f8-9857-4065-b5f6-9b3bb33183c4" Description="Description for UPM_IPS.MPJAAMPrototool.ItemMenuMetafora" Name="ItemMenuMetafora" DisplayName="Item Menu Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Item Menu Metafora" FillColor="LightSeaGreen" InitialWidth="1.3" InitialHeight="0.5" OutlineThickness="0" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerMiddleLeft" HorizontalOffset="0" VerticalOffset="0">
         <IconDecorator Name="PointIcon" DisplayName="Point Icon" DefaultIcon="Resources\Punto.bmp" />
       </ShapeHasDecorators>
@@ -314,10 +327,11 @@
         <TextDecorator Name="TituloDec" DisplayName="Titulo Dec" DefaultText="TituloDec" />
       </ShapeHasDecorators>
     </GeometryShape>
+    <ImageShape Id="00eea75c-0ff7-433c-8943-e39bc425fd76" Description="Description for UPM_IPS.MPJAAMPrototool.EstadoFinMetafora" Name="EstadoFinMetafora" DisplayName="Estado Fin Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Estado Fin Metafora" InitialHeight="1" Image="Resources\stop (2).bmp" />
   </Shapes>
   <Connectors>
-    <Connector Id="753407dd-edb2-4483-912b-db98fabf920e" Description="Description for UPM_IPS.MPJAAMPrototool.ItemNavegacion_Ventana" Name="ItemNavegacion_Ventana" DisplayName="Item Navegacion_ Ventana" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Item Navegacion_ Ventana" />
-    <Connector Id="32dcfaab-8fe4-4e11-95ec-2692e0d7bfe5" Description="Description for UPM_IPS.MPJAAMPrototool.ItemNavegacion_EstadoFinMetafora" Name="ItemNavegacion_EstadoFinMetafora" DisplayName="Item Navegacion_ Estado Fin Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Item Navegacion_ Estado Fin Metafora" />
+    <Connector Id="753407dd-edb2-4483-912b-db98fabf920e" Description="Description for UPM_IPS.MPJAAMPrototool.ItemNavegacion_Ventana" Name="ItemNavegacion_Ventana" DisplayName="Item Navegacion_ Ventana" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Item Navegacion_ Ventana" TargetEndStyle="FilledArrow" />
+    <Connector Id="32dcfaab-8fe4-4e11-95ec-2692e0d7bfe5" Description="Description for UPM_IPS.MPJAAMPrototool.ItemNavegacion_EstadoFinMetafora" Name="ItemNavegacion_EstadoFinMetafora" DisplayName="Item Navegacion_ Estado Fin Metafora" Namespace="UPM_IPS.MPJAAMPrototool" FixedTooltipText="Item Navegacion_ Estado Fin Metafora" TargetEndStyle="EmptyArrow" />
   </Connectors>
   <XmlSerializationBehavior Name="MPJAAMPrototoolSerializationBehavior" Namespace="UPM_IPS.MPJAAMPrototool">
     <ClassData>
@@ -361,6 +375,9 @@
           </XmlRelationshipData>
           <XmlPropertyData XmlName="nombreCalculado" Representation="Ignore">
             <DomainPropertyMoniker Name="Ventana/nombreCalculado" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="dimensionesCalculado" Representation="Ignore">
+            <DomainPropertyMoniker Name="Ventana/dimensionesCalculado" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
@@ -433,9 +450,6 @@
       <XmlClassData TypeName="EstadoFin" MonikerAttributeName="" SerializeId="true" MonikerElementName="estadoFinMoniker" ElementName="estadoFin" MonikerTypeName="EstadoFinMoniker">
         <DomainClassMoniker Name="EstadoFin" />
       </XmlClassData>
-      <XmlClassData TypeName="EstadoFinMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="estadoFinMetaforaMoniker" ElementName="estadoFinMetafora" MonikerTypeName="EstadoFinMetaforaMoniker">
-        <GeometryShapeMoniker Name="EstadoFinMetafora" />
-      </XmlClassData>
       <XmlClassData TypeName="ItemNavegacionReferencesVentana" MonikerAttributeName="" SerializeId="true" MonikerElementName="itemNavegacionReferencesVentanaMoniker" ElementName="itemNavegacionReferencesVentana" MonikerTypeName="ItemNavegacionReferencesVentanaMoniker">
         <DomainRelationshipMoniker Name="ItemNavegacionReferencesVentana" />
       </XmlClassData>
@@ -456,6 +470,9 @@
       </XmlClassData>
       <XmlClassData TypeName="ItemMenuMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="itemMenuMetaforaMoniker" ElementName="itemMenuMetafora" MonikerTypeName="ItemMenuMetaforaMoniker">
         <GeometryShapeMoniker Name="ItemMenuMetafora" />
+      </XmlClassData>
+      <XmlClassData TypeName="EstadoFinMetafora" MonikerAttributeName="" SerializeId="true" MonikerElementName="estadoFinMetaforaMoniker" ElementName="estadoFinMetafora" MonikerTypeName="EstadoFinMetaforaMoniker">
+        <ImageShapeMoniker Name="EstadoFinMetafora" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -518,6 +535,31 @@
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="VSecundariaMetafora/NombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Ventana/nombreCalculado" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <IconDecoratorMoniker Name="VSecundariaMetafora/ModalDec" />
+          <VisibilityPropertyPath>
+            <DomainPropertyMoniker Name="VentanaSecundaria/modal" />
+            <PropertyFilters>
+              <PropertyFilter FilteringValue="True" />
+            </PropertyFilters>
+          </VisibilityPropertyPath>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="VPrincipalMetafora/DimensionesDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Ventana/dimensionesCalculado" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <GeometryShapeMoniker Name="VSecundariaMetafora" />
       </ShapeMap>
       <ShapeMap HasCustomParentElement="true">
@@ -536,13 +578,6 @@
         <DomainClassMoniker Name="Boton" />
         <GeometryShapeMoniker Name="BotonMetafora" />
       </ShapeMap>
-      <ShapeMap HasCustomParentElement="true">
-        <DomainClassMoniker Name="EstadoFin" />
-        <ParentElementPath>
-          <DomainPath />
-        </ParentElementPath>
-        <GeometryShapeMoniker Name="EstadoFinMetafora" />
-      </ShapeMap>
       <ShapeMap>
         <DomainClassMoniker Name="VentanaPrincipal" />
         <ParentElementPath>
@@ -553,6 +588,14 @@
           <PropertyDisplayed>
             <PropertyPath>
               <DomainPropertyMoniker Name="Ventana/nombreCalculado" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="VPrincipalMetafora/DimensionesDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Ventana/dimensionesCalculado" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -569,6 +612,13 @@
           </PropertyDisplayed>
         </DecoratorMap>
         <GeometryShapeMoniker Name="ItemMenuMetafora" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="EstadoFin" />
+        <ParentElementPath>
+          <DomainPath>TapizPrototoolHasEstadoFin.TapizPrototool/!TapizPrototool</DomainPath>
+        </ParentElementPath>
+        <ImageShapeMoniker Name="EstadoFinMetafora" />
       </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
@@ -590,30 +640,30 @@
       <XmlSerializationBehaviorMoniker Name="MPJAAMPrototoolSerializationBehavior" />
     </XmlSerializationDefinition>
     <ToolboxTab TabText="Ventanas">
-      <ElementTool Name="VPrincipalTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Ventana Principal" Tooltip="VPrincipal Tool" HelpKeyword="VPrincipalTool">
+      <ElementTool Name="VPrincipalTool1" ToolboxIcon="Resources\Ventana.bmp" Caption="Ventana Principal" Tooltip="Añadir Ventana Principal" HelpKeyword="VPrincipalTool1">
         <DomainClassMoniker Name="VentanaPrincipal" />
       </ElementTool>
-      <ElementTool Name="VSecundariaTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Ventana Secundaria" Tooltip="VSecundaria Tool" HelpKeyword="VSecundariaTool">
+      <ElementTool Name="VSecundariaTool1" ToolboxIcon="Resources\VentanaS.bmp" Caption="Ventana Secundaria" Tooltip="Añadir Ventana Secundaria" HelpKeyword="VSecundariaTool1">
         <DomainClassMoniker Name="VentanaSecundaria" />
       </ElementTool>
     </ToolboxTab>
     <ToolboxTab TabText="Navegación">
-      <ElementTool Name="MenuTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Menu" Tooltip="Menu Tool" HelpKeyword="MenuTool">
+      <ElementTool Name="MenuTool1" ToolboxIcon="Resources\menu_icono.bmp" Caption="Menu" Tooltip="Añadir un Menu" HelpKeyword="MenuTool1">
         <DomainClassMoniker Name="Menu" />
       </ElementTool>
-      <ElementTool Name="ItemMenuTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Item de Menu" Tooltip="Item Menu Tool" HelpKeyword="ItemMenuTool">
+      <ElementTool Name="ItemMenuTool1" ToolboxIcon="Resources\item_menu.bmp" Caption="Item de Menu" Tooltip="Añadir Item de Menu" HelpKeyword="ItemMenuTool1">
         <DomainClassMoniker Name="ItemMenu" />
       </ElementTool>
-      <ElementTool Name="BotonTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Boton" Tooltip="Boton Tool" HelpKeyword="BotonTool">
+      <ElementTool Name="BotonTool1" ToolboxIcon="Resources\boton.bmp" Caption="Boton" Tooltip="Añadir un Boton" HelpKeyword="BotonTool1">
         <DomainClassMoniker Name="Boton" />
       </ElementTool>
-      <ElementTool Name="EstadoFinTool" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Estado de Fin" Tooltip="Estado Fin Tool" HelpKeyword="EstadoFinTool">
+      <ElementTool Name="EstadoFinTool1" ToolboxIcon="Resources\stop.bmp" Caption="Estado de Fin" Tooltip="Estado Fin Tool1" HelpKeyword="EstadoFinTool1">
         <DomainClassMoniker Name="EstadoFin" />
       </ElementTool>
-      <ConnectionTool Name="ItemNavegacion_VentanaTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="ItemNavegacion_VentanaTool" Tooltip="Item Navegacion_ Ventana Tool" HelpKeyword="ItemNavegacion_VentanaTool">
+      <ConnectionTool Name="ItemNavegacion_VentanaTool1" ToolboxIcon="Resources\enlace.bmp" Caption="Navegar a Ventana" Tooltip="De boton/item de menu a Ventana" HelpKeyword="ItemNavegacion_VentanaTool1">
         <ConnectionBuilderMoniker Name="MPJAAMPrototool/ItemNavegacionReferencesVentanaBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="ItemNavegacion_EstadoFinTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="Item Navegacion con Estado de Fin" Tooltip="Item Navegacion_ Estado Fin Tool" HelpKeyword="ItemNavegacion_EstadoFinTool">
+      <ConnectionTool Name="ItemNavegacion_EstadoFinTool" ToolboxIcon="Resources\enlace.bmp" Caption="Finalizar aplicación" Tooltip="De boton/item de navegacion a estado de fin" HelpKeyword="ItemNavegacion_EstadoFinTool">
         <ConnectionBuilderMoniker Name="MPJAAMPrototool/ItemNavegacionReferencesEstadoFinBuilder" />
       </ConnectionTool>
     </ToolboxTab>

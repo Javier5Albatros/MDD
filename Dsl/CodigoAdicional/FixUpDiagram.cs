@@ -18,9 +18,5 @@ namespace UPM_IPS.MPJAAMPrototool
             return elem.VentanaBoton;
         }
 
-        private ModelElement GetParentForEstadoFin(EstadoFin elem)
-        {
-            return elem.TapizPrototool;
-        }
     }
 }

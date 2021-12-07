@@ -712,6 +712,72 @@ namespace UPM_IPS.MPJAAMPrototool
 		}
 		
 		#endregion
+		#region dimensionesCalculado domain property code
+		
+		/// <summary>
+		/// dimensionesCalculado domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid dimensionesCalculadoDomainPropertyId = new global::System.Guid(0xb39ddbcd, 0x64b3, 0x4542, 0x9a, 0x6a, 0xe6, 0xc6, 0x12, 0x58, 0xa2, 0xe0);
+		
+		/// <summary>
+		/// Gets or sets the value of dimensionesCalculado domain property.
+		/// Description for UPM_IPS.MPJAAMPrototool.Ventana.Dimensiones Calculado
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.Ventana/dimensionesCalculado.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.Ventana/dimensionesCalculado.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("b39ddbcd-64b3-4542-9a6a-e6c61258a2e0")]
+		public global::System.String dimensionesCalculado
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return dimensionesCalculadoPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Ventana.dimensionesCalculado domain property.
+		/// </summary>
+		internal sealed partial class dimensionesCalculadoPropertyHandler : DslModeling::CalculatedPropertyValueHandler<Ventana, global::System.String>
+		{
+			private dimensionesCalculadoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Ventana.dimensionesCalculado domain property value handler.
+			/// </summary>
+			public static readonly dimensionesCalculadoPropertyHandler Instance = new dimensionesCalculadoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Ventana.dimensionesCalculado domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return dimensionesCalculadoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Ventana element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for dimensionesCalculado because its Kind is
+				// set to Calculated. Please provide the GetdimensionesCalculadoValue()
+				// method on the domain class.
+				return element.GetdimensionesCalculadoValue();
+			}
+		
+		}
+		
+		#endregion
 		#region Menus opposite domain role accessor
 		
 		/// <summary>

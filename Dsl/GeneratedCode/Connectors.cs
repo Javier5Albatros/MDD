@@ -98,6 +98,15 @@ namespace UPM_IPS.MPJAAMPrototool
 		#endregion
 		
 		#region Connector styles
+		/// <summary>
+		/// Initializes resources associated with this connector instance.
+		/// </summary>
+		protected override void InitializeInstanceResources()
+		{
+			base.InitializeInstanceResources();
+			this.SetDecorators(null, new DslDiagrams::SizeD(0.1,0.1), DslDiagrams::LinkDecorator.DecoratorFilledArrow, new DslDiagrams::SizeD(0.1,0.1), false);
+		}
+		
 		#endregion
 		
 		#region Constructors, domain class Id
@@ -215,6 +224,15 @@ namespace UPM_IPS.MPJAAMPrototool
 		#endregion
 		
 		#region Connector styles
+		/// <summary>
+		/// Initializes resources associated with this connector instance.
+		/// </summary>
+		protected override void InitializeInstanceResources()
+		{
+			base.InitializeInstanceResources();
+			this.SetDecorators(null, new DslDiagrams::SizeD(0.1,0.1), DslDiagrams::LinkDecorator.DecoratorEmptyArrow, new DslDiagrams::SizeD(0.1,0.1), false);
+		}
+		
 		#endregion
 		
 		#region Constructors, domain class Id

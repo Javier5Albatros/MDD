@@ -90,9 +90,9 @@ namespace UPM_IPS.MPJAAMPrototool
 				typeof(VSecundariaMetafora),
 				typeof(MenuMetafora),
 				typeof(BotonMetafora),
-				typeof(EstadoFinMetafora),
 				typeof(VPrincipalMetafora),
 				typeof(ItemMenuMetafora),
+				typeof(EstadoFinMetafora),
 				typeof(global::UPM_IPS.MPJAAMPrototool.FixUpDiagram),
 				typeof(global::UPM_IPS.MPJAAMPrototool.ConnectorRolePlayerChanged),
 			};
@@ -111,6 +111,7 @@ namespace UPM_IPS.MPJAAMPrototool
 				new DomainMemberInfo(typeof(Ventana), "ancho", Ventana.anchoDomainPropertyId, typeof(Ventana.anchoPropertyHandler)),
 				new DomainMemberInfo(typeof(Ventana), "altura", Ventana.alturaDomainPropertyId, typeof(Ventana.alturaPropertyHandler)),
 				new DomainMemberInfo(typeof(Ventana), "nombreCalculado", Ventana.nombreCalculadoDomainPropertyId, typeof(Ventana.nombreCalculadoPropertyHandler)),
+				new DomainMemberInfo(typeof(Ventana), "dimensionesCalculado", Ventana.dimensionesCalculadoDomainPropertyId, typeof(Ventana.dimensionesCalculadoPropertyHandler)),
 				new DomainMemberInfo(typeof(VentanaSecundaria), "modal", VentanaSecundaria.modalDomainPropertyId, typeof(VentanaSecundaria.modalPropertyHandler)),
 				new DomainMemberInfo(typeof(Menu), "TituloMenu", Menu.TituloMenuDomainPropertyId, typeof(Menu.TituloMenuPropertyHandler)),
 				new DomainMemberInfo(typeof(ItemNavegacion), "titulo", ItemNavegacion.tituloDomainPropertyId, typeof(ItemNavegacion.tituloPropertyHandler)),
@@ -175,9 +176,9 @@ namespace UPM_IPS.MPJAAMPrototool
 				createElementMap.Add(typeof(VSecundariaMetafora), 10);
 				createElementMap.Add(typeof(MenuMetafora), 11);
 				createElementMap.Add(typeof(BotonMetafora), 12);
-				createElementMap.Add(typeof(EstadoFinMetafora), 13);
-				createElementMap.Add(typeof(VPrincipalMetafora), 14);
-				createElementMap.Add(typeof(ItemMenuMetafora), 15);
+				createElementMap.Add(typeof(VPrincipalMetafora), 13);
+				createElementMap.Add(typeof(ItemMenuMetafora), 14);
+				createElementMap.Add(typeof(EstadoFinMetafora), 15);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -204,9 +205,9 @@ namespace UPM_IPS.MPJAAMPrototool
 				case 10: return new VSecundariaMetafora(partition, propertyAssignments);
 				case 11: return new MenuMetafora(partition, propertyAssignments);
 				case 12: return new BotonMetafora(partition, propertyAssignments);
-				case 13: return new EstadoFinMetafora(partition, propertyAssignments);
-				case 14: return new VPrincipalMetafora(partition, propertyAssignments);
-				case 15: return new ItemMenuMetafora(partition, propertyAssignments);
+				case 13: return new VPrincipalMetafora(partition, propertyAssignments);
+				case 14: return new ItemMenuMetafora(partition, propertyAssignments);
+				case 15: return new EstadoFinMetafora(partition, propertyAssignments);
 				default: return null;
 			}
 		}

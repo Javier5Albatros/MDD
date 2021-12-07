@@ -278,14 +278,14 @@ namespace UPM_IPS.MPJAAMPrototool
  	/// <summary>
 	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
 	/// </summary>
-	internal partial class ItemNavegacion_VentanaToolConnectAction : DslDiagrams::ConnectAction
+	internal partial class ItemNavegacion_VentanaTool1ConnectAction : DslDiagrams::ConnectAction
 	{
 		private DslDiagrams::ConnectionType[] connectionTypes;
 		
 		/// <summary>
-		/// Constructs a new ItemNavegacion_VentanaToolConnectAction for the given Diagram.
+		/// Constructs a new ItemNavegacion_VentanaTool1ConnectAction for the given Diagram.
 		/// </summary>
-		public ItemNavegacion_VentanaToolConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		public ItemNavegacion_VentanaTool1ConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
 		{
 		}
 		
@@ -315,24 +315,24 @@ namespace UPM_IPS.MPJAAMPrototool
 		
 		
 		/// <summary>
-		/// Returns the ItemNavegacion_VentanaToolConnectionType associated with this action.
+		/// Returns the ItemNavegacion_VentanaTool1ConnectionType associated with this action.
 		/// </summary>
 		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
 		{
 			if(this.connectionTypes == null)
 			{
-				this.connectionTypes = new DslDiagrams::ConnectionType[] { new ItemNavegacion_VentanaToolConnectionType() };
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new ItemNavegacion_VentanaTool1ConnectionType() };
 			}
 			
 			return this.connectionTypes;
 		}
 		
-		private partial class ItemNavegacion_VentanaToolConnectionTypeBase : DslDiagrams::ConnectionType
+		private partial class ItemNavegacion_VentanaTool1ConnectionTypeBase : DslDiagrams::ConnectionType
 		{
 			/// <summary>
-			/// Constructs a new the ItemNavegacion_VentanaToolConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the ItemNavegacion_VentanaTool1ConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			protected ItemNavegacion_VentanaToolConnectionTypeBase() : base() {}
+			protected ItemNavegacion_VentanaTool1ConnectionTypeBase() : base() {}
 			
 			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
 			{
@@ -425,12 +425,12 @@ namespace UPM_IPS.MPJAAMPrototool
 			}
 		}
 		
-		private partial class ItemNavegacion_VentanaToolConnectionType : ItemNavegacion_VentanaToolConnectionTypeBase
+		private partial class ItemNavegacion_VentanaTool1ConnectionType : ItemNavegacion_VentanaTool1ConnectionTypeBase
 		{
 			/// <summary>
-			/// Constructs a new the ItemNavegacion_VentanaToolConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the ItemNavegacion_VentanaTool1ConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			public ItemNavegacion_VentanaToolConnectionType() : base() {}
+			public ItemNavegacion_VentanaTool1ConnectionType() : base() {}
 		}
 	}
  	

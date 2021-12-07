@@ -181,6 +181,14 @@
     <value>Nombre Calculado</value>
     <comment>DisplayName for DomainProperty &apos;nombreCalculado&apos; on DomainClass &apos;Ventana&apos;</comment>
   </data>
+  <data name="UPM_IPS.MPJAAMPrototool.Ventana/dimensionesCalculado.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.Ventana.Dimensiones Calculado</value>
+    <comment>Description for DomainProperty &apos;dimensionesCalculado&apos; on DomainClass &apos;Ventana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.Ventana/dimensionesCalculado.DisplayName" xml:space="preserve">
+    <value>Dimensiones Calculado</value>
+    <comment>DisplayName for DomainProperty &apos;dimensionesCalculado&apos; on DomainClass &apos;Ventana&apos;</comment>
+  </data>
   <data name="UPM_IPS.MPJAAMPrototool.VentanaPrincipal.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MPJAAMPrototool.VentanaPrincipal</value>
     <comment>Description for DomainClass &apos;VentanaPrincipal&apos;</comment>
@@ -529,6 +537,10 @@
     <value>NombreDec</value>
     <comment>Text decorator default text</comment>
   </data>
+  <data name="VSecundariaMetaforaDimensionesDecDefaultText" xml:space="preserve">
+    <value>DimensionesDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="UPM_IPS.MPJAAMPrototool.MenuMetafora.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MPJAAMPrototool.MenuMetafora</value>
     <comment>Description for DomainClass &apos;MenuMetafora&apos;</comment>
@@ -549,14 +561,6 @@
     <value>Boton Metafora</value>
     <comment>DisplayName for DomainClass &apos;BotonMetafora&apos;</comment>
   </data>
-  <data name="UPM_IPS.MPJAAMPrototool.EstadoFinMetafora.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.MPJAAMPrototool.EstadoFinMetafora</value>
-    <comment>Description for DomainClass &apos;EstadoFinMetafora&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MPJAAMPrototool.EstadoFinMetafora.DisplayName" xml:space="preserve">
-    <value>Estado Fin Metafora</value>
-    <comment>DisplayName for DomainClass &apos;EstadoFinMetafora&apos;</comment>
-  </data>
   <data name="UPM_IPS.MPJAAMPrototool.VPrincipalMetafora.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MPJAAMPrototool.VPrincipalMetafora</value>
     <comment>Description for DomainClass &apos;VPrincipalMetafora&apos;</comment>
@@ -567,6 +571,10 @@
   </data>
   <data name="VPrincipalMetaforaNombreDecDefaultText" xml:space="preserve">
     <value>NombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="VPrincipalMetaforaDimensionesDecDefaultText" xml:space="preserve">
+    <value>DimensionesDec</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="UPM_IPS.MPJAAMPrototool.ItemMenuMetafora.Description" xml:space="preserve">
@@ -580,6 +588,14 @@
   <data name="ItemMenuMetaforaTituloDecDefaultText" xml:space="preserve">
     <value>TituloDec</value>
     <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.EstadoFinMetafora.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.EstadoFinMetafora</value>
+    <comment>Description for DomainClass &apos;EstadoFinMetafora&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.EstadoFinMetafora.DisplayName" xml:space="preserve">
+    <value>Estado Fin Metafora</value>
+    <comment>DisplayName for DomainClass &apos;EstadoFinMetafora&apos;</comment>
   </data>
   <data name="UPM_IPS.MPJAAMPrototool.ItemNavegacion_Ventana.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MPJAAMPrototool.ItemNavegacion_Ventana</value>
@@ -617,72 +633,72 @@
     <value>Ventanas</value>
     <comment>Toolbox item tab name</comment>
   </data>
-  <data name="VPrincipalToolToolboxItem" xml:space="preserve">
+  <data name="VPrincipalTool1ToolboxItem" xml:space="preserve">
     <value>Ventana Principal</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="VPrincipalToolToolboxTooltip" xml:space="preserve">
-    <value>VPrincipal Tool</value>
+  <data name="VPrincipalTool1ToolboxTooltip" xml:space="preserve">
+    <value>Añadir Ventana Principal</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="VSecundariaToolToolboxItem" xml:space="preserve">
+  <data name="VSecundariaTool1ToolboxItem" xml:space="preserve">
     <value>Ventana Secundaria</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="VSecundariaToolToolboxTooltip" xml:space="preserve">
-    <value>VSecundaria Tool</value>
+  <data name="VSecundariaTool1ToolboxTooltip" xml:space="preserve">
+    <value>Añadir Ventana Secundaria</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="NavegaciónToolboxTab" xml:space="preserve">
     <value>Navegación</value>
     <comment>Toolbox item tab name</comment>
   </data>
-  <data name="MenuToolToolboxItem" xml:space="preserve">
+  <data name="MenuTool1ToolboxItem" xml:space="preserve">
     <value>Menu</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="MenuToolToolboxTooltip" xml:space="preserve">
-    <value>Menu Tool</value>
+  <data name="MenuTool1ToolboxTooltip" xml:space="preserve">
+    <value>Añadir un Menu</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="ItemMenuToolToolboxItem" xml:space="preserve">
+  <data name="ItemMenuTool1ToolboxItem" xml:space="preserve">
     <value>Item de Menu</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="ItemMenuToolToolboxTooltip" xml:space="preserve">
-    <value>Item Menu Tool</value>
+  <data name="ItemMenuTool1ToolboxTooltip" xml:space="preserve">
+    <value>Añadir Item de Menu</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="BotonToolToolboxItem" xml:space="preserve">
+  <data name="BotonTool1ToolboxItem" xml:space="preserve">
     <value>Boton</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="BotonToolToolboxTooltip" xml:space="preserve">
-    <value>Boton Tool</value>
+  <data name="BotonTool1ToolboxTooltip" xml:space="preserve">
+    <value>Añadir un Boton</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="EstadoFinToolToolboxItem" xml:space="preserve">
+  <data name="EstadoFinTool1ToolboxItem" xml:space="preserve">
     <value>Estado de Fin</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="EstadoFinToolToolboxTooltip" xml:space="preserve">
-    <value>Estado Fin Tool</value>
+  <data name="EstadoFinTool1ToolboxTooltip" xml:space="preserve">
+    <value>Estado Fin Tool1</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="ItemNavegacion_VentanaToolToolboxItem" xml:space="preserve">
-    <value>ItemNavegacion_VentanaTool</value>
+  <data name="ItemNavegacion_VentanaTool1ToolboxItem" xml:space="preserve">
+    <value>Navegar a Ventana</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="ItemNavegacion_VentanaToolToolboxTooltip" xml:space="preserve">
-    <value>Item Navegacion_ Ventana Tool</value>
+  <data name="ItemNavegacion_VentanaTool1ToolboxTooltip" xml:space="preserve">
+    <value>De boton/item de menu a Ventana</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="ItemNavegacion_EstadoFinToolToolboxItem" xml:space="preserve">
-    <value>Item Navegacion con Estado de Fin</value>
+    <value>Finalizar aplicación</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="ItemNavegacion_EstadoFinToolToolboxTooltip" xml:space="preserve">
-    <value>Item Navegacion_ Estado Fin Tool</value>
+    <value>De boton/item de navegacion a estado de fin</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -810,6 +826,10 @@ A DomainClass can be serialized as a moniker only if
     <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="VSecundariaMetaforaModalDecDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\modal.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
   <data name="MenuMetaforaMenuIconDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\Menu.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Icon decorator default image</comment>
@@ -822,36 +842,40 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\Punto.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Icon decorator default image</comment>
   </data>
-  <data name="VPrincipalToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="EstadoFinMetaforaImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\stop (2).bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>EstadoFinMetafora shape image</comment>
+  </data>
+  <data name="VPrincipalTool1ToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Ventana.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="VSecundariaToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="VSecundariaTool1ToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\VentanaS.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="MenuToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MenuTool1ToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\menu_icono.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="ItemMenuToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ItemMenuTool1ToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\item_menu.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="BotonToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BotonTool1ToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\boton.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="EstadoFinToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="EstadoFinTool1ToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\stop.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="ItemNavegacion_VentanaToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ItemNavegacion_VentanaTool1ToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\enlace.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="ItemNavegacion_EstadoFinToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\enlace.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>
