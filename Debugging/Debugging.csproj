@@ -44,6 +44,10 @@
       <SubType>
       </SubType>
     </None>
+    <None Include="Moodle.MPJAAMPrototool" />
+    <None Include="Moodle.MPJAAMPrototool.diagram">
+      <DependentUpon>Moodle.MPJAAMPrototool</DependentUpon>
+    </None>
     <None Include="MPJAAMPrototool1.MPJAAMPrototool" />
     <None Include="MPJAAMPrototool1.MPJAAMPrototool.diagram">
       <DependentUpon>MPJAAMPrototool1.MPJAAMPrototool</DependentUpon>

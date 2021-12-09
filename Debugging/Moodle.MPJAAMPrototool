@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tapizPrototool xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="9d50f816-4a95-4348-8663-61f708e97286" nombreAplicacion="Apruebamoodle" xmlns="http://schemas.microsoft.com/dsltools/MPJAAMPrototool">
+  <ventanaPrincipal>
+    <tapizPrototoolHasVentanaPrincipal Id="bfe57bc6-5b53-43fd-8bf3-f1bf40f378c6">
+      <ventanaPrincipal Id="e70210be-a1f2-441a-b9b2-27392f8d521e" nombre="Apruebamoodle" ancho="1280" altura="720">
+        <menus>
+          <ventanaHasMenus Id="83a82cca-a444-47d0-a849-620146336ff9">
+            <menu Id="cad0dd14-2671-45ce-addf-3d33e591efbd" tituloMenu="Asignaturas">
+              <itemMenus>
+                <menuHasItemMenus Id="9c41b415-d9b0-4c01-892d-efb13a482009">
+                  <itemMenu Id="243aa714-6eef-40eb-9e0f-ed9653c806e3" titulo="IPS">
+                    <ventana>
+                      <itemNavegacionReferencesVentana Id="a1f44a0d-34b3-407a-a50b-5f320f7ac321">
+                        <ventanaSecundariaMoniker Id="232b60a7-3384-413f-bedc-200c9f6384d4" />
+                      </itemNavegacionReferencesVentana>
+                    </ventana>
+                  </itemMenu>
+                </menuHasItemMenus>
+                <menuHasItemMenus Id="c6b6c22f-cb29-42c8-91ff-073d2ecd26a4">
+                  <itemMenu Id="40a505ac-df4e-481b-8089-955f186a8bc1" titulo="IRM">
+                    <ventana>
+                      <itemNavegacionReferencesVentana Id="f407890e-381c-4ce7-a471-05492d5d25e6">
+                        <ventanaSecundariaMoniker Id="d9486636-6a0d-4463-9712-e5cb79ac8870" />
+                      </itemNavegacionReferencesVentana>
+                    </ventana>
+                  </itemMenu>
+                </menuHasItemMenus>
+                <menuHasItemMenus Id="b6e0856f-3eb7-4c41-87af-e151732173f8">
+                  <itemMenu Id="dea2a2b1-480f-4122-b567-96cce7bd19aa" titulo="SO">
+                    <ventana>
+                      <itemNavegacionReferencesVentana Id="51370f7c-4b39-488f-bd1a-f3b2ad5cc9ca">
+                        <ventanaSecundariaMoniker Id="656f44ac-7d78-47f2-a4e7-1efaac675314" />
+                      </itemNavegacionReferencesVentana>
+                    </ventana>
+                  </itemMenu>
+                </menuHasItemMenus>
+              </itemMenus>
+            </menu>
+          </ventanaHasMenus>
+        </menus>
+        <botons>
+          <ventanaHasBotons Id="efc73a31-8a0a-46d6-a104-45cd669505e0">
+            <boton Id="dbd9d34a-0fb4-4b9b-a1fa-cff38c3620cc" titulo="Cerrar sesión">
+              <estadoFin>
+                <itemNavegacionReferencesEstadoFin Id="24aceca4-fcac-483d-b8f1-f79d32dab440">
+                  <estadoFinMoniker Id="18d24e92-2e7c-49aa-897f-d0fdc6e5c02f" />
+                </itemNavegacionReferencesEstadoFin>
+              </estadoFin>
+            </boton>
+          </ventanaHasBotons>
+        </botons>
+      </ventanaPrincipal>
+    </tapizPrototoolHasVentanaPrincipal>
+  </ventanaPrincipal>
+  <ventanaSecundarium>
+    <tapizPrototoolHasVentanaSecundarium Id="83b2045e-d6ba-4fdd-bd23-76e214baeaea">
+      <ventanaSecundaria Id="232b60a7-3384-413f-bedc-200c9f6384d4" nombre="IPS" ancho="1280" altura="720" modal="false">
+        <menus>
+          <ventanaHasMenus Id="f213b2e1-4919-4ce8-87e9-2d22dbea7d5c">
+            <menu Id="ac5b9ccf-c93e-43aa-97e6-c2956f64e62c" tituloMenu="Temario">
+              <itemMenus>
+                <menuHasItemMenus Id="1d399ce5-88a0-44af-9955-5eb6584a878e">
+                  <itemMenu Id="ceb50a7f-fbb5-41fb-8978-113d08d7b4c8" titulo="Tema 1">
+                    <ventana>
+                      <itemNavegacionReferencesVentana Id="18acf467-b770-403f-8bb2-46cc1d53bc4c">
+                        <ventanaSecundariaMoniker Id="c848c1d9-1f81-4e1c-9a5a-18f9072126c9" />
+                      </itemNavegacionReferencesVentana>
+                    </ventana>
+                  </itemMenu>
+                </menuHasItemMenus>
+                <menuHasItemMenus Id="0a8def3c-3cc0-46bd-a619-a63bbcae70f5">
+                  <itemMenu Id="1d8db907-0cc8-4cf3-8656-8a47b13723bd" titulo="Tema 2">
+                    <ventana>
+                      <itemNavegacionReferencesVentana Id="8f92fe09-c8d7-4b15-bdda-2e5d0dc934d6">
+                        <ventanaSecundariaMoniker Id="b493450b-76fd-4223-9f5b-aa2f1475ee0c" />
+                      </itemNavegacionReferencesVentana>
+                    </ventana>
+                  </itemMenu>
+                </menuHasItemMenus>
+                <menuHasItemMenus Id="c046b2e3-9820-46d6-90ea-9730b66edfdb">
+                  <itemMenu Id="56cb098f-3346-4fc2-8fca-48607c410084" titulo="Tema 3">
+                    <ventana>
+                      <itemNavegacionReferencesVentana Id="6af2251f-1e8e-49b5-8133-b3780155bccf">
+                        <ventanaSecundariaMoniker Id="e774199e-6756-465b-9716-3f86ef407b6c" />
+                      </itemNavegacionReferencesVentana>
+                    </ventana>
+                  </itemMenu>
+                </menuHasItemMenus>
+              </itemMenus>
+            </menu>
+          </ventanaHasMenus>
+        </menus>
+        <botons>
+          <ventanaHasBotons Id="11207b99-9693-4ed3-b57a-c3664bea7f61">
+            <boton Id="3f67f4bf-3460-4cd8-af3a-f7eadef4d966" titulo="Atrás">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="b73025d8-0f20-437f-a4d3-5e1ac028b36b">
+                  <ventanaPrincipalMoniker Id="e70210be-a1f2-441a-b9b2-27392f8d521e" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+        </botons>
+      </ventanaSecundaria>
+    </tapizPrototoolHasVentanaSecundarium>
+    <tapizPrototoolHasVentanaSecundarium Id="3b905cd5-cdd5-4801-9ae5-940e882d3472">
+      <ventanaSecundaria Id="c848c1d9-1f81-4e1c-9a5a-18f9072126c9" nombre="Tema 1 IPS" ancho="640" altura="360" modal="true">
+        <botons>
+          <ventanaHasBotons Id="df83a616-b062-427a-a9ce-b50eda6609a4">
+            <boton Id="895b0e52-cd33-47ee-bbf5-ba69cf042611" titulo="Cerrar">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="fc53f43e-c1db-44be-9f1e-aab9ab0f410c">
+                  <ventanaSecundariaMoniker Id="232b60a7-3384-413f-bedc-200c9f6384d4" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+        </botons>
+      </ventanaSecundaria>
+    </tapizPrototoolHasVentanaSecundarium>
+    <tapizPrototoolHasVentanaSecundarium Id="1e862a3a-cffd-49d5-be53-0bd89fe35768">
+      <ventanaSecundaria Id="b493450b-76fd-4223-9f5b-aa2f1475ee0c" nombre="Tema 2 IPS" ancho="640" altura="360" modal="true">
+        <botons>
+          <ventanaHasBotons Id="f6f83531-9146-4073-a92d-05aac53c9525">
+            <boton Id="1b331551-563b-4555-aa18-d6f2b6a37649" titulo="Cerrar">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="131365e0-b28c-47fb-982f-1be5b86dcaa1">
+                  <ventanaSecundariaMoniker Id="232b60a7-3384-413f-bedc-200c9f6384d4" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+        </botons>
+      </ventanaSecundaria>
+    </tapizPrototoolHasVentanaSecundarium>
+    <tapizPrototoolHasVentanaSecundarium Id="8c1ca5fb-d180-4590-a19a-53d91cdba0ec">
+      <ventanaSecundaria Id="e774199e-6756-465b-9716-3f86ef407b6c" nombre="Tema 3 IPS" ancho="640" altura="360" modal="true">
+        <botons>
+          <ventanaHasBotons Id="79e6eeb2-e955-4833-8ffd-2e6185d708a3">
+            <boton Id="1809e117-3424-47da-b9bb-33ba369e597f" titulo="Cerrar">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="c5b812d9-9abd-487a-9438-a72f54ebe9c1">
+                  <ventanaSecundariaMoniker Id="232b60a7-3384-413f-bedc-200c9f6384d4" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+        </botons>
+      </ventanaSecundaria>
+    </tapizPrototoolHasVentanaSecundarium>
+    <tapizPrototoolHasVentanaSecundarium Id="85b17685-68ae-46d5-b0a5-375c11b1406c">
+      <ventanaSecundaria Id="656f44ac-7d78-47f2-a4e7-1efaac675314" nombre="SO" ancho="1280" altura="720" modal="false">
+        <menus>
+          <ventanaHasMenus Id="018ce3b8-dde0-41eb-9306-cd66ec6257ad">
+            <menu Id="a9247549-3767-4737-934b-b63940f4e0d3">
+              <itemMenus>
+                <menuHasItemMenus Id="45208b50-613d-4454-9278-978f93ab7688">
+                  <itemMenu Id="fca552d1-8d80-4a3b-b738-063be5835225" titulo="Calificaciones Primer Parcial">
+                    <ventana>
+                      <itemNavegacionReferencesVentana Id="b0d15d9a-0acc-41df-9386-4b77cf6f9a28">
+                        <ventanaSecundariaMoniker Id="7b199959-f045-430d-8641-42010bee32ad" />
+                      </itemNavegacionReferencesVentana>
+                    </ventana>
+                  </itemMenu>
+                </menuHasItemMenus>
+                <menuHasItemMenus Id="15c43e55-db36-41c0-be26-5306ba6b815a">
+                  <itemMenu Id="d78701de-c0a0-446e-8ef0-bea37ac2b5cd" titulo="Segundo Parcial">
+                    <ventana>
+                      <itemNavegacionReferencesVentana Id="9771416f-0723-4729-a22d-1bdf7d637c02">
+                        <ventanaSecundariaMoniker Id="9baef311-4ace-49ab-ab12-ad8e1b443bef" />
+                      </itemNavegacionReferencesVentana>
+                    </ventana>
+                  </itemMenu>
+                </menuHasItemMenus>
+              </itemMenus>
+            </menu>
+          </ventanaHasMenus>
+        </menus>
+        <botons>
+          <ventanaHasBotons Id="2e1e53d9-da55-4a02-a34a-1f7fa1b406a1">
+            <boton Id="286ed7b1-132c-46d8-80cb-79b7ad05d448" titulo="Volver atrás">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="062c9ac5-ea80-4bcf-8cd0-cc5184b5c79e">
+                  <ventanaPrincipalMoniker Id="e70210be-a1f2-441a-b9b2-27392f8d521e" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+        </botons>
+      </ventanaSecundaria>
+    </tapizPrototoolHasVentanaSecundarium>
+    <tapizPrototoolHasVentanaSecundarium Id="881406aa-8de8-4ec9-92c5-88de08fad383">
+      <ventanaSecundaria Id="7b199959-f045-430d-8641-42010bee32ad" nombre="Calificaciones SO" ancho="640" altura="360" modal="true">
+        <botons>
+          <ventanaHasBotons Id="e97d2a85-48a0-4d5a-9704-59d17604a788">
+            <boton Id="8928fe78-c0d0-4c1f-975b-6cbfa69522aa" titulo="Cerrar">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="f028337c-01c3-420e-bd80-90e0315cd735">
+                  <ventanaSecundariaMoniker Id="656f44ac-7d78-47f2-a4e7-1efaac675314" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+        </botons>
+      </ventanaSecundaria>
+    </tapizPrototoolHasVentanaSecundarium>
+    <tapizPrototoolHasVentanaSecundarium Id="7ccd03df-0174-4c07-be5d-18e26185bee3">
+      <ventanaSecundaria Id="9baef311-4ace-49ab-ab12-ad8e1b443bef" nombre="Segundo Parcial SO" ancho="1280" altura="720" modal="false">
+        <menus>
+          <ventanaHasMenus Id="2d2f88dc-2f51-4a37-a6a6-a7b53f5a4bbe">
+            <menu Id="a8b834b3-0ea7-4d22-b5aa-326521513c7b" tituloMenu="Preguntas">
+              <itemMenus>
+                <menuHasItemMenus Id="270f8aa8-37b5-4d13-8a29-d4ddd4f40a61">
+                  <itemMenu Id="d385c422-51ad-48e2-9e8c-2b87b074faf0" titulo="Test teoría">
+                    <ventana>
+                      <itemNavegacionReferencesVentana Id="a45672b5-268c-4588-812b-a40d0fb100ab">
+                        <ventanaSecundariaMoniker Id="6dd1dca0-5f09-42f9-a6fa-e5a63c4b30e1" />
+                      </itemNavegacionReferencesVentana>
+                    </ventana>
+                  </itemMenu>
+                </menuHasItemMenus>
+                <menuHasItemMenus Id="7489ab0e-6f88-466a-9d5d-0974847827f5">
+                  <itemMenu Id="60fbab3e-60b2-4a19-a9fb-197142ccde33" titulo="Problema práctico">
+                    <ventana>
+                      <itemNavegacionReferencesVentana Id="7ebea83f-29a6-435e-86d0-c710b82cff98">
+                        <ventanaSecundariaMoniker Id="08821320-da06-4474-8caa-7c3acfc5967c" />
+                      </itemNavegacionReferencesVentana>
+                    </ventana>
+                  </itemMenu>
+                </menuHasItemMenus>
+              </itemMenus>
+            </menu>
+          </ventanaHasMenus>
+        </menus>
+        <botons>
+          <ventanaHasBotons Id="6bd244a9-e0dd-4546-85c5-84f1ddc64789">
+            <boton Id="355fb2e8-6f19-4691-b66d-bbab7a67fc90" titulo="Entregar">
+              <estadoFin>
+                <itemNavegacionReferencesEstadoFin Id="1eda85f7-3d2b-4989-9bfb-d48986c5d663">
+                  <estadoFinMoniker Id="18d24e92-2e7c-49aa-897f-d0fdc6e5c02f" />
+                </itemNavegacionReferencesEstadoFin>
+              </estadoFin>
+            </boton>
+          </ventanaHasBotons>
+          <ventanaHasBotons Id="643e1b7f-bf17-488e-adbb-86dd43aeea16">
+            <boton Id="28bc1e82-d53e-42bf-938d-a8f8de845dcf" titulo="Abandonar intento">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="eac12e8c-0bc8-47cb-964b-1b11d0a6d111">
+                  <ventanaSecundariaMoniker Id="656f44ac-7d78-47f2-a4e7-1efaac675314" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+        </botons>
+      </ventanaSecundaria>
+    </tapizPrototoolHasVentanaSecundarium>
+    <tapizPrototoolHasVentanaSecundarium Id="8a31ff66-d583-4fb2-8826-0adf3e466472">
+      <ventanaSecundaria Id="08821320-da06-4474-8caa-7c3acfc5967c" nombre="Problema SO" ancho="640" altura="360" modal="true">
+        <botons>
+          <ventanaHasBotons Id="9e593f69-302f-47d4-9e6a-528b520bdc58">
+            <boton Id="5e16dc38-d289-4f35-bf88-2b531d8b12bb" titulo="Guardar respuesta">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="fcf5e4a5-fe0e-4615-acbb-74f7b19f7db7">
+                  <ventanaSecundariaMoniker Id="9baef311-4ace-49ab-ab12-ad8e1b443bef" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+          <ventanaHasBotons Id="15fb8193-a81f-4462-8098-9a8234230306">
+            <boton Id="ed5803f3-5843-4e8f-91bc-57a11eafb2a3" titulo="Volver atrás sin guardar">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="e28aa8e8-0586-409e-a080-076611c2c88b">
+                  <ventanaSecundariaMoniker Id="9baef311-4ace-49ab-ab12-ad8e1b443bef" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+        </botons>
+      </ventanaSecundaria>
+    </tapizPrototoolHasVentanaSecundarium>
+    <tapizPrototoolHasVentanaSecundarium Id="ad15e786-aff4-4425-9ca4-fb36d3cefbfb">
+      <ventanaSecundaria Id="6dd1dca0-5f09-42f9-a6fa-e5a63c4b30e1" nombre="Test SO" ancho="1280" altura="720" modal="false">
+        <menus>
+          <ventanaHasMenus Id="d90fdaa1-e7f9-47d8-a07a-1a2cfd9fa1f1">
+            <menu Id="380b6433-26f3-46da-be84-2a55b4faed0e" tituloMenu="Preguntas">
+              <itemMenus>
+                <menuHasItemMenus Id="604e767e-4506-4cc7-9c61-dbce19dab473">
+                  <itemMenu Id="a8552351-4933-4867-9b03-8c586fd3acac" titulo="Pregunta 1">
+                    <ventana>
+                      <itemNavegacionReferencesVentana Id="c8300333-55e1-40cd-a7c9-5b7999370ad1">
+                        <ventanaSecundariaMoniker Id="846698da-916b-4437-ae27-431b90c6ba97" />
+                      </itemNavegacionReferencesVentana>
+                    </ventana>
+                  </itemMenu>
+                </menuHasItemMenus>
+                <menuHasItemMenus Id="20416ca8-c1f2-490d-b705-ea08ca222aea">
+                  <itemMenu Id="0fe9f16f-d0e9-409d-9f66-ce33d3ea9f0d" titulo="Pregunta 2">
+                    <ventana>
+                      <itemNavegacionReferencesVentana Id="40170bfe-9f8d-4b2c-9deb-6edef7e5363a">
+                        <ventanaSecundariaMoniker Id="612cc543-2994-423d-8c69-5ab2d6a0eb3a" />
+                      </itemNavegacionReferencesVentana>
+                    </ventana>
+                  </itemMenu>
+                </menuHasItemMenus>
+                <menuHasItemMenus Id="69eb51e8-d0d2-4b24-8de7-cf872410b35a">
+                  <itemMenu Id="7e449730-0ada-4766-8cfe-4dbd17526e0c" titulo="Pregunta 3">
+                    <ventana>
+                      <itemNavegacionReferencesVentana Id="5992f10a-046d-49bc-a2e7-271e79da1d90">
+                        <ventanaSecundariaMoniker Id="87c41cd7-aaed-40d6-bb4f-b2b8d13fd01a" />
+                      </itemNavegacionReferencesVentana>
+                    </ventana>
+                  </itemMenu>
+                </menuHasItemMenus>
+              </itemMenus>
+            </menu>
+          </ventanaHasMenus>
+        </menus>
+        <botons>
+          <ventanaHasBotons Id="abd86b71-f4cc-46fe-ab61-c769a441175c">
+            <boton Id="06997331-a122-48df-bbd0-06f4aa476524" titulo="Volver atrás sin guardar">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="ceda1b6f-50c5-45ca-b49b-146e12952ce2">
+                  <ventanaSecundariaMoniker Id="9baef311-4ace-49ab-ab12-ad8e1b443bef" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+          <ventanaHasBotons Id="94929ad6-3f2c-4a3a-8a1b-330cf9667c4f">
+            <boton Id="2ab0319a-b59a-46da-8569-c406d24b573c" titulo="Guardar respuestas">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="c776e9dc-7ea8-4248-94ca-8fd3e41b9a6d">
+                  <ventanaSecundariaMoniker Id="9baef311-4ace-49ab-ab12-ad8e1b443bef" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+        </botons>
+      </ventanaSecundaria>
+    </tapizPrototoolHasVentanaSecundarium>
+    <tapizPrototoolHasVentanaSecundarium Id="82d9e605-87db-459b-93d8-924285e1960c">
+      <ventanaSecundaria Id="846698da-916b-4437-ae27-431b90c6ba97" nombre="Pregunta 1 SO" ancho="640" altura="360" modal="true">
+        <botons>
+          <ventanaHasBotons Id="df4ebd3e-eba6-47ee-aed6-60e74767f470">
+            <boton Id="111c9080-37e3-4ccb-9ed3-a3ebba1adcfd" titulo="A">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="b26ab5db-aa42-4331-bb06-8863b9a959c8">
+                  <ventanaSecundariaMoniker Id="846698da-916b-4437-ae27-431b90c6ba97" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+          <ventanaHasBotons Id="92e9c45f-5dfe-4405-a643-ce7436cd382b">
+            <boton Id="deffd7fd-4cf5-43f6-b4c5-6e25c87b06cd" titulo="B">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="35fd04b1-ddb5-48a3-816d-7dbb70663621">
+                  <ventanaSecundariaMoniker Id="846698da-916b-4437-ae27-431b90c6ba97" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+          <ventanaHasBotons Id="a19cb0e5-a035-44fc-b022-580370d3919d">
+            <boton Id="479688d5-74eb-4cd9-a58c-8cc797d6e7ee" titulo="C">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="8f70499d-5d2f-44af-b476-4168081d18ee">
+                  <ventanaSecundariaMoniker Id="846698da-916b-4437-ae27-431b90c6ba97" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+          <ventanaHasBotons Id="bc1c37f6-9acb-4e1b-ab96-180b8e8e02bc">
+            <boton Id="02283909-19fa-44e3-bbd3-91f75cfcdf6e" titulo="Volver">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="96fce42b-502a-4821-8617-e9caa30f02f0">
+                  <ventanaSecundariaMoniker Id="6dd1dca0-5f09-42f9-a6fa-e5a63c4b30e1" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+        </botons>
+      </ventanaSecundaria>
+    </tapizPrototoolHasVentanaSecundarium>
+    <tapizPrototoolHasVentanaSecundarium Id="18f5698d-4bbe-4624-a322-c87209751792">
+      <ventanaSecundaria Id="612cc543-2994-423d-8c69-5ab2d6a0eb3a" nombre="Pregunta 2 SO" ancho="640" altura="360" modal="true">
+        <botons>
+          <ventanaHasBotons Id="57b2620f-2f59-4cfb-b272-f7601261328f">
+            <boton Id="47e1959e-4d63-41d4-aaa6-4306e8d36753" titulo="A">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="45c4374e-6a0e-4938-8d4d-63eef8a1e42a">
+                  <ventanaSecundariaMoniker Id="612cc543-2994-423d-8c69-5ab2d6a0eb3a" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+          <ventanaHasBotons Id="4efd6417-89a0-454d-bb75-358278db8792">
+            <boton Id="1f4eeb0c-d2c4-40a8-a952-c30eb549735f" titulo="B">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="24fdf996-22b0-4556-bdf8-bdfa9351b6a1">
+                  <ventanaSecundariaMoniker Id="612cc543-2994-423d-8c69-5ab2d6a0eb3a" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+          <ventanaHasBotons Id="8da6ac0f-9520-452a-8eb1-6c5d7b7667a7">
+            <boton Id="5539bfae-e539-42ce-b4bb-aecf7cef0b2f" titulo="C">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="2583be92-d93d-4011-9dc6-ef34d7b534b3">
+                  <ventanaSecundariaMoniker Id="612cc543-2994-423d-8c69-5ab2d6a0eb3a" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+          <ventanaHasBotons Id="3c0bc758-dd2b-4b4f-a124-c78e7439d584">
+            <boton Id="c427104e-7502-476d-a597-ce957a1a88c2" titulo="Volver">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="55419a2c-a60b-4b6e-a018-e3558057834e">
+                  <ventanaSecundariaMoniker Id="6dd1dca0-5f09-42f9-a6fa-e5a63c4b30e1" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+        </botons>
+      </ventanaSecundaria>
+    </tapizPrototoolHasVentanaSecundarium>
+    <tapizPrototoolHasVentanaSecundarium Id="a17116ae-5b30-4c41-9669-2a524a4faf53">
+      <ventanaSecundaria Id="87c41cd7-aaed-40d6-bb4f-b2b8d13fd01a" nombre="Pregunta 3 SO" ancho="640" altura="360" modal="true">
+        <botons>
+          <ventanaHasBotons Id="fb66c3a6-0ede-4588-ac96-8d35dccf4224">
+            <boton Id="fc4561e4-ee0d-4a72-8782-c40659fbe031" titulo="A">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="3df96dfa-ba3a-43c7-b0bc-e43d30007b20">
+                  <ventanaSecundariaMoniker Id="87c41cd7-aaed-40d6-bb4f-b2b8d13fd01a" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+          <ventanaHasBotons Id="77e1dfd6-c30b-4f5a-92ec-51c2353d572d">
+            <boton Id="6431b627-b554-4717-85a7-0c85077e6f42" titulo="B">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="ae7a1367-9c51-481c-87c4-c524418ed38b">
+                  <ventanaSecundariaMoniker Id="87c41cd7-aaed-40d6-bb4f-b2b8d13fd01a" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+          <ventanaHasBotons Id="411bbdea-e752-4de3-8e63-2ef8bccd4dc0">
+            <boton Id="aa25d46d-51c5-4a92-9aec-5220af8a12ee" titulo="C">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="6aad05b2-392b-4bdd-ba33-5195c6c268bb">
+                  <ventanaSecundariaMoniker Id="87c41cd7-aaed-40d6-bb4f-b2b8d13fd01a" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+          <ventanaHasBotons Id="e5fe072d-0d50-4228-a959-2026fe07e49e">
+            <boton Id="48f8af59-3b68-4a4c-a20a-1efa36d1db05" titulo="Volver">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="3fb18d22-a8ef-46df-8be3-141e9b04691f">
+                  <ventanaSecundariaMoniker Id="6dd1dca0-5f09-42f9-a6fa-e5a63c4b30e1" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+        </botons>
+      </ventanaSecundaria>
+    </tapizPrototoolHasVentanaSecundarium>
+    <tapizPrototoolHasVentanaSecundarium Id="9efe2a0e-f4de-4c2a-b43d-9e192ee81dd8">
+      <ventanaSecundaria Id="d9486636-6a0d-4463-9712-e5cb79ac8870" nombre="IRM" ancho="1280" altura="720" modal="false">
+        <menus>
+          <ventanaHasMenus Id="0ab3506e-78dc-40f0-8d43-09014a1d84e8">
+            <menu Id="a07f9c2e-68d5-422c-b45d-64085e7b06ae" tituloMenu="Profesoras">
+              <itemMenus>
+                <menuHasItemMenus Id="c30a6593-22b5-4238-b371-614ea2970d58">
+                  <itemMenu Id="f8b91ad2-7b0f-4eca-a959-eb74dad79c7b" titulo="Sandra">
+                    <ventana>
+                      <itemNavegacionReferencesVentana Id="6e6eb68d-05ec-422e-890f-e4c527c695d3">
+                        <ventanaSecundariaMoniker Id="c5a05b64-ba90-4813-8019-92779878cc11" />
+                      </itemNavegacionReferencesVentana>
+                    </ventana>
+                  </itemMenu>
+                </menuHasItemMenus>
+                <menuHasItemMenus Id="a007d345-4617-4bf6-9d49-f7b344d5f056">
+                  <itemMenu Id="dfda535b-95dc-418f-b900-bd26802fb5db" titulo="Jennifer">
+                    <ventana>
+                      <itemNavegacionReferencesVentana Id="f630e561-68de-4600-8c03-3e99c3535b9e">
+                        <ventanaSecundariaMoniker Id="6b9f3b1a-70e3-4b60-818e-bfe70b6c409f" />
+                      </itemNavegacionReferencesVentana>
+                    </ventana>
+                  </itemMenu>
+                </menuHasItemMenus>
+              </itemMenus>
+            </menu>
+          </ventanaHasMenus>
+        </menus>
+        <botons>
+          <ventanaHasBotons Id="fd6d8084-2588-4e84-9145-aa0e809dc32a">
+            <boton Id="b40dedf3-b9c9-4e08-8d7e-abc84685f1d2" titulo="Volver atrás">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="fdd6c4fe-c72a-4a88-a1f6-e323c0a7246b">
+                  <ventanaPrincipalMoniker Id="e70210be-a1f2-441a-b9b2-27392f8d521e" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+        </botons>
+      </ventanaSecundaria>
+    </tapizPrototoolHasVentanaSecundarium>
+    <tapizPrototoolHasVentanaSecundarium Id="5b6b39d6-6105-432b-9f8e-a6ead37947ea">
+      <ventanaSecundaria Id="c5a05b64-ba90-4813-8019-92779878cc11" nombre="Sandra" ancho="640" altura="360" modal="true">
+        <botons>
+          <ventanaHasBotons Id="9e971269-e0d0-44ae-906a-547bdd967e4b">
+            <boton Id="ba9d6efa-bdc0-4edf-be2a-c821d5fdfa57" titulo="Volver atras">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="97658581-3c47-403e-b3a5-000088904d2d">
+                  <ventanaSecundariaMoniker Id="d9486636-6a0d-4463-9712-e5cb79ac8870" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+          <ventanaHasBotons Id="74a94f1a-f4c7-4008-8225-c579ec36f915">
+            <boton Id="4937bf76-303f-43b0-ab06-46ebd15872d2" titulo="Enviar un correo">
+              <estadoFin>
+                <itemNavegacionReferencesEstadoFin Id="defc032f-bae4-4c81-af0d-ef9e09a57f77">
+                  <estadoFinMoniker Id="18d24e92-2e7c-49aa-897f-d0fdc6e5c02f" />
+                </itemNavegacionReferencesEstadoFin>
+              </estadoFin>
+            </boton>
+          </ventanaHasBotons>
+        </botons>
+      </ventanaSecundaria>
+    </tapizPrototoolHasVentanaSecundarium>
+    <tapizPrototoolHasVentanaSecundarium Id="66b7ca1f-a91d-4c10-a0c8-ede6cfe0f6b1">
+      <ventanaSecundaria Id="6b9f3b1a-70e3-4b60-818e-bfe70b6c409f" nombre="Jennifer" ancho="640" altura="360" modal="true">
+        <botons>
+          <ventanaHasBotons Id="bb4a3584-7a50-419e-bd07-e7ff23b7ca42">
+            <boton Id="06455681-709c-45f4-b13c-a214d4c1630b" titulo="Volver atrás">
+              <ventana>
+                <itemNavegacionReferencesVentana Id="b6d9c0fe-4bb7-4b65-a896-b54feef4a52f">
+                  <ventanaSecundariaMoniker Id="d9486636-6a0d-4463-9712-e5cb79ac8870" />
+                </itemNavegacionReferencesVentana>
+              </ventana>
+            </boton>
+          </ventanaHasBotons>
+          <ventanaHasBotons Id="dc9737b7-8993-4a79-88bc-7cafa8b6f597">
+            <boton Id="8b60d672-e417-403c-8cb2-249b97de58ab" titulo="Enviar un correo">
+              <estadoFin>
+                <itemNavegacionReferencesEstadoFin Id="6f2e472b-8ecd-492c-a36e-4578e61a864c">
+                  <estadoFinMoniker Id="18d24e92-2e7c-49aa-897f-d0fdc6e5c02f" />
+                </itemNavegacionReferencesEstadoFin>
+              </estadoFin>
+            </boton>
+          </ventanaHasBotons>
+        </botons>
+      </ventanaSecundaria>
+    </tapizPrototoolHasVentanaSecundarium>
+  </ventanaSecundarium>
+  <estadoFin>
+    <tapizPrototoolHasEstadoFin Id="733d8ac3-b3ef-44a9-b4bf-b00b4223848f">
+      <estadoFin Id="18d24e92-2e7c-49aa-897f-d0fdc6e5c02f" />
+    </tapizPrototoolHasEstadoFin>
+  </estadoFin>
+</tapizPrototool>
