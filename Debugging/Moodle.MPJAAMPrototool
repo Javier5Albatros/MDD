@@ -152,7 +152,7 @@
       <ventanaSecundaria Id="656f44ac-7d78-47f2-a4e7-1efaac675314" nombre="SO" ancho="1280" altura="720" modal="false">
         <menus>
           <ventanaHasMenus Id="018ce3b8-dde0-41eb-9306-cd66ec6257ad">
-            <menu Id="a9247549-3767-4737-934b-b63940f4e0d3">
+            <menu Id="a9247549-3767-4737-934b-b63940f4e0d3" tituloMenu="Secciones">
               <itemMenus>
                 <menuHasItemMenus Id="45208b50-613d-4454-9278-978f93ab7688">
                   <itemMenu Id="fca552d1-8d80-4a3b-b738-063be5835225" titulo="Calificaciones Primer Parcial">

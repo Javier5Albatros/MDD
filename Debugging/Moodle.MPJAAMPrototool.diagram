@@ -100,7 +100,7 @@
         <vSecundariaMetaforaMoniker Id="ca084b92-c25e-42cc-8814-8c4c7e766dcb" />
       </nodes>
     </itemNavegacion_Ventana>
-    <itemNavegacion_Ventana Id="c558596c-553c-49ff-8c6b-62521451a987" edgePoints="[(13.4375 : 4.75); (13.4375 : 4.0937475); (14.75 : 4.0937475)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <itemNavegacion_Ventana Id="c558596c-553c-49ff-8c6b-62521451a987" edgePoints="[(13.4375 : 4.75); (13.4375 : 4.0937475); (14.75 : 4.0937475)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <itemNavegacionReferencesVentanaMoniker Id="18acf467-b770-403f-8bb2-46cc1d53bc4c" />
       <nodes>
         <itemMenuMetaforaMoniker Id="300fd0a7-f5bd-4111-9fe0-032fb52cffc9" />
@@ -122,7 +122,7 @@
         </botonMetafora>
       </nestedChildShapes>
     </vSecundariaMetafora>
-    <itemNavegacion_Ventana Id="ced7cf9f-f9ee-4dff-a41d-8781cb94fbdc" edgePoints="[(14 : 6.375); (14.75 : 6.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <itemNavegacion_Ventana Id="ced7cf9f-f9ee-4dff-a41d-8781cb94fbdc" edgePoints="[(14 : 6.375); (14.75 : 6.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <itemNavegacionReferencesVentanaMoniker Id="6af2251f-1e8e-49b5-8133-b3780155bccf" />
       <nodes>
         <itemMenuMetaforaMoniker Id="3009c95e-fdb9-4d49-859d-04eaff88d45e" />
