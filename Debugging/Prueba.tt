@@ -1,0 +1,14 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="True" #>
+<#@ output extension=".txt" #>
+<#@ MPJAAMPrototool processor="MPJAAMPrototoolDirectiveProcessor" requires="fileName='Moodle.MPJAAMPrototool'" #>
+<#@ include file="EF.utility.CS.ttinclude" #>
+
+<#
+	var fileManager=EntityFrameworkTemplateFileManager.Create(this);
+	foreach(Ventana ventana in this.TapizPrototool.VentanaSecundarium) {
+		fileManager.StartNewFile(ventana.nombre+ ".html");
+		WriteLine("<h1>" + ventana.nombre + "</h1>");
+	}
+	fileManager.Process();
+	
+#>

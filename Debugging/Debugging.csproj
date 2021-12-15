@@ -73,6 +73,18 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Calificaciones SO.html">
+      <DependentUpon>Prueba.tt</DependentUpon>
+    </Content>
+    <Content Include="IPS.html">
+      <DependentUpon>Prueba.tt</DependentUpon>
+    </Content>
+    <Content Include="IRM.html">
+      <DependentUpon>Prueba.tt</DependentUpon>
+    </Content>
+    <Content Include="Jennifer.html">
+      <DependentUpon>Prueba.tt</DependentUpon>
+    </Content>
     <Content Include="MPJAAMPrototoolReport.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -82,6 +94,48 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MPJAAMPrototoolReportVB.tt</DependentUpon>
+    </Content>
+    <Content Include="Pregunta 1 SO.html">
+      <DependentUpon>Prueba.tt</DependentUpon>
+    </Content>
+    <Content Include="Pregunta 2 SO.html">
+      <DependentUpon>Prueba.tt</DependentUpon>
+    </Content>
+    <Content Include="Pregunta 3 SO.html">
+      <DependentUpon>Prueba.tt</DependentUpon>
+    </Content>
+    <Content Include="Problema SO.html">
+      <DependentUpon>Prueba.tt</DependentUpon>
+    </Content>
+    <Content Include="Prueba.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Prueba.txt</LastGenOutput>
+    </Content>
+    <Content Include="Prueba.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prueba.tt</DependentUpon>
+    </Content>
+    <Content Include="Sandra.html">
+      <DependentUpon>Prueba.tt</DependentUpon>
+    </Content>
+    <Content Include="Segundo Parcial SO.html">
+      <DependentUpon>Prueba.tt</DependentUpon>
+    </Content>
+    <Content Include="SO.html">
+      <DependentUpon>Prueba.tt</DependentUpon>
+    </Content>
+    <Content Include="Tema 1 IPS.html">
+      <DependentUpon>Prueba.tt</DependentUpon>
+    </Content>
+    <Content Include="Tema 2 IPS.html">
+      <DependentUpon>Prueba.tt</DependentUpon>
+    </Content>
+    <Content Include="Tema 3 IPS.html">
+      <DependentUpon>Prueba.tt</DependentUpon>
+    </Content>
+    <Content Include="Test SO.html">
+      <DependentUpon>Prueba.tt</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
