@@ -63,6 +63,16 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="63458279-4867-4c2b-a1f9-ff4e3b866d98" Description="Description for UPM_IPS.MPJAAMPrototool.Ventana.Titulo" Name="titulo" DisplayName="Titulo">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="b78ef4b5-717b-4b59-880e-7d9e08faa77b" Description="Description for UPM_IPS.MPJAAMPrototool.Ventana.Contenido" Name="contenido" DisplayName="Contenido">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
       </Properties>
       <ElementMergeDirectives>
         <ElementMergeDirective>
@@ -378,6 +388,12 @@
           </XmlPropertyData>
           <XmlPropertyData XmlName="dimensionesCalculado" Representation="Ignore">
             <DomainPropertyMoniker Name="Ventana/dimensionesCalculado" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="titulo">
+            <DomainPropertyMoniker Name="Ventana/titulo" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="contenido">
+            <DomainPropertyMoniker Name="Ventana/contenido" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>

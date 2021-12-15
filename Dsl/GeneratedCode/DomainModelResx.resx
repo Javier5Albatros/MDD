@@ -189,6 +189,22 @@
     <value>Dimensiones Calculado</value>
     <comment>DisplayName for DomainProperty &apos;dimensionesCalculado&apos; on DomainClass &apos;Ventana&apos;</comment>
   </data>
+  <data name="UPM_IPS.MPJAAMPrototool.Ventana/titulo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.Ventana.Titulo</value>
+    <comment>Description for DomainProperty &apos;titulo&apos; on DomainClass &apos;Ventana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.Ventana/titulo.DisplayName" xml:space="preserve">
+    <value>Titulo</value>
+    <comment>DisplayName for DomainProperty &apos;titulo&apos; on DomainClass &apos;Ventana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.Ventana/contenido.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.MPJAAMPrototool.Ventana.Contenido</value>
+    <comment>Description for DomainProperty &apos;contenido&apos; on DomainClass &apos;Ventana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MPJAAMPrototool.Ventana/contenido.DisplayName" xml:space="preserve">
+    <value>Contenido</value>
+    <comment>DisplayName for DomainProperty &apos;contenido&apos; on DomainClass &apos;Ventana&apos;</comment>
+  </data>
   <data name="UPM_IPS.MPJAAMPrototool.VentanaPrincipal.Description" xml:space="preserve">
     <value>Description for UPM_IPS.MPJAAMPrototool.VentanaPrincipal</value>
     <comment>Description for DomainClass &apos;VentanaPrincipal&apos;</comment>

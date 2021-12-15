@@ -7,24 +7,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System;
+using System.Diagnostics;
+using System.Drawing.Design;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using VSShellInterop = global::Microsoft.VisualStudio.Shell.Interop;
 using VSShell = global::Microsoft.VisualStudio.Shell;
 using DslShell = global::Microsoft.VisualStudio.Modeling.Shell;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
-using System;
-using System.Diagnostics;
-using System.Drawing.Design;
-using System.Linq;
-using System.Windows.Forms;
-	
+
 namespace UPM_IPS.MPJAAMPrototool
 {
 	/// <summary>
 	/// This class implements the VS package that integrates this DSL into Visual Studio.
 	/// </summary>
-	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\15.0")]
-	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true)]
+	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
 	[VSShell::ProvideToolWindow(typeof(MPJAAMPrototoolExplorerToolWindow), MultiInstances = false, Style = VSShell::VsDockStyle.Tabbed, Orientation = VSShell::ToolWindowOrientation.Right, Window = "{3AE79031-E1BC-11D0-8F78-00A0C9110057}")]
 	[VSShell::ProvideToolWindowVisibility(typeof(MPJAAMPrototoolExplorerToolWindow), Constants.MPJAAMPrototoolEditorFactoryId)]
 	[VSShell::ProvideStaticToolboxGroup("@VentanasToolboxTab;UPM_IPS.MPJAAMPrototool.Dsl.dll", "UPM_IPS.MPJAAMPrototool.VentanasToolboxTab")]
@@ -107,16 +108,16 @@ namespace UPM_IPS.MPJAAMPrototool
 	[DslShell::ProvideBindingPath]
 	[DslShell::ProvideXmlEditorChooserBlockSxSWithXmlEditor(@"MPJAAMPrototool", typeof(MPJAAMPrototoolEditorFactory))]
 
-	internal abstract partial class MPJAAMPrototoolPackageBase : DslShell::ModelingPackage
+	internal abstract partial class MPJAAMPrototoolPackageBase : DslShell::AsyncModelingPackage
 	{
 		protected global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolToolboxHelper toolboxHelper;	
 		
 		/// <summary>
 		/// Initialization method called by the package base class when this package is loaded.
 		/// </summary>
-		protected override void Initialize()
+		protected async override Task InitializeAsync(CancellationToken cancellationToken, IProgress<VSShell.ServiceProgressData> progress)
 		{
-			base.Initialize();
+			await base.InitializeAsync(cancellationToken, progress);
 
 			// Register the editor factory used to create the DSL editor.
 			this.RegisterEditorFactory(new MPJAAMPrototoolEditorFactory(this));
@@ -126,21 +127,28 @@ namespace UPM_IPS.MPJAAMPrototool
 
 			// Create the command set that handles menu commands provided by this package.
 			MPJAAMPrototoolCommandSet commandSet = new MPJAAMPrototoolCommandSet(this);
-			commandSet.Initialize();
+			await commandSet.InitializeAsync(cancellationToken);
 			
 			// Create the command set that handles cut/copy/paste commands provided by this package.
 			MPJAAMPrototoolClipboardCommandSet clipboardCommandSet = new MPJAAMPrototoolClipboardCommandSet(this);
-			clipboardCommandSet.Initialize();
+			await clipboardCommandSet.InitializeAsync(cancellationToken);
 			
 			// Register the model explorer tool window for this DSL.
 			this.AddToolWindow(typeof(MPJAAMPrototoolExplorerToolWindow));
+
+			if (cancellationToken.IsCancellationRequested)
+			{
+				return;
+			}
+
+			await JoinableTaskFactory.SwitchToMainThreadAsync();
 
 			// Initialize Extension Registars
 			// this is a partial method call
 			this.InitializeExtensions();
 
 			// Add dynamic toolbox items
-			this.SetupDynamicToolbox();
+			await this.SetupDynamicToolboxAsync(cancellationToken);
 		}
 
 		/// <summary>
@@ -159,7 +167,7 @@ namespace UPM_IPS.MPJAAMPrototool
 				Debug.Assert(toolboxHelper != null, "Toolbox helper is not initialized");
 				return toolboxHelper.CreateToolboxItems();
 			}
-			catch(global::System.Exception e)
+			catch (global::System.Exception e)
 			{
 				global::System.Diagnostics.Debug.Fail("Exception thrown during toolbox item creation.  This may result in Package Load Failure:\r\n\r\n" + e);
 				throw;
@@ -180,8 +188,17 @@ namespace UPM_IPS.MPJAAMPrototool
 			// Retrieve the specified ToolboxItem from the DSL
 			return toolboxHelper.GetToolboxItemData(itemId, format);
 		}
-	}
 
+		public override VSShellInterop::IVsAsyncToolWindowFactory GetAsyncToolWindowFactory(Guid toolWindowType)
+		{
+			if (toolWindowType == typeof(MPJAAMPrototoolExplorerToolWindow).GUID)
+			{
+				return this;
+			}
+
+			return base.GetAsyncToolWindowFactory(toolWindowType);
+		}
+	}
 }
 
 //

@@ -74,22 +74,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Apruebamoodle.html">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="Calificaciones SO.html">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="index.js">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="IPS.html">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="IRM.html">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="Jennifer.html">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="MPJAAMPrototoolReport.txt">
       <AutoGen>True</AutoGen>
@@ -102,49 +102,49 @@
       <DependentUpon>MPJAAMPrototoolReportVB.tt</DependentUpon>
     </Content>
     <Content Include="Pregunta 1 SO.html">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="Pregunta 2 SO.html">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="Pregunta 3 SO.html">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="Problema SO.html">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
-    <Content Include="Prueba.tt">
+    <Content Include="html.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Prueba.txt</LastGenOutput>
+      <LastGenOutput>html.txt</LastGenOutput>
     </Content>
-    <Content Include="Prueba.txt">
+    <Content Include="html.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="Sandra.html">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="Segundo Parcial SO.html">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="SO.html">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="styles.css">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="Tema 1 IPS.html">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="Tema 2 IPS.html">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="Tema 3 IPS.html">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="Test SO.html">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

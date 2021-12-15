@@ -112,6 +112,8 @@ namespace UPM_IPS.MPJAAMPrototool
 				new DomainMemberInfo(typeof(Ventana), "altura", Ventana.alturaDomainPropertyId, typeof(Ventana.alturaPropertyHandler)),
 				new DomainMemberInfo(typeof(Ventana), "nombreCalculado", Ventana.nombreCalculadoDomainPropertyId, typeof(Ventana.nombreCalculadoPropertyHandler)),
 				new DomainMemberInfo(typeof(Ventana), "dimensionesCalculado", Ventana.dimensionesCalculadoDomainPropertyId, typeof(Ventana.dimensionesCalculadoPropertyHandler)),
+				new DomainMemberInfo(typeof(Ventana), "titulo", Ventana.tituloDomainPropertyId, typeof(Ventana.tituloPropertyHandler)),
+				new DomainMemberInfo(typeof(Ventana), "contenido", Ventana.contenidoDomainPropertyId, typeof(Ventana.contenidoPropertyHandler)),
 				new DomainMemberInfo(typeof(VentanaSecundaria), "modal", VentanaSecundaria.modalDomainPropertyId, typeof(VentanaSecundaria.modalPropertyHandler)),
 				new DomainMemberInfo(typeof(Menu), "TituloMenu", Menu.TituloMenuDomainPropertyId, typeof(Menu.TituloMenuPropertyHandler)),
 				new DomainMemberInfo(typeof(ItemNavegacion), "titulo", ItemNavegacion.tituloDomainPropertyId, typeof(ItemNavegacion.tituloPropertyHandler)),

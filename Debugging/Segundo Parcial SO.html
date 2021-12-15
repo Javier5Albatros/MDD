@@ -8,10 +8,9 @@
 <body>
 <main>
 <h1>Segundo Parcial SO</h1>
-<hr />
 <section class='menu'>
-<button class='dropbtn'> Preguntas</button>
-<div class='dropdown-content'>
+<button class='dropbtn' onmouseover='showMenu("Preguntas")'> Preguntas</button> </div>
+<div class='dropdown-content' id='Preguntas' onmouseleave='hideMenu("Preguntas")' >
 
 			<a href='Test SO.html' class='item-menu'>
 				Test teoría
@@ -24,6 +23,26 @@
 		
 </div>
 </section>
+<section class='content'>
+<h3 class='titulo'>Gestión de Memoria</h3>
+<p class='contenido'>Lorem ipsum dolor sit amet, ea mel epicuri perpetua. Vel nonumy tincidunt in, consul equidem id pri, ea quo movet accusamus abhorreant. No pri epicuri perfecto expetenda, ne atomorum inimicus sea. Simul deseruisse vel ei, duo sumo inermis an.</p>
+</section>
+<section class='botones'>
+
+			<a class='boton crimson' onclick='closeApp()'>
+				Entregar
+			</a>
+		
+
+			<a href='SO.html' class='boton'>
+				Abandonar intento
+			</a>
+		
+</section>
+<footer class='footer'>
+			<p>Javier Álvarez, Alonso Monasterio, Miguel Pérez</p>
+			<p>IPS, 2021-2022</p>
+		</footer>
 </main>
 </body>
 </html>

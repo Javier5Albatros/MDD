@@ -8,10 +8,9 @@
 <body>
 <main>
 <h1>Apruebamoodle</h1>
-<hr />
 <section class='menu'>
-<button class='dropbtn'> Asignaturas</button>
-<div class='dropdown-content'>
+<button class='dropbtn' onmouseover='showMenu("Asignaturas")'> Asignaturas</button> </div>
+<div class='dropdown-content' id='Asignaturas' onmouseleave='hideMenu("Asignaturas")' >
 
 			<a href='IPS.html' class='item-menu'>
 				IPS
@@ -29,6 +28,21 @@
 		
 </div>
 </section>
+<section class='content'>
+<h3 class='titulo'>Bienvenido a Apruebamoodle</h3>
+<p class='contenido'>Lorem ipsum dolor sit amet, mei ei illum mazim utamur, ius mundi repudiare ei, no vix omnis malis deterruisset. Nam probo etiam dissentiet ad. Novum ullamcorper interpretaris te per, id per semper eirmod. Cu eam essent impetus nominavi, ad pro graeci diceret iracundia. Ea est oratio imperdiet splendide.</p>
+</section>
+<section class='botones'>
+
+			<a class='boton crimson' onclick='closeApp()'>
+				Cerrar sesión
+			</a>
+		
+</section>
+<footer class='footer'>
+			<p>Javier Álvarez, Alonso Monasterio, Miguel Pérez</p>
+			<p>IPS, 2021-2022</p>
+		</footer>
 </main>
 </body>
 </html>

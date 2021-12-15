@@ -52,6 +52,18 @@
 
 <#+
 	string js = @"
+		const showMenu = (el) => {
+			document.getElementById(el).style.display = 'block';
+		}
+
+		const hideMenu = (el) => {
+			document.getElementById(el).style.display = 'none';
+		}
+
+		const closeApp = () => {
+			alert('Fin de la aplicación!');
+			window.close();
+		}
 	";
 
 	private void addJavascript() {
@@ -67,7 +79,11 @@
 		main {
 			width: 75%;
 			margin: 0 auto;
-			background-color: #dfdbdb;
+			background-color: #efeeee;
+		}
+
+		.menu, .footer {
+			background-color: rgb(19 32 70);
 		}
 
 		main h1 {
@@ -88,7 +104,7 @@
 		.dropdown-content {
 			display: none;
 			position: absolute;
-			background-color: #f1f1f1;
+			background-color: #efeeee;
 			min-width: 160px;
 			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 			z-index: 1;
@@ -100,9 +116,42 @@
 			text-decoration: none;
 			display: block;
 		}
-		.menu:hover .dropdown-content {
-			display: block;
+
+		.boton {
+			cursor: pointer;
+			padding: 15px;
+			display: inline-block;
+			margin: 10px;
+			color: white;
+			border-radius: 10px;
+			background-color: #1f35bb;
 		}
+
+		.crimson {
+			background-color: crimson;
+		}
+
+		.content {
+			padding: 15px;
+		}
+
+		.footer {
+			padding: 15px;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.footer div {
+			
+		}
+
+		.footer p {
+			display: inline-block;
+			color: white;
+			margin: 2px;
+		}
+
+
 		";
 	private void addCss() {
 		WriteLine(css);
@@ -126,8 +175,10 @@
 	WriteLine("<body>");
 		WriteLine("<main>");
 			WriteLine("<h1>" + ventana.nombre + "</h1>");
-			WriteLine("<hr />");
 			addMenus(ventana);
+			addContent(ventana);
+			addButtons(ventana);
+			footer();
 		WriteLine("</main>");
 	WriteLine("</body>");
 	}
@@ -137,17 +188,29 @@
 	private void addMenus(Ventana ventana) {
 		if(ventana.Menus.Count != 0) {
 			foreach(Menu menu in ventana.Menus) {
-				getMenu(menu);
+				printMenu(menu);
 			}	
 		}
 	}
 #>
 
 <#+
-	private void getMenu(Menu menu) {
+	private void addButtons(Ventana ventana) {
+		if(ventana.Botons.Count != 0) {
+			WriteLine("<section class='botones'>");
+			foreach(Boton boton in ventana.Botons) {
+				WriteLine(itemNavegacion(boton));
+			}
+			WriteLine("</section>");
+		}
+	}
+#>
+
+<#+
+	private void printMenu(Menu menu) {
 		WriteLine("<section class='menu'>");
-		WriteLine("<button class='dropbtn'> " + menu.TituloMenu + "</button>");
-		WriteLine("<div class='dropdown-content'>");
+		WriteLine("<button class='dropbtn' onmouseover='showMenu(\"" + menu.TituloMenu +"\")'> " + menu.TituloMenu + "</button> </div>");
+		WriteLine("<div class='dropdown-content' id='"+ menu.TituloMenu+ "' onmouseleave='hideMenu(\"" + menu.TituloMenu +"\")' >");
 		foreach(ItemMenu item in menu.ItemMenus) {
 			WriteLine(itemNavegacion(item));
 		}
@@ -158,17 +221,38 @@
 
 <#+
 	private string itemNavegacion(ItemNavegacion item) {
-	string clase = "";
-		if(item is ItemMenu) {
-			clase = "item-menu";
-		} else {
-			clase = "boton";
-		}
+	string clase = (item is ItemMenu) ? "item-menu" : "boton";
 
+	if(item.Ventana != null) {
 		return String.Format(@"
 			<a href='{0}' class='{1}'>
 				{2}
 			</a>
-		", item.Ventana.nombre+".html", clase, item.titulo);
+		", item.Ventana.nombre + ".html", clase, item.titulo);
+	} else {
+		return String.Format(@"
+			<a class='{0} crimson' onclick='closeApp()'>
+				{1}
+			</a>
+		", clase, item.titulo);
+		}
+	}
+#>
+
+<#+
+	private void addContent(Ventana ventana) {
+		WriteLine("<section class='content'>");
+		WriteLine(String.Format("<h3 class='titulo'>{0}</h3>", ventana.titulo));
+		WriteLine(String.Format("<p class='contenido'>{0}</p>", ventana.contenido));
+		WriteLine("</section>");
+	}
+#>
+
+<#+
+	private void footer() {
+		WriteLine(@"<footer class='footer'>
+			<p>Javier Álvarez, Alonso Monasterio, Miguel Pérez</p>
+			<p>IPS, 2021-2022</p>
+		</footer>");
 	}
 #>

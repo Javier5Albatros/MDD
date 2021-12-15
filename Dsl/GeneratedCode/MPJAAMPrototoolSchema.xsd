@@ -140,6 +140,10 @@
         <xsd:attribute name="ancho" type="xsd:string" />
         <!-- Property: altura -->
         <xsd:attribute name="altura" type="xsd:string" />
+        <!-- Property: titulo -->
+        <xsd:attribute name="titulo" type="xsd:string" />
+        <!-- Property: contenido -->
+        <xsd:attribute name="contenido" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

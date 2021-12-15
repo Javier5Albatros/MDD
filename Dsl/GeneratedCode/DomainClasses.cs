@@ -778,6 +778,180 @@ namespace UPM_IPS.MPJAAMPrototool
 		}
 		
 		#endregion
+		#region titulo domain property code
+		
+		/// <summary>
+		/// titulo domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid tituloDomainPropertyId = new global::System.Guid(0x63458279, 0x4867, 0x4c2b, 0xa1, 0xf9, 0xff, 0x4e, 0x3b, 0x86, 0x6d, 0x98);
+		
+		/// <summary>
+		/// Storage for titulo
+		/// </summary>
+		private global::System.String tituloPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of titulo domain property.
+		/// Description for UPM_IPS.MPJAAMPrototool.Ventana.Titulo
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.Ventana/titulo.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.Ventana/titulo.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("63458279-4867-4c2b-a1f9-ff4e3b866d98")]
+		public global::System.String titulo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tituloPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				tituloPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Ventana.titulo domain property.
+		/// </summary>
+		internal sealed partial class tituloPropertyHandler : DslModeling::DomainPropertyValueHandler<Ventana, global::System.String>
+		{
+			private tituloPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Ventana.titulo domain property value handler.
+			/// </summary>
+			public static readonly tituloPropertyHandler Instance = new tituloPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Ventana.titulo domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return tituloDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Ventana element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.tituloPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Ventana element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tituloPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region contenido domain property code
+		
+		/// <summary>
+		/// contenido domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid contenidoDomainPropertyId = new global::System.Guid(0xb78ef4b5, 0x717b, 0x4b59, 0x88, 0x0e, 0x7d, 0x9e, 0x08, 0xfa, 0xa7, 0x7b);
+		
+		/// <summary>
+		/// Storage for contenido
+		/// </summary>
+		private global::System.String contenidoPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of contenido domain property.
+		/// Description for UPM_IPS.MPJAAMPrototool.Ventana.Contenido
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MPJAAMPrototool.Ventana/contenido.DisplayName", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MPJAAMPrototool.Ventana/contenido.Description", typeof(global::UPM_IPS.MPJAAMPrototool.MPJAAMPrototoolDomainModel), "UPM_IPS.MPJAAMPrototool.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("b78ef4b5-717b-4b59-880e-7d9e08faa77b")]
+		public global::System.String contenido
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return contenidoPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				contenidoPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Ventana.contenido domain property.
+		/// </summary>
+		internal sealed partial class contenidoPropertyHandler : DslModeling::DomainPropertyValueHandler<Ventana, global::System.String>
+		{
+			private contenidoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Ventana.contenido domain property value handler.
+			/// </summary>
+			public static readonly contenidoPropertyHandler Instance = new contenidoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Ventana.contenido domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return contenidoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Ventana element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.contenidoPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Ventana element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.contenidoPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region Menus opposite domain role accessor
 		
 		/// <summary>

@@ -1110,6 +1110,40 @@ namespace UPM_IPS.MPJAAMPrototool
 					}
 				}
 			}
+			// titulo
+			if (!serializationContext.Result.Failed)
+			{
+				string attribtitulo = MPJAAMPrototoolSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "titulo");
+				if (attribtitulo != null)
+				{
+					global::System.String valueOftitulo;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribtitulo, out valueOftitulo))
+					{
+						instanceOfVentana.titulo = valueOftitulo;
+					}
+					else
+					{	// Invalid property value, ignored.
+						MPJAAMPrototoolSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "titulo", typeof(global::System.String), attribtitulo);
+					}
+				}
+			}
+			// contenido
+			if (!serializationContext.Result.Failed)
+			{
+				string attribcontenido = MPJAAMPrototoolSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "contenido");
+				if (attribcontenido != null)
+				{
+					global::System.String valueOfcontenido;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribcontenido, out valueOfcontenido))
+					{
+						instanceOfVentana.contenido = valueOfcontenido;
+					}
+					else
+					{	// Invalid property value, ignored.
+						MPJAAMPrototoolSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "contenido", typeof(global::System.String), attribcontenido);
+					}
+				}
+			}
 		}
 	
 		/// <summary>
@@ -1610,6 +1644,28 @@ namespace UPM_IPS.MPJAAMPrototool
 				if (!serializationContext.Result.Failed)
 				{
 					MPJAAMPrototoolSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "altura", serializedPropValue);
+				}
+			}
+			// titulo
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfVentana.titulo;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						MPJAAMPrototoolSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "titulo", propValue);
+	
+				}
+			}
+			// contenido
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfVentana.contenido;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						MPJAAMPrototoolSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "contenido", propValue);
+	
 				}
 			}
 		}
