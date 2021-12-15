@@ -73,7 +73,13 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Apruebamoodle.html">
+      <DependentUpon>Prueba.tt</DependentUpon>
+    </Content>
     <Content Include="Calificaciones SO.html">
+      <DependentUpon>Prueba.tt</DependentUpon>
+    </Content>
+    <Content Include="index.js">
       <DependentUpon>Prueba.tt</DependentUpon>
     </Content>
     <Content Include="IPS.html">
@@ -123,6 +129,9 @@
       <DependentUpon>Prueba.tt</DependentUpon>
     </Content>
     <Content Include="SO.html">
+      <DependentUpon>Prueba.tt</DependentUpon>
+    </Content>
+    <Content Include="styles.css">
       <DependentUpon>Prueba.tt</DependentUpon>
     </Content>
     <Content Include="Tema 1 IPS.html">

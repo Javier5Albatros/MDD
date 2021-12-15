@@ -4,11 +4,171 @@
 <#@ include file="EF.utility.CS.ttinclude" #>
 
 <#
-	var fileManager=EntityFrameworkTemplateFileManager.Create(this);
+	var fileManager = EntityFrameworkTemplateFileManager.Create(this);
+	
+	fileManager.StartNewFile("index.js");
+	addJavascript();
+
+	fileManager.StartNewFile("styles.css");
+	addCss();
+
+	var ventanaPrincipal = this.TapizPrototool.VentanaPrincipal;
+	fileManager.StartNewFile(ventanaPrincipal.nombre + ".html");
+	procesarVentana(ventanaPrincipal);
 	foreach(Ventana ventana in this.TapizPrototool.VentanaSecundarium) {
 		fileManager.StartNewFile(ventana.nombre+ ".html");
-		WriteLine("<h1>" + ventana.nombre + "</h1>");
+		procesarVentana(ventana);
 	}
 	fileManager.Process();
 	
+#>
+
+<#+
+	private void procesarVentana(Ventana ventana) {
+	WriteLine("<html>");
+	addHead(ventana);
+		if(ventana is VentanaPrincipal) {
+			procesarVentanaPrincipal(ventana);
+		} else {
+			procesarVentanaSecundaria(ventana);
+		}
+	WriteLine("</html>");
+	}
+
+#>
+
+<#+
+	private void procesarVentanaPrincipal(Ventana ventana) {
+		addBody(ventana);
+	}
+#>
+
+
+<#+
+	private void procesarVentanaSecundaria(Ventana ventana) {
+		addBody(ventana);
+	}
+#>
+
+<#+
+	string js = @"
+	";
+
+	private void addJavascript() {
+		WriteLine(js);
+	}
+#>
+
+<#+
+	string css = @"
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		main {
+			width: 75%;
+			margin: 0 auto;
+			background-color: #dfdbdb;
+		}
+
+		main h1 {
+			display: inline-block;
+			width: 100%;
+			text-align: center;
+		}
+
+		.dropbtn {
+			background-color: #04AA6D;
+			color: white;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			margin: 10px;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f1f1f1;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+
+		.item-menu {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+		.menu:hover .dropdown-content {
+			display: block;
+		}
+		";
+	private void addCss() {
+		WriteLine(css);
+	}
+#>
+
+<#+
+	private void addHead(Ventana ventana) {
+		string head = String.Format(@"
+		<head> 
+			<title>{0}</title>
+			<link rel='stylesheet' href='styles.css'>
+			<script type='text/javascript' src='index.js'></script>
+		</head>", ventana.nombre);
+		WriteLine(head);
+	}
+#>
+
+<#+
+	private void addBody(Ventana ventana) {
+	WriteLine("<body>");
+		WriteLine("<main>");
+			WriteLine("<h1>" + ventana.nombre + "</h1>");
+			WriteLine("<hr />");
+			addMenus(ventana);
+		WriteLine("</main>");
+	WriteLine("</body>");
+	}
+#>
+
+<#+
+	private void addMenus(Ventana ventana) {
+		if(ventana.Menus.Count != 0) {
+			foreach(Menu menu in ventana.Menus) {
+				getMenu(menu);
+			}	
+		}
+	}
+#>
+
+<#+
+	private void getMenu(Menu menu) {
+		WriteLine("<section class='menu'>");
+		WriteLine("<button class='dropbtn'> " + menu.TituloMenu + "</button>");
+		WriteLine("<div class='dropdown-content'>");
+		foreach(ItemMenu item in menu.ItemMenus) {
+			WriteLine(itemNavegacion(item));
+		}
+		WriteLine("</div>");
+		WriteLine("</section>");
+	}
+#>
+
+<#+
+	private string itemNavegacion(ItemNavegacion item) {
+	string clase = "";
+		if(item is ItemMenu) {
+			clase = "item-menu";
+		} else {
+			clase = "boton";
+		}
+
+		return String.Format(@"
+			<a href='{0}' class='{1}'>
+				{2}
+			</a>
+		", item.Ventana.nombre+".html", clase, item.titulo);
+	}
 #>
