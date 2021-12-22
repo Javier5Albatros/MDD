@@ -1,0 +1,83 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="True" #>
+<#@ output extension=".java" #>
+<#@ MPJAAMPrototool processor="MPJAAMPrototoolDirectiveProcessor" requires="fileName='Moodle.MPJAAMPrototool'" #>
+<#@ include file="EF.utility.CS.ttinclude" #>
+
+<#
+	var fileManager = EntityFrameworkTemplateFileManager.Create(this);
+
+	var ventanaPrincipal = this.TapizPrototool.VentanaPrincipal;
+	fileManager.StartNewFile(ventanaPrincipal.nombre + ".java");
+	procesarVentana(ventanaPrincipal);
+
+	var nombreAplicacion = this.TapizPrototool.nombreAplicacion;
+	fileManager.StartNewFile(nombreAplicacion + ".java");
+	clasePrincipal(nombreAplicacion, ventanaPrincipal);
+	foreach(Ventana ventana in this.TapizPrototool.VentanaSecundarium) {
+		fileManager.StartNewFile(ventana.nombre+ ".java");
+		procesarVentana(ventana);
+	}
+	fileManager.Process();
+#>
+
+<#+
+	private void importPackages() {
+		WriteLine("import java.awt.*;");
+		WriteLine("import java.awt.event.*;");
+	}
+#>
+
+<#+
+	private void clasePrincipal(string nombreAplicacion, VentanaPrincipal ventanaPrincipal) {
+		WriteLine("public class " + nombreAplicacion + "{");
+		WriteLine(" public static void main(String[] args) {");
+		WriteLine("new " + ventanaPrincipal.nombre + "();");
+		WriteLine("}");
+		WriteLine("}");
+	}
+#>
+
+<#+
+	private void procesarVentana(Ventana ventana) {
+		importPackages();
+		if(ventana is VentanaPrincipal) {
+			procesarVentanaPrincipal(ventana);
+		} else {
+			procesarVentanaSecundaria(ventana);
+		}
+		WriteLine("}");
+	}
+
+#>
+
+<#+
+	private void procesarVentanaPrincipal(Ventana ventana) {
+		WriteLine("public class " +  ventana.nombre + " extends Frame implements ActionListener {");
+		declararBotones(ventana);
+	}
+#>
+
+
+<#+
+	private void procesarVentanaSecundaria(Ventana ventana) {
+		WriteLine("public class " +  ventana.nombre + " extends Dialog implements ActionListener {");
+		declararBotones(ventana);
+	}
+#>
+
+<#+
+	private void declararBotones(Ventana ventana) {
+		if(ventana.Botons.Count != 0) {
+			foreach(Boton boton in ventana.Botons) {
+				WriteLine("private Button b_" + normalizar(boton.titulo) + ";");
+				WriteLine("private " + ventana.nombre + " v_" +  normalizar(ventana.nombre) + ";");
+			}
+		}
+	}
+#>
+
+<#+
+	private string normalizar(string cadena) {
+		return cadena.ToLower().Replace(" ", "").Replace("á", "a").Replace("é", "e").Replace("í", "i").Replace("ó", "o").Replace("ú", "u");
+	}
+#>

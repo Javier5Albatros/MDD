@@ -108,7 +108,7 @@ namespace UPM_IPS.MPJAAMPrototool
 			get
 			{
 				MPJAAMPrototoolExplorerToolWindow explorerWindow = null;
-				DslShell::AsyncModelingPackage package = this.ServiceProvider.GetService(typeof(VSShell::AsyncPackage)) as DslShell::AsyncModelingPackage;
+				DslShell::ModelingPackage package = this.ServiceProvider.GetService(typeof(VSShell::Package)) as DslShell::ModelingPackage;
 
 				if (package != null)
 				{

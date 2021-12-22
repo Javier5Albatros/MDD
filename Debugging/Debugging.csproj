@@ -73,23 +73,32 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Apruebamoodle.html">
-      <DependentUpon>html.tt</DependentUpon>
+    <Content Include="Apruebamoodle.java">
+      <DependentUpon>java.tt</DependentUpon>
     </Content>
-    <Content Include="Calificaciones SO.html">
-      <DependentUpon>html.tt</DependentUpon>
+    <Content Include="ApruebamoodleDiagrama.java">
+      <DependentUpon>java.tt</DependentUpon>
     </Content>
-    <Content Include="index.js">
-      <DependentUpon>html.tt</DependentUpon>
+    <Content Include="Calificaciones SO.java">
+      <DependentUpon>java.tt</DependentUpon>
     </Content>
-    <Content Include="IPS.html">
-      <DependentUpon>html.tt</DependentUpon>
+    <Content Include="IPS.java">
+      <DependentUpon>java.tt</DependentUpon>
     </Content>
-    <Content Include="IRM.html">
-      <DependentUpon>html.tt</DependentUpon>
+    <Content Include="IRM.java">
+      <DependentUpon>java.tt</DependentUpon>
     </Content>
-    <Content Include="Jennifer.html">
-      <DependentUpon>html.tt</DependentUpon>
+    <Content Include="java.java">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>java.tt</DependentUpon>
+    </Content>
+    <Content Include="java.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>java.java</LastGenOutput>
+    </Content>
+    <Content Include="Jennifer.java">
+      <DependentUpon>java.tt</DependentUpon>
     </Content>
     <Content Include="MPJAAMPrototoolReport.txt">
       <AutoGen>True</AutoGen>
@@ -101,18 +110,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MPJAAMPrototoolReportVB.tt</DependentUpon>
     </Content>
-    <Content Include="Pregunta 1 SO.html">
-      <DependentUpon>html.tt</DependentUpon>
-    </Content>
-    <Content Include="Pregunta 2 SO.html">
-      <DependentUpon>html.tt</DependentUpon>
-    </Content>
-    <Content Include="Pregunta 3 SO.html">
-      <DependentUpon>html.tt</DependentUpon>
-    </Content>
-    <Content Include="Problema SO.html">
-      <DependentUpon>html.tt</DependentUpon>
-    </Content>
     <Content Include="html.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>html.txt</LastGenOutput>
@@ -122,29 +119,38 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>html.tt</DependentUpon>
     </Content>
-    <Content Include="Sandra.html">
-      <DependentUpon>html.tt</DependentUpon>
+    <Content Include="Pregunta 1 SO.java">
+      <DependentUpon>java.tt</DependentUpon>
     </Content>
-    <Content Include="Segundo Parcial SO.html">
-      <DependentUpon>html.tt</DependentUpon>
+    <Content Include="Pregunta 2 SO.java">
+      <DependentUpon>java.tt</DependentUpon>
     </Content>
-    <Content Include="SO.html">
-      <DependentUpon>html.tt</DependentUpon>
+    <Content Include="Pregunta 3 SO.java">
+      <DependentUpon>java.tt</DependentUpon>
     </Content>
-    <Content Include="styles.css">
-      <DependentUpon>html.tt</DependentUpon>
+    <Content Include="Problema SO.java">
+      <DependentUpon>java.tt</DependentUpon>
     </Content>
-    <Content Include="Tema 1 IPS.html">
-      <DependentUpon>html.tt</DependentUpon>
+    <Content Include="Sandra.java">
+      <DependentUpon>java.tt</DependentUpon>
     </Content>
-    <Content Include="Tema 2 IPS.html">
-      <DependentUpon>html.tt</DependentUpon>
+    <Content Include="Segundo Parcial SO.java">
+      <DependentUpon>java.tt</DependentUpon>
     </Content>
-    <Content Include="Tema 3 IPS.html">
-      <DependentUpon>html.tt</DependentUpon>
+    <Content Include="SO.java">
+      <DependentUpon>java.tt</DependentUpon>
     </Content>
-    <Content Include="Test SO.html">
-      <DependentUpon>html.tt</DependentUpon>
+    <Content Include="Tema 1 IPS.java">
+      <DependentUpon>java.tt</DependentUpon>
+    </Content>
+    <Content Include="Tema 2 IPS.java">
+      <DependentUpon>java.tt</DependentUpon>
+    </Content>
+    <Content Include="Tema 3 IPS.java">
+      <DependentUpon>java.tt</DependentUpon>
+    </Content>
+    <Content Include="Test SO.java">
+      <DependentUpon>java.tt</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<tapizPrototool xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="9d50f816-4a95-4348-8663-61f708e97286" nombreAplicacion="Apruebamoodle" xmlns="http://schemas.microsoft.com/dsltools/MPJAAMPrototool">
+<tapizPrototool xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="9d50f816-4a95-4348-8663-61f708e97286" nombreAplicacion="ApruebamoodleDiagrama" xmlns="http://schemas.microsoft.com/dsltools/MPJAAMPrototool">
   <ventanaPrincipal>
     <tapizPrototoolHasVentanaPrincipal Id="bfe57bc6-5b53-43fd-8bf3-f1bf40f378c6">
       <ventanaPrincipal Id="e70210be-a1f2-441a-b9b2-27392f8d521e" nombre="Apruebamoodle" ancho="1280" altura="720" titulo="Bienvenido a Apruebamoodle" contenido="Lorem ipsum dolor sit amet, mei ei illum mazim utamur, ius mundi repudiare ei, no vix omnis malis deterruisset. Nam probo etiam dissentiet ad. Novum ullamcorper interpretaris te per, id per semper eirmod. Cu eam essent impetus nominavi, ad pro graeci diceret iracundia. Ea est oratio imperdiet splendide.">
