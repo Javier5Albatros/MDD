@@ -266,15 +266,6 @@
               </ventana>
             </boton>
           </ventanaHasBotons>
-          <ventanaHasBotons Id="15fb8193-a81f-4462-8098-9a8234230306">
-            <boton Id="ed5803f3-5843-4e8f-91bc-57a11eafb2a3" titulo="Volver atrás sin guardar">
-              <ventana>
-                <itemNavegacionReferencesVentana Id="e28aa8e8-0586-409e-a080-076611c2c88b">
-                  <ventanaSecundariaMoniker Id="9baef311-4ace-49ab-ab12-ad8e1b443bef" />
-                </itemNavegacionReferencesVentana>
-              </ventana>
-            </boton>
-          </ventanaHasBotons>
         </botons>
       </ventanaSecundaria>
     </tapizPrototoolHasVentanaSecundarium>
@@ -340,33 +331,6 @@
     <tapizPrototoolHasVentanaSecundarium Id="82d9e605-87db-459b-93d8-924285e1960c">
       <ventanaSecundaria Id="846698da-916b-4437-ae27-431b90c6ba97" nombre="Pregunta 1 SO" ancho="640" altura="360" titulo="Elige la correcta" contenido="Lorem ipsum dolor sit amet, vis no molestie patrioque reprimique. Quo ex timeam aliquid nusquam. Laudem evertitur te vim. Affert audire fierent ius te, alienum splendide intellegam ut has. Per ei putent luptatum. Recteque laboramus nec ex, recusabo pericula ut eam." modal="true">
         <botons>
-          <ventanaHasBotons Id="df4ebd3e-eba6-47ee-aed6-60e74767f470">
-            <boton Id="111c9080-37e3-4ccb-9ed3-a3ebba1adcfd" titulo="A">
-              <ventana>
-                <itemNavegacionReferencesVentana Id="b26ab5db-aa42-4331-bb06-8863b9a959c8">
-                  <ventanaSecundariaMoniker Id="846698da-916b-4437-ae27-431b90c6ba97" />
-                </itemNavegacionReferencesVentana>
-              </ventana>
-            </boton>
-          </ventanaHasBotons>
-          <ventanaHasBotons Id="92e9c45f-5dfe-4405-a643-ce7436cd382b">
-            <boton Id="deffd7fd-4cf5-43f6-b4c5-6e25c87b06cd" titulo="B">
-              <ventana>
-                <itemNavegacionReferencesVentana Id="35fd04b1-ddb5-48a3-816d-7dbb70663621">
-                  <ventanaSecundariaMoniker Id="846698da-916b-4437-ae27-431b90c6ba97" />
-                </itemNavegacionReferencesVentana>
-              </ventana>
-            </boton>
-          </ventanaHasBotons>
-          <ventanaHasBotons Id="a19cb0e5-a035-44fc-b022-580370d3919d">
-            <boton Id="479688d5-74eb-4cd9-a58c-8cc797d6e7ee" titulo="C">
-              <ventana>
-                <itemNavegacionReferencesVentana Id="8f70499d-5d2f-44af-b476-4168081d18ee">
-                  <ventanaSecundariaMoniker Id="846698da-916b-4437-ae27-431b90c6ba97" />
-                </itemNavegacionReferencesVentana>
-              </ventana>
-            </boton>
-          </ventanaHasBotons>
           <ventanaHasBotons Id="bc1c37f6-9acb-4e1b-ab96-180b8e8e02bc">
             <boton Id="02283909-19fa-44e3-bbd3-91f75cfcdf6e" titulo="Volver">
               <ventana>
@@ -382,33 +346,6 @@
     <tapizPrototoolHasVentanaSecundarium Id="18f5698d-4bbe-4624-a322-c87209751792">
       <ventanaSecundaria Id="612cc543-2994-423d-8c69-5ab2d6a0eb3a" nombre="Pregunta 2 SO" ancho="640" altura="360" titulo="Elige la correcta" contenido="Lorem ipsum dolor sit amet, vis no molestie patrioque reprimique. Quo ex timeam aliquid nusquam. Laudem evertitur te vim. Affert audire fierent ius te, alienum splendide intellegam ut has. Per ei putent luptatum. Recteque laboramus nec ex, recusabo pericula ut eam." modal="true">
         <botons>
-          <ventanaHasBotons Id="57b2620f-2f59-4cfb-b272-f7601261328f">
-            <boton Id="47e1959e-4d63-41d4-aaa6-4306e8d36753" titulo="A">
-              <ventana>
-                <itemNavegacionReferencesVentana Id="45c4374e-6a0e-4938-8d4d-63eef8a1e42a">
-                  <ventanaSecundariaMoniker Id="612cc543-2994-423d-8c69-5ab2d6a0eb3a" />
-                </itemNavegacionReferencesVentana>
-              </ventana>
-            </boton>
-          </ventanaHasBotons>
-          <ventanaHasBotons Id="4efd6417-89a0-454d-bb75-358278db8792">
-            <boton Id="1f4eeb0c-d2c4-40a8-a952-c30eb549735f" titulo="B">
-              <ventana>
-                <itemNavegacionReferencesVentana Id="24fdf996-22b0-4556-bdf8-bdfa9351b6a1">
-                  <ventanaSecundariaMoniker Id="612cc543-2994-423d-8c69-5ab2d6a0eb3a" />
-                </itemNavegacionReferencesVentana>
-              </ventana>
-            </boton>
-          </ventanaHasBotons>
-          <ventanaHasBotons Id="8da6ac0f-9520-452a-8eb1-6c5d7b7667a7">
-            <boton Id="5539bfae-e539-42ce-b4bb-aecf7cef0b2f" titulo="C">
-              <ventana>
-                <itemNavegacionReferencesVentana Id="2583be92-d93d-4011-9dc6-ef34d7b534b3">
-                  <ventanaSecundariaMoniker Id="612cc543-2994-423d-8c69-5ab2d6a0eb3a" />
-                </itemNavegacionReferencesVentana>
-              </ventana>
-            </boton>
-          </ventanaHasBotons>
           <ventanaHasBotons Id="3c0bc758-dd2b-4b4f-a124-c78e7439d584">
             <boton Id="c427104e-7502-476d-a597-ce957a1a88c2" titulo="Volver">
               <ventana>
@@ -424,33 +361,6 @@
     <tapizPrototoolHasVentanaSecundarium Id="a17116ae-5b30-4c41-9669-2a524a4faf53">
       <ventanaSecundaria Id="87c41cd7-aaed-40d6-bb4f-b2b8d13fd01a" nombre="Pregunta 3 SO" ancho="640" altura="360" titulo="Elige la correcta" contenido="Lorem ipsum dolor sit amet, vis no molestie patrioque reprimique. Quo ex timeam aliquid nusquam. Laudem evertitur te vim. Affert audire fierent ius te, alienum splendide intellegam ut has. Per ei putent luptatum. Recteque laboramus nec ex, recusabo pericula ut eam." modal="true">
         <botons>
-          <ventanaHasBotons Id="fb66c3a6-0ede-4588-ac96-8d35dccf4224">
-            <boton Id="fc4561e4-ee0d-4a72-8782-c40659fbe031" titulo="A">
-              <ventana>
-                <itemNavegacionReferencesVentana Id="3df96dfa-ba3a-43c7-b0bc-e43d30007b20">
-                  <ventanaSecundariaMoniker Id="87c41cd7-aaed-40d6-bb4f-b2b8d13fd01a" />
-                </itemNavegacionReferencesVentana>
-              </ventana>
-            </boton>
-          </ventanaHasBotons>
-          <ventanaHasBotons Id="77e1dfd6-c30b-4f5a-92ec-51c2353d572d">
-            <boton Id="6431b627-b554-4717-85a7-0c85077e6f42" titulo="B">
-              <ventana>
-                <itemNavegacionReferencesVentana Id="ae7a1367-9c51-481c-87c4-c524418ed38b">
-                  <ventanaSecundariaMoniker Id="87c41cd7-aaed-40d6-bb4f-b2b8d13fd01a" />
-                </itemNavegacionReferencesVentana>
-              </ventana>
-            </boton>
-          </ventanaHasBotons>
-          <ventanaHasBotons Id="411bbdea-e752-4de3-8e63-2ef8bccd4dc0">
-            <boton Id="aa25d46d-51c5-4a92-9aec-5220af8a12ee" titulo="C">
-              <ventana>
-                <itemNavegacionReferencesVentana Id="6aad05b2-392b-4bdd-ba33-5195c6c268bb">
-                  <ventanaSecundariaMoniker Id="87c41cd7-aaed-40d6-bb4f-b2b8d13fd01a" />
-                </itemNavegacionReferencesVentana>
-              </ventana>
-            </boton>
-          </ventanaHasBotons>
           <ventanaHasBotons Id="e5fe072d-0d50-4228-a959-2026fe07e49e">
             <boton Id="48f8af59-3b68-4a4c-a20a-1efa36d1db05" titulo="Volver">
               <ventana>

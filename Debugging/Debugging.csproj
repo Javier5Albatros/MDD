@@ -73,17 +73,37 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Apruebamoodle.html">
+      <DependentUpon>html.tt</DependentUpon>
+    </Content>
     <Content Include="Apruebamoodle.java">
       <DependentUpon>java.tt</DependentUpon>
     </Content>
     <Content Include="ApruebamoodleDiagrama.java">
       <DependentUpon>java.tt</DependentUpon>
     </Content>
-    <Content Include="Calificaciones SO.java">
+    <Content Include="Calificaciones SO.html">
+      <DependentUpon>html.tt</DependentUpon>
+    </Content>
+    <Content Include="CalificacionesSO.java">
       <DependentUpon>java.tt</DependentUpon>
+    </Content>
+    <Content Include="html.html">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>html.tt</DependentUpon>
+    </Content>
+    <Content Include="index.js">
+      <DependentUpon>html.tt</DependentUpon>
+    </Content>
+    <Content Include="IPS.html">
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="IPS.java">
       <DependentUpon>java.tt</DependentUpon>
+    </Content>
+    <Content Include="IRM.html">
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="IRM.java">
       <DependentUpon>java.tt</DependentUpon>
@@ -96,6 +116,9 @@
     <Content Include="java.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>java.java</LastGenOutput>
+    </Content>
+    <Content Include="Jennifer.html">
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="Jennifer.java">
       <DependentUpon>java.tt</DependentUpon>
@@ -112,44 +135,75 @@
     </Content>
     <Content Include="html.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>html.txt</LastGenOutput>
+      <LastGenOutput>html.html</LastGenOutput>
     </Content>
-    <Content Include="html.txt">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
+    <Content Include="Pregunta 1 SO.html">
       <DependentUpon>html.tt</DependentUpon>
     </Content>
-    <Content Include="Pregunta 1 SO.java">
+    <Content Include="Pregunta 2 SO.html">
+      <DependentUpon>html.tt</DependentUpon>
+    </Content>
+    <Content Include="Pregunta 3 SO.html">
+      <DependentUpon>html.tt</DependentUpon>
+    </Content>
+    <Content Include="Pregunta1SO.java">
       <DependentUpon>java.tt</DependentUpon>
     </Content>
-    <Content Include="Pregunta 2 SO.java">
+    <Content Include="Pregunta2SO.java">
       <DependentUpon>java.tt</DependentUpon>
     </Content>
-    <Content Include="Pregunta 3 SO.java">
+    <Content Include="Pregunta3SO.java">
       <DependentUpon>java.tt</DependentUpon>
     </Content>
-    <Content Include="Problema SO.java">
+    <Content Include="Problema SO.html">
+      <DependentUpon>html.tt</DependentUpon>
+    </Content>
+    <Content Include="ProblemaSO.java">
       <DependentUpon>java.tt</DependentUpon>
+    </Content>
+    <Content Include="Sandra.html">
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="Sandra.java">
       <DependentUpon>java.tt</DependentUpon>
     </Content>
-    <Content Include="Segundo Parcial SO.java">
+    <Content Include="Segundo Parcial SO.html">
+      <DependentUpon>html.tt</DependentUpon>
+    </Content>
+    <Content Include="SegundoParcialSO.java">
       <DependentUpon>java.tt</DependentUpon>
+    </Content>
+    <Content Include="SO.html">
+      <DependentUpon>html.tt</DependentUpon>
     </Content>
     <Content Include="SO.java">
       <DependentUpon>java.tt</DependentUpon>
     </Content>
-    <Content Include="Tema 1 IPS.java">
+    <Content Include="styles.css">
+      <DependentUpon>html.tt</DependentUpon>
+    </Content>
+    <Content Include="Tema 1 IPS.html">
+      <DependentUpon>html.tt</DependentUpon>
+    </Content>
+    <Content Include="Tema 2 IPS.html">
+      <DependentUpon>html.tt</DependentUpon>
+    </Content>
+    <Content Include="Tema 3 IPS.html">
+      <DependentUpon>html.tt</DependentUpon>
+    </Content>
+    <Content Include="Tema1IPS.java">
       <DependentUpon>java.tt</DependentUpon>
     </Content>
-    <Content Include="Tema 2 IPS.java">
+    <Content Include="Tema2IPS.java">
       <DependentUpon>java.tt</DependentUpon>
     </Content>
-    <Content Include="Tema 3 IPS.java">
+    <Content Include="Tema3IPS.java">
       <DependentUpon>java.tt</DependentUpon>
     </Content>
-    <Content Include="Test SO.java">
+    <Content Include="Test SO.html">
+      <DependentUpon>html.tt</DependentUpon>
+    </Content>
+    <Content Include="TestSO.java">
       <DependentUpon>java.tt</DependentUpon>
     </Content>
   </ItemGroup>

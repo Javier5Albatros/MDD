@@ -4,20 +4,63 @@
 <#@ include file="EF.utility.CS.ttinclude" #>
 
 <#
+	Dictionary<Ventana, int> niveles = new Dictionary<Ventana, int>();
 	var fileManager = EntityFrameworkTemplateFileManager.Create(this);
-
 	var ventanaPrincipal = this.TapizPrototool.VentanaPrincipal;
+
+	ponerNiveles(ventanaPrincipal, 1, niveles);
+
 	fileManager.StartNewFile(ventanaPrincipal.nombre + ".java");
-	procesarVentana(ventanaPrincipal);
+	procesarVentana(ventanaPrincipal, niveles);
 
 	var nombreAplicacion = this.TapizPrototool.nombreAplicacion;
 	fileManager.StartNewFile(nombreAplicacion + ".java");
-	clasePrincipal(nombreAplicacion, ventanaPrincipal);
+	clasePrincipal(clase(nombreAplicacion), ventanaPrincipal);
 	foreach(Ventana ventana in this.TapizPrototool.VentanaSecundarium) {
-		fileManager.StartNewFile(ventana.nombre+ ".java");
-		procesarVentana(ventana);
+		fileManager.StartNewFile(clase(ventana.nombre) + ".java");
+		procesarVentana(ventana, niveles);
 	}
+
 	fileManager.Process();
+#>
+
+<#+
+	private void ponerNiveles(Ventana ventana, int nivel, Dictionary<Ventana, int> niveles) {
+		niveles[ventana] = nivel;
+		List<Ventana> ventanas = getVentanasAdyacentes(ventana);
+		if(ventanas.Count != 0) {
+			foreach(Ventana v in ventanas) {
+				if(!niveles.ContainsKey(v)) {
+					ponerNiveles(v, nivel + 1, niveles);
+				}
+			}
+		}
+	}
+#>
+
+<#+
+	private List<Ventana> getVentanasAdyacentes(Ventana ventana) {
+		List<Ventana> ventanas = new List<Ventana>();
+		if(ventana.Botons.Count != 0) {
+			foreach(Boton b in ventana.Botons) {
+				if(b.Ventana != null) {
+					ventanas.Add(b.Ventana);
+				}
+			}
+		}
+
+		if(ventana.Menus.Count > 0) {
+			foreach(Menu m in ventana.Menus) {
+				foreach(ItemMenu item in m.ItemMenus) {
+					if(item.Ventana != null) {
+						ventanas.Add(item.Ventana);
+					}
+				}
+			}
+		}
+
+		return ventanas;
+	}
 #>
 
 <#+
@@ -38,12 +81,12 @@
 #>
 
 <#+
-	private void procesarVentana(Ventana ventana) {
+	private void procesarVentana(Ventana ventana, Dictionary<Ventana, int> niveles) {
 		importPackages();
 		if(ventana is VentanaPrincipal) {
 			procesarVentanaPrincipal(ventana);
 		} else {
-			procesarVentanaSecundaria(ventana);
+			procesarVentanaSecundaria(ventana, niveles);
 		}
 		WriteLine("}");
 	}
@@ -52,25 +95,103 @@
 
 <#+
 	private void procesarVentanaPrincipal(Ventana ventana) {
-		WriteLine("public class " +  ventana.nombre + " extends Frame implements ActionListener {");
-		declararBotones(ventana);
+		HashSet<Ventana> ventanas = new HashSet<Ventana>();
+		List<ItemNavegacion> items = new List<ItemNavegacion>();
+		items = getItemsNavegacion(ventana);
+		WriteLine("public class " +  clase(ventana.nombre) + " extends Frame implements ActionListener {");
+		ventanas = propiedadesPrivadas(ventana);
+		constructorPrincipal(ventana, ventanas);
+		actionPerformed(ventana, items, false, null);
 	}
 #>
 
 
 <#+
-	private void procesarVentanaSecundaria(Ventana ventana) {
-		WriteLine("public class " +  ventana.nombre + " extends Dialog implements ActionListener {");
-		declararBotones(ventana);
+	private void procesarVentanaSecundaria(Ventana ventana, Dictionary<Ventana, int> niveles) {
+		HashSet<Ventana> ventanas = new HashSet<Ventana>();
+		List<ItemNavegacion> items = new List<ItemNavegacion>();
+		items = getItemsNavegacion(ventana);
+		WriteLine("public class " +  clase(ventana.nombre) + " extends Dialog implements ActionListener {");
+		ventanas = propiedadesPrivadasS(ventana, niveles);
+		constructorSecundario(ventana, ventanas, items, niveles);
+		actionPerformed(ventana, items, true, niveles);
 	}
 #>
 
 <#+
-	private void declararBotones(Ventana ventana) {
+	private HashSet<Ventana> propiedadesPrivadas(Ventana ventana) {
+		HashSet <Ventana> ventanas = new HashSet<Ventana>();
+		botones(ventana, ventanas);
+		itemsNavegacion(ventana, ventanas);
+		if(ventanas.Count != 0) {
+			foreach(Ventana ven in ventanas) {
+				WriteLine("private " + clase(ven.nombre) + " v_" + normalizar(ven.nombre) + ";");
+			}
+		}
+
+		return ventanas;
+	}
+#>
+
+<#+
+	private HashSet<Ventana> propiedadesPrivadasS(Ventana ventana, Dictionary<Ventana, int> niveles) {
+		HashSet <Ventana> ventanas = new HashSet<Ventana>();
+		botones(ventana, ventanas);
+		itemsNavegacionS(ventana, ventanas);
+		if(ventanas.Count != 0) {
+			foreach(Ventana ven in ventanas) {
+				if(niveles[ventana] <= niveles[ven]) {
+					WriteLine("private " + clase(ven.nombre) + " v_" + normalizar(ven.nombre) + ";");
+				}
+			}
+		}
+
+		return ventanas;
+	}
+#>
+
+<#+
+	private void botones(Ventana ventana, HashSet<Ventana> ventanas) {
 		if(ventana.Botons.Count != 0) {
 			foreach(Boton boton in ventana.Botons) {
 				WriteLine("private Button b_" + normalizar(boton.titulo) + ";");
-				WriteLine("private " + ventana.nombre + " v_" +  normalizar(ventana.nombre) + ";");
+				if(boton.Ventana != null) {
+					ventanas.Add(boton.Ventana);
+				}
+			}
+		}	
+	}
+#>
+
+<#+
+	private void itemsNavegacion(Ventana ventana, HashSet<Ventana> ventanas) {
+		if(ventana.Menus.Count != 0) {
+			foreach(Menu menu in ventana.Menus) {
+				if(menu.ItemMenus.Count != 0) {
+					foreach(ItemMenu item in menu.ItemMenus) {
+						WriteLine("private MenuItem im_" + normalizar(item.titulo) + ";");
+						if(item.Ventana != null) {
+							ventanas.Add(item.Ventana);	
+						}
+					}
+				}
+			}
+		}
+	}
+#>
+
+<#+
+	private void itemsNavegacionS(Ventana ventana, HashSet<Ventana> ventanas) {
+		if(ventana.Menus.Count != 0) {
+			foreach(Menu menu in ventana.Menus) {
+				if(menu.ItemMenus.Count != 0) {
+					foreach(ItemMenu item in menu.ItemMenus) {
+						WriteLine("private Button b_" + normalizar(item.titulo) + ";");
+						if(item.Ventana != null) {
+							ventanas.Add(item.Ventana);	
+						}
+					}
+				}
 			}
 		}
 	}
@@ -79,5 +200,161 @@
 <#+
 	private string normalizar(string cadena) {
 		return cadena.ToLower().Replace(" ", "").Replace("á", "a").Replace("é", "e").Replace("í", "i").Replace("ó", "o").Replace("ú", "u");
+	}
+#>
+
+<#+
+	private string clase(String nombre) {
+		return nombre.Replace(" ", "");
+	}
+#>
+
+<#+
+	private void constructorPrincipal(Ventana ventana, HashSet<Ventana> ventanas) {
+		WriteLine("public " +  clase(ventana.nombre) +  "() {");
+		WriteLine("super();");
+		WriteLine("this.setTitle(\"" + ventana.nombre + "\");");
+		inicializarVentanas(ventana, ventanas, null);
+		WriteLine("this.setLayout(new FlowLayout());");
+		WriteLine("MenuBar MB = new MenuBar();");
+		WriteLine("this.setMenuBar(MB);");
+		inicializarMenus(ventana);
+		inicializarBotones(ventana);
+		WriteLine(String.Format("this.setSize({0}, {1});", ventana.ancho, ventana.altura));
+		WriteLine("this.setVisible(true);");
+		WriteLine("}");
+	}
+#>
+
+<#+
+	private void constructorSecundario(Ventana ventana, HashSet<Ventana> ventanas, List<ItemNavegacion> items, Dictionary<Ventana, int> niveles) {
+		string tipo = niveles[ventana] > 2 ? "Dialog" : "Frame";
+		WriteLine("public " +  clase(ventana.nombre) +  "(" + tipo +" padre, boolean modal) {");
+		WriteLine("super(padre, \"" + ventana.nombre + "\", modal);");
+		inicializarVentanas(ventana, ventanas, niveles);
+		WriteLine("this.setLayout(new FlowLayout());");
+		inicializarItems(items);
+		WriteLine(String.Format("this.setSize({0}, {1});", ventana.ancho, ventana.altura));
+		WriteLine("}");
+	}
+#>
+
+<#+
+	private void inicializarItems(List<ItemNavegacion> items) {
+		if(items.Count != 0) {
+			foreach(ItemNavegacion item in items) {
+				WriteLine("b_" + normalizar(item.titulo) + " = new Button(\""+ item.titulo + "\");");
+				WriteLine("this.add(" +  "b_" + normalizar(item.titulo) + ");");
+				WriteLine("b_" + normalizar(item.titulo) +".addActionListener(this);");
+			}
+		}
+	}
+#>
+
+<#+
+	private void inicializarVentanas(Ventana ventana, HashSet<Ventana> ventanas, Dictionary<Ventana, int> niveles) {
+		foreach(Ventana v in ventanas) {
+			if(niveles == null || niveles[ventana] <= niveles[v]) {
+				var nombre = v.nombre;
+				var modal = !(v is VentanaPrincipal) && ((v as VentanaSecundaria).modal);
+				WriteLine(String.Format("v_{0} = new {1}(this, {2});", normalizar(nombre), clase(nombre), (modal + "").ToLower()));
+			}
+		}
+	}
+#>
+
+<#+
+	private void inicializarMenus(Ventana ventana) {
+		if(ventana.Menus.Count != 0) {
+			foreach(Menu menu in ventana.Menus) {
+				WriteLine(String.Format("Menu {0} = new Menu(\"{1}\");", "m_" + normalizar(menu.TituloMenu), menu.TituloMenu));
+				foreach(ItemMenu item in menu.ItemMenus) {
+					WriteLine(String.Format("{0} = new MenuItem(\"{1}\");", "im_" +  normalizar(item.titulo), item.titulo ));
+					WriteLine("m_" + normalizar(menu.TituloMenu) + ".add(" + "im_" + normalizar(item.titulo) + ");");
+					WriteLine("im_" + normalizar(item.titulo) +".addActionListener(this);");
+				}
+
+				WriteLine("MB.add(m_" + normalizar(menu.TituloMenu) + ");");
+			}
+		}
+	}
+#>
+
+<#+
+	private void inicializarBotones(Ventana ventana) {
+		if(ventana.Botons.Count != 0) {
+			foreach(Boton boton in ventana.Botons) {
+				WriteLine("b_" + normalizar(boton.titulo) + " = new Button(\""+ boton.titulo + "\");");
+				WriteLine("this.add(" +  "b_" + normalizar(boton.titulo) + ");");
+				WriteLine("b_" + normalizar(boton.titulo) +".addActionListener(this);");
+			}
+		}
+	}
+#>
+
+<#+
+	private void actionPerformed(Ventana ventana, List<ItemNavegacion> items, bool secundaria, Dictionary<Ventana, int> niveles) {
+		WriteLine("public void actionPerformed(ActionEvent ae) {");
+		WriteLine("Object o = ae.getSource();");
+		imprimirOpcionesMenu(items, secundaria, ventana, niveles);
+		WriteLine("}");
+	}
+#>
+
+<#+
+	private List<ItemNavegacion> getItemsNavegacion(Ventana ventana) {
+		List<ItemNavegacion> items = new List<ItemNavegacion>();
+		if(ventana.Botons.Count != 0) {
+			foreach(Boton b in ventana.Botons) {
+				items.Add(b);
+			}
+		}
+
+		if(ventana.Menus.Count != 0) {
+			foreach(Menu m in ventana.Menus) {
+				if(m.ItemMenus.Count != 0) {
+					foreach(ItemMenu item in m.ItemMenus) {
+						items.Add(item);
+					}
+				}
+			}
+		}
+
+		return items;
+	}
+#>
+
+<#+
+	private void imprimirOpcionesMenu(List<ItemNavegacion> items, bool secundaria, Ventana ventana, Dictionary<Ventana, int> niveles) {
+		if(items.Count != 0) {
+			foreach(ItemNavegacion item in items) {
+				var nombre = secundaria ? "b_" + normalizar(item.titulo) : nombreItem(item);
+				WriteLine("if(o == " + nombre + ") {");
+				action(item, ventana, niveles);
+				WriteLine("return;");
+				WriteLine("}");
+			}
+		}
+	}
+#>
+
+<#+
+	private string nombreItem(ItemNavegacion item) {
+		var prefijo = (item is Boton) ? "b_" : "im_";
+		return prefijo + normalizar(item.titulo);
+	}
+#>
+
+<#+
+	private void action(ItemNavegacion item, Ventana ventana, Dictionary<Ventana, int> niveles) {
+		if(item.Ventana != null) {
+			if(niveles != null && niveles[item.Ventana] <= niveles[ventana]) {
+				WriteLine("this.setVisible(false);");
+			} else {
+				WriteLine(String.Format("{0}.setVisible(true);", "v_" + normalizar(item.Ventana.nombre)));
+			}
+		} else {
+			WriteLine("System.exit(0);");
+		}
 	}
 #>
